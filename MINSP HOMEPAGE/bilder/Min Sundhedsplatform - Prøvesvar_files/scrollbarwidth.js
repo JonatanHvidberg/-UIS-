@@ -1,0 +1,3 @@
+﻿(function() {var template = Handlebars.template, templates = $$WP.Templates = $$WP.Templates || {};templates = templates.Core = templates.Core || {};templates['scrollbarwidth'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div style=\"visibility: hidden; width: 100px; height: 100px; overflow: hidden;\"><p style=\"width: 100px; height: 200px;\">Unused/invisible text content</p></div>";
+},"useData":true});})();

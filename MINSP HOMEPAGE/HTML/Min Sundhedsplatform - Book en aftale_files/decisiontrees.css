@@ -1,0 +1,29 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+#dt-container {
+  position: relative;
+  min-height: 8rem; }
+
+.dt-spinner, #dt-container .qnr-spinner {
+  position: absolute;
+  top: 2rem;
+  background: none;
+  z-index: 1000; }
+
+.dtbanner {
+  max-width: none;
+  border: 1px solid;
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin-bottom: 1rem;
+  display: block; }
+  .dtbanner img {
+    width: auto;
+    height: 2.2rem;
+    vertical-align: middle;
+    padding-right: 0.5rem; }
+  .dtbanner .header {
+    padding: 0.25rem 0 0.25rem; }
+
+.dtbannertext {
+  display: inline-block;
+  width: 90%;
+  vertical-align: middle; }

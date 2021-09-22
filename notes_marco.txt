@@ -1,0 +1,25 @@
+REMEBER to add a reflection on how you lived up to the principle of the MUST method! 
+
+the vision for change is a little shallow, you are suggesting a new GUI and search function which seems unrelated with the target group and not clearly linked to the problems you found in the last phase. 
+
+This work needs a severe improvement, because as for now is too shallow. Clearly this is a draft therefore I believe that the improvements are in your pipeline. 
+
+Rememebr to add a section with the reflection on the principles of the MUST method. 
+
+And populate your vision with visual aids, since the only part you will consider is UI. 
+
+Also try to elaborate on the search function, why is needed? How will it work? What problems will it solve? Work is needed. 
+
+------------------------------------talk--------------------------------------
+The moscow method
+	describe hwo we lived up to this
+	related afsnit det passer ind i	
+
+The must principles
+	describe it in a new section, make a list of the things we did
+	our findings and how it knowlegde base expends because of [things]
+	interview gave us insight, things that was not used, and how it lived up to the must method
+	top priorities should be included and the should, in the report, 
+
+Why do our target group need a search function?
+	because of the seer amount of results that they 

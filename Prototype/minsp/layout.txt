@@ -1,0 +1,23 @@
+minsp/
+	__init__.py
+	models.py
+	forms.py
+	helper_functions.py
+	
+	Login/
+		routes.py
+		
+	templates/
+		about.html
+		graph.html
+		health.html
+		home.html
+		layout.html
+		layout_acc.html
+		login.html
+		results.html
+		
+	static/
+		favicon.ico	
+		main.css
+		images/

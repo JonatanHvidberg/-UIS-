@@ -1,0 +1,16 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+.addressContainer {
+  position: relative; }
+  .addressContainer.loading {
+    min-height: 5rem; }
+
+.address.grid {
+  margin-top: 0;
+  margin-bottom: 0; }
+.address > .loadingIndicator {
+  position: absolute;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+  margin: 0; }
+.address .ghostInput.street textarea {
+  margin-bottom: 0; }

@@ -1,0 +1,306 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{graphicx}
+\usepackage{su19}
+
+\begin{document}
+\begin{titlepage}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+    \center
+    \textsc{\LARGE University of Copenhagen}\\[1.5cm]
+    \textsc{\Large Development of Information Systems}\\[0.5cm]
+    \textsc{Course ID: NDAB16009U}
+
+    \vfill
+    \HRule\\[0.4cm]
+    {\huge\bfseries Assignment 1}\\[0.4cm]
+    \HRule\\[1.5cm]
+
+    \large\textit{\textbf{Authors}}
+    
+    \large\textit{\textbf{Team 2 -  group 8}}
+    \\Emil Bæk Henriksen - \texttt{WSL798}
+    \\Jasmin Brinch Pedersen - \texttt{WCP197}
+    \\Jonatan Geysner Hvidberg - \texttt{PJC990}
+    \\Simon Gram Gregersen - \texttt{JSH981}
+    
+    \vfill
+
+    \large\textit{\textbf{Teaching Assistant}}
+    \\Ziming Luo
+    \\Marco Ugo Gambetta
+
+    \vfill
+    \large\textit{\textbf{Deadline}}
+    \\28th of February
+    \vfill
+
+\includegraphics[width=0.7\textwidth]{pics/ucph.png}
+\end{titlepage}
+
+\pagenumbering{arabic}
+
+\newpage
+\tableofcontents
+\newpage
+
+%\section*{Brainstorm}
+%\textbf{Limits}
+%\begin{itemize}
+%    \item Chronically ill patients, frequent use of the platform and health care
+%    \item Danish citizen, located in Copenhagen
+%    \item management oriented (figure 8.1): baseline planning
+%    \item performance oriented (figure 8.1): (4)interview, (7)SWOT, (8)Observation, (9)Thinking aloud??, (10)workshops, (15)Experimenting with prototypes
+%\end{itemize}
+
+%\textbf{Baseline Planning (MUST)}
+%\begin{itemize}
+%    \item (BL.1) Mandate: To make structural changes, conduct interview with patients and next of kin, 
+%    \item (BL.2) Charter: 
+%    \item (BL.2) Baseline plan: 
+%\end{itemize}
+
+\section{Premise}
+
+The foundation of this project is based on the already existing platform 'Min Sundhedsplatform', which has been in operation since 2016 by the Danish administrative units called the Regions ('Regioner' in danish). The system was meant to bridge the gap between patients and health professionals, collecting all important documents concerning the patients health into one platform that could be accessed by the relevant parties on demand. \\
+
+In this project we will make use of the MUST method to create an overview of the phases pictured in our Baseline Planning. Here we sketch out the phases of our project for the next couple of months that will result in a working prototype and model database.\\
+
+\subsection{The work process}
+
+The work process that we will maintain during this project is as follows:
+\begin{itemize}
+    \item The assessment of the current and future platform
+    \item Thought through interview questions for the first interview regarding \textit{MinSunhedsplatform} and an even more tailored interview for future participants in later phases
+    \item Weekly checkup
+    \item Plan the report
+    \item Find interviewees and Execute interviews
+    \item Initial Assessment:
+    \begin{enumerate}
+        \item Participants: Project group, Professor, users of \textit{MinSundhedsplatform}
+        \item Goal: find, analyse and improve faults and weaknesses. Followed by a prototype
+        \item Outcome: Prototype with improved components
+        \item Deadlines: 2-3 deadlines before final admission
+    \end{enumerate}
+\end{itemize}
+
+
+%\subsection{Data transfer}
+
+%All data is done on the healthcare platform so the opportunity to lose data because it is written on paper is not there.
+%teskt + model\\
+
+%hvordan flyder vores ting. lav kreativ figur\\
+
+\subsection{Company Resources}
+The project does not involve any significant financial factors, which would be a limitation for project execution.\\
+
+\begin{itemize}
+  \item Steering committee must set aside time
+  \item Patients for interview
+\end{itemize}
+
+%clean up
+%tekst, subsubsections, figur\\
+%snak om udfordringer der er når vi ikke skal bedømme en virksomhed etc. evt om hvem vi er/hvem vi interviewer/leder efter.
+%clean up
+
+    
+\subsection{The problem}
+
+\begin{itemize}
+    \item Bridging information gaps
+    \item Reducing complexity and ensuring accessibility for all
+    \item Gaining an overview of a health profile
+\end{itemize}
+
+%*print ud og tage ting med til møde op\\
+%*er der et problem angående information? ved man som patient hvad der er galt med en hvis man ikke læser det på platformen? \\
+
+%udkast skrevet pre-interview
+In our preliminary interview with a person who deals with diabetes 2, and is a user of 'MinSundhedsplatform', we gained insight into how the platform is used in their specific instance. We could observe in our interview how the platform was operated to gain the needed information on a range of selected topics, spanning from how data is sorted to what can be customized.\\
+
+With further questioning we could see that the platform has indeed bridged many gaps, but that information gabs were present, eg. some information was not available from the app such as the contact information to health professionals that our interviewee has been in contact with before - the only contact information is the name of the doctor connected to each person which is also present on every citizens 'Sundhedskort'.\\
+
+When going through test results (called 'prøvesvar' on the platform) it was all lumped into one long continuously list, where 25 entries were loaded each time the bottom was reached and older entries were fetched. They were not grouped, and were sorted in a static way, with the newest entries at the top, and then descending downward. So trying to find the first test results would demand scrolling through each and every instance to find the correct one.\\
+
+Patients are interested in getting the best possible experience using \textit{MinSundhedsplatform}. This requires an intuitive interface and easy access to relevant information. It is therefore important that they do not have to deal with an advanced or any long processes, which could discourage use and frustrate the user. It needs to cater to all levels of technical skill. If the current iteration of the app confuses even a superuser such as our interviewee, how can we expect less technically inclined people to not be confused?
+
+% A simplified exchange of information is possible through digitization, e.g. through an app, that would otherwise require a much more involved process if done analog. Users from home can now replace printing, filling out, signing and scanning a document, with a questionnaire accessible on their own smartphone.
+
+
+%vi bør også finde en der har haft diabetes før sundhedsplatformen blev søsat, som måske kan sige hvordan det ændrede sig 
+%(JAAA GOD IDE. KH JAZZ)
+
+\subsection{Assignment and Objective}
+Our assignment during this project is to find and solve problems in the platform, with the help of an overview created partially by the patient to facilitate a better and more accessible structure for reaching the relevant documents concerning the patients health.
+
+%    \item {in-depth analysis of situations which "Min Sundhedsplatform" is be used by diabetic}
+
+Below is an overview of what our solution should provide 
+
+\begin{itemize}
+    \item {A coherent database vision for the change 'Min Sundhedsplatform'}
+    \item {The solution should implement a more effective search over the existing earlier questionnaires, test results, meetings and notes}
+    \item{The solution while implement the data that our users miss}
+\end{itemize}
+In the appendix is placed an E/R diagram of the parties affected by this objective which can help in gaining a quick overview of the structure.
+
+
+
+%Kort udgave:\\
+%Objective: Find users of min sundhedsplatform, identify potential problems/issues/missing features as well as helpful and useful features. Design a solution (vision for change) to solve or better issues and maybe extend functionality. 
+
+
+%vi har ikke fået givet not grundlag. så basically kan vi omskrive vores ass-opgavebeskrivelse som svar.
+\subsection{Critical factors}
+A few of the most critical factors are the following:
+\begin{itemize}
+    \item Find patients willing to participate in our project
+    \item Can we even find any significant problems?
+    \item Finish before deadline
+    \item Legislation regarding the sector
+    \item Privacy laws and protection of confidential information
+    \item Finding an intuitive and straightforward solution
+\end{itemize}
+
+\section{Organization}
+The project groups consists of four second year students that studies Data Science at The University of Copenhagen.
+
+\subsection{Project organization}
+The table below is an overview of the project groups names, roles and responsibilities.
+
+\begin{figure}[H]
+\begin{table}[H]\hspace*{-0.8cm}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Name}                                                                                                 & \textbf{Role}                                                             & \textbf{Responsibilities}                                                                                                                                      \\ \hline
+\begin{tabular}[c]{@{}l@{}}Jasmin Pedersen\\ Jonatan Hvidberg\\ Emil Henriksen\\ Simon Gregersen\end{tabular} & Project Group Members                                                     & \begin{tabular}[c]{@{}l@{}}* Generate proposals for the \\ design project\\ * Fulfil the tasks delegated by \\ the project manager\end{tabular}               \\ \hline
+Jasmin Pedersen                                                                                              & Project Manager                                                           & \begin{tabular}[c]{@{}l@{}}* Assess state of the project \\ and make sure the group is\\ on track\\ * Delegate tasks for project\\ group\end{tabular}       \\ \hline
+\begin{tabular}[c]{@{}l@{}}Finn Kensing \\ Marcos AntonioVaz Salles\\
+Ziming Luo\\
+Marco Ugo Gambetta\\
+\end{tabular}                                     & Steering Committee                                                        & \begin{tabular}[c]{@{}l@{}}* Deals with potential\\ inquiries posed by the project\\ group\\ * Approve proposals and\\  Resovle possible conflicts\end{tabular} \\ \hline
+Finn Kensing                                                       & \begin{tabular}[c]{@{}l@{}}Chairman of steering \\ Committee\end{tabular} & \begin{tabular}[c]{@{}l@{}}* Double check information\\ * If any tie occurs the chairman\\ takes the final decision\end{tabular}                               \\ \hline
+\end{tabular}
+\end{table}
+\label{Fig:roles}
+\caption{Overview of roles}
+\end{figure}
+
+\subsection{Stakeholders}
+\begin{itemize}
+  \item \textbf{Patients}
+  \item \textbf{The Region}
+  \item \textbf{Steering committee}
+\end{itemize}
+
+The Stakeholders we are going to have the most contact with is the steering committee and the patients using \textit{MinSundhedsplatform}. There will most likely not be as much contact with the Region besides the initial documents, as they lack the resources with regards to personnel and budget to engage directly in our project.\\
+
+As we are working on the patients' needs for the platform we will mainly be in contact with those and internally in our own project group.\\
+
+It is important to our project to get insight from patients that use \textit{MinSundhedsplatform}. If we are to improve upon the experience when using the platform, we must first understand how users interact with the platform. Patient are therefore an integral part of our project. Throughout our project we will be conducting interviews to facilitate the best vision for change, while also gaining valuable feedback on our proposed changes.\\
+
+Another important group of users that interact with \textit{MinSundhedsplatform} is the health professionals at the Regions. They provide an essential service by interacting with patients through the platform, although our focus remains on improving usability for patients, we must consider if any changes that we will introduce might alter the workflow of personnel at the Regions. 
+
+
+\section{Method}
+\subsection{Approach}
+%insert fig numbers
+The project was created using the MUST method's principles, which was provided by the litterateur \textbf{Participatory IT Design: Designing for business and workplace realities (Bødker et al., 2004)}. The Baseline presented below provides an overview of the techniques and tools that has been chosen for this project.\\
+
+%baseline planning kan indsættes her når billedet er i mappen
+\begin{figure}[H]
+\centering
+\hspace*{-1cm}
+\includegraphics[scale=0.75]{"pics/BaseLine_diagram"}
+\label{fig:baseline}
+\caption{Baseline diagram}
+\end{figure}
+
+%fjern hvis den ikke giver mening senere
+\newpage
+%det er newpage jeg snakker om :D
+The project initiation phase of the project has been focused around creating the outlining framework and creation of the baseline diagram containing the activities that we envisioned will be needed to deliver a prototype that would improve upon certain aspects of the already deployed platform. This will be accomplished through interviews with chronic patients, analysis of relevant documents. This will result in a project charter that will characterize our project in coming months. \\\\
+This will be used to carry us into the 'Idea Development', which will be based upon our analysis of the 'User Study' that will be combined with a mock-up representing our prototype. The process will then be reviewed to find shortcomings or new considerations that will have to be addressed.\\\\
+%report and prototype,
+The final outcome of our project will be a prototype which will be the laid out in our project report, that will encompass all our findings, analysis of the prototype and the development phase. This will be combined with a working database model that will be a stand-in for the real version that the danish state has been using.
+\subsection{Plan}
+The following diagram contains activities for the process
+% stor tabel\\
+\begin{figur}
+\begin{table}[H]\hspace*{-0.8cm}
+    \begin{tabular}{ | c | c | c |}
+      \hline
+      \thead{Activity} & \thead{Participants} & \thead{Result of activity} \\
+      \hline
+      \makecell[l]{Gain an understanding of how\\ 'MinSundhedsplatform' is used \\and an overview of \\the administrative \\structure of Regions}   & Project group members     & \makecell[l]{Background knowledge\\ and user story}\\ \hline
+    \makecell[l]{Interview with diabetes\\ patient about the platform}     & Project group members     &    \makecell[l]{Background knowledge\\ and user story}\\  \hline
+    \makecell[l]{Create Baseline plan for the project}     & Project group members     & \makecell[l]{An overview of the\\ techniques and methods\\ to be used in this project}                 \\ \hline
+    \makecell[l]{Document Analysis}     & Project group members     & \makecell[l]{An understanding of\\ the structure behind}                 \\ \hline
+   
+    \makecell[l]{Prototype of Database}  & Project group members  &\makecell[l]{ } \\ \hline
+    \makecell[l]{Final preliminary study}  & Project group members  &\makecell[l]{ } \\ \hline
+    
+    \end{tabular}
+\end{table}
+\caption{Overview of plan}
+\label{Fig:plan}
+\end{figur}
+\section{SWOT and IT Strategy}
+Our IT strategy is made with the current framework in mind, as we do not consider it prudent to redesign it from scratch, but instead we are working on a platform that has been deployed and has been incorporated into the daily work routine by health professionals and the Regions. If we were to redesign it, we would also have to deal with the ramifications of having a new system that would have to be implemented once again. By aligning ourselves with the current framework we will avoid pit falls that arise with implementing a new system from scratch.\\
+Thus we limited ourselves to creating an extension that would be easy to use and would not break the current workflow or how the users of the platform already interacts with it.
+\subsection{Strategy}
+The goal is the implementation of the desired extension, which would facilitate easy access to the patient's information in a way that makes it intuitive for both new users and users that have been using it since the launch in 2016. Thus we have placed our focus on sorting and filtering data that the patient has access to.\\\\
+By way of analysing the structure of the existing model we will follow the guidelines laid out by the creators of the platform, and not create any extra workload upon the platform and only extend upon it.
+%cost free to maintain?
+\subsection{SWOT}
+In figure \ref{fig:swot} in the appendix we see a SWOT model containing the strengths, weaknesses, opportunities and threats of \textit{MinSundhedsplatform}.\\
+
+\textbf{Strength (Internal)}\\
+\textit{MinSundhedsplatform} has a huge advantage of having direct access to the patients information and test results as they are the ones performing them and having them analysed at their laboratory. In addition to this, they have monopoly over the markets as no one has any similar features, however, something that might be seen as a annoyance is for instance \textit{Sundhed.dk} as they collect health records as well. \\\\
+As seen in the distributed files provided by our course and region, more specifically, the 'Informationsmodel for minSP' we can see that they are also fully aware of how the information is connected and how all that they are involved with flows. For instance, contacts and organizational units, etc. \\
+
+\textbf{Weakness (Internal)}\\
+Opposite, \textit{MinSundhedsplatform} has a lot of weaknesses too, for instance we have found out (based on a single user) that it might be desirable to be able to redesign the layout and composition in graphic design so that one see only what is deemed relevant for one self.\\ 
+
+Furthermore, we found that by accessing the platform on a smartphone and a computer - through the web page - can have two very different experiences. One where the internet version is not very user friendly and on the app which is very simple and only with a few minor flaws which we have covered earlier and will analyse in more detail in later process.\\
+
+Another big weakness could be that the health professionals, etc. do not take into account is that not everyone understands the medical and technical language.\\
+
+\textbf{Opportunities (External)}\\
+An overall opportunity for \textit{minSundhedsplatform} is the evolution of technology. Either if new technology unknown to mankind, or simply technology such as virtual reality entered the consumer marked, it could create a whole new range of opportunities and options for both the Regions, health professionals and patients. For instance to make communication even better instead of meeting a health professionals for a small check up, it would be able to happen over online video calls, etc.\\
+
+\textbf{Threats (External)}\\
+The greatest threat that \textit{minSundhedsplatform} could be facing is the possibility of rising competitors. This could be organizations such as 'Sundhed.dk', 'Fælles Medicinkort' or the local municipality which already has a presence on the market.
+If an established organization such as Google entered the market, \textit{minSundhedsplatform} might be threatened on their monopoly.\\
+
+Overall, \textit{minSundhedsplatform} has a lot of advantages compared to possible substitutions such as 'Sundhed.dk'. If an established organization such as Google entered the market, they might be more threatened. However, if they follow the evolution of technology they might be able to keep up.\\ In relation to our diabetic patient \textit{minSundhedsplatform} also have a lot of small annoyance making it less user friendly. This could be the appearance of irrelevant functionality on the app which is merely an example of what needs to be changed.
+
+%In relation to our diabetic patient that we interviewed concerning \textit{minSundhedsplatform}, we observed a lot of small flaws making it less user friendly. An example is the appearance of irrelevant functionality on the app, which is something to be changed that could be altered.
+
+\section{Conclusion}
+The project has been started and the next few months has been planned using a Baseline diagram, this will be used to work out a prototype based upon our work and analysis. We have conducted an interview with a patient diagnosed with type 2 diabetes which gave us an insight into how one could utilize the platform and what could be looked into with in regards to improvements.\\
+
+We have explored strengths and weaknesses by performing a SWOT analysis, that have helped us prepare for what might occur, but also serves as a relatively detailed section about the potential problems of the platform - from a user's perspective - and how they might impact our project in the near future. 
+
+\newpage
+\section{Appendix}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.60]{pics/E_R_MinSundhedsplatform.png}
+    \caption{E/R diagram (thick frames around entities and relation means that they are weak.)}
+    \label{fig:er}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{pics/SWOT.png}
+    \caption{SWOT model for Analysis}
+    \label{fig:swot}
+\end{figure}
+
+\section{References}
+Bødker, K., Kensing, F., and Simonsen, J. 2004 \textit{Participatory IT Design}.
+
+
+\end{document}

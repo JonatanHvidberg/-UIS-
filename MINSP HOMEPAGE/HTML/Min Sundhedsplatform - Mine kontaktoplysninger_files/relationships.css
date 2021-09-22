@@ -1,0 +1,220 @@
+﻿/* Copyright 2018-2019 Epic Systems Corporation */
+div.title.relationship-content {
+  margin-top: 22px; }
+
+.card.relationship-content {
+  min-height: 220px; }
+  .card.relationship-content .address .cardline {
+    display: inline-block;
+    vertical-align: top; }
+
+.relationship-content p.subtext {
+  display: none;
+  line-height: 1.25rem;
+  margin: 0.25rem 0.5%;
+  box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  position: absolute;
+  font-size: 11pt;
+  text-align: left;
+  padding: 1rem;
+  bottom: 2.8rem;
+  left: 7.6rem;
+  z-index: 2;
+  border-width: 1px;
+  border-style: solid;
+  min-width: 19rem; }
+
+.mobile .relationship-content .buttonList p.subtext {
+  left: unset;
+  right: 0rem;
+  bottom: 4.5rem; }
+
+.explanable.disabled:hover + .subtext, .explanable.disabled:focus + .subtext {
+  display: inline-block; }
+
+.relationship-content .ghostInput {
+  padding: 0 0.25rem 0.5rem 0.25rem; }
+  .relationship-content .ghostInput input, .relationship-content .ghostInput select, .relationship-content .ghostInput textarea {
+    width: 100%; }
+.mobile .relationship-content .formsection .ghostInput:not(.ghosted) label {
+  padding-top: 0; }
+.relationship-content .header.name.icon + .cardline.halfwidth {
+  width: 50%;
+  line-height: 1rem; }
+.relationship-content .formsection {
+  margin: 0.25rem 0; }
+  .relationship-content .formsection .ghostInput label {
+    overflow: visible;
+    line-height: 2.5rem;
+    padding-top: 0;
+    white-space: normal; }
+  .relationship-content .formsection .ghostInput:not(.ghosted) {
+    line-height: 2.5rem; }
+.relationship-content .formsection .buttonList .button, .relationship-content .button:focus {
+  opacity: 1; }
+.relationship-content .buttonList .cancelButton {
+  display: inline-block;
+  margin-top: 0; }
+.relationship-content .loadingIndicator {
+  position: absolute;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+  margin: 0 0 -0.5rem 0; }
+.relationship-content .overflowHiddenWithEllipses {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 0.5rem; }
+.relationship-content .noValue {
+  font-style: italic; }
+.relationship-content .name.header {
+  height: 2.5rem; }
+  .relationship-content .name.header .primaryContactLabel {
+    padding: 0.125rem 0.5rem;
+    color: #ffffff;
+    background-color: #767676;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    float: right; }
+.relationship-content .primary-contact-checkbox {
+  padding: 0 0.25rem 0.5rem 0.25rem; }
+  .relationship-content .primary-contact-checkbox p.button {
+    width: 100%; }
+  .relationship-content .primary-contact-checkbox p label {
+    text-transform: none;
+    font-size: 1.05rem;
+    height: 2.5rem; }
+.relationship-content .edit-primary-label p {
+  text-align: right;
+  font-size: 0.9rem; }
+
+div.privatecontactmessage {
+  text-align: center; }
+  div.privatecontactmessage::before {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    margin: 0 auto 0.8rem;
+    height: 4rem;
+    width: 4rem;
+    content: "";
+    position: relative;
+    background-image: url("../images/Relationships/private_contact.png"); }
+
+.relationship-content .ghostInput.homePhone, .relationship-content .ghostInput.mobilePhone, .relationship-content .ghostInput.workPhone {
+  width: 50%; }
+.relationship-content .homePhone input::-ms-clear, .relationship-content .mobilePhone input::-ms-clear, .relationship-content .workPhone input::-ms-clear {
+  display: none; }
+.relationship-content .homePhone input, .relationship-content .mobilePhone input, .relationship-content .workPhone input {
+  padding-right: 1.5rem; }
+.relationship-content .formsection .ghostInput label.preferredDeviceSelector {
+  padding-top: 0;
+  margin: -2.5rem 0 0 0;
+  line-height: 2.5rem;
+  height: 2.5rem;
+  width: auto;
+  float: right;
+  cursor: pointer;
+  position: relative; }
+  .mobile .relationship-content .formsection .ghostInput label.preferredDeviceSelector {
+    margin-top: -1.8rem;
+    line-height: 1.8rem;
+    height: 1.8rem; }
+.relationship-content .preferredDeviceSelector .preferredDeviceSelected, .relationship-content .preferredDeviceSelector .preferredDeviceUnselected {
+  display: none;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem; }
+.relationship-content .preferredDeviceSelector.selected .preferredDeviceSelected, .relationship-content .preferredDeviceSelector:hover .preferredDeviceUnselected, .relationship-content input:hover + .preferredDeviceSelector .preferredDeviceUnselected, .relationship-content input:focus + .preferredDeviceSelector .preferredDeviceUnselected, .relationship-content .preferredDeviceSelector input:focus + .preferredDeviceSelected + .preferredDeviceUnselected, .mobile .relationship-content .preferredDeviceSelector .preferredDeviceUnselected {
+  display: inline; }
+.relationship-content .preferredDeviceSelector.selected input:focus + .preferredDeviceSelected, .relationship-content .preferredDeviceSelector input:focus + .preferredDeviceSelected + .preferredDeviceUnselected {
+  outline: 1px dotted #000000; }
+.relationship-content .preferredDeviceSelector.selected:hover .preferredDeviceUnselected, .relationship-content input:hover + .preferredDeviceSelector.selected .preferredDeviceUnselected, .relationship-content input:focus + .preferredDeviceSelector.selected .preferredDeviceUnselected, .relationship-content .preferredDeviceSelector.selected input:focus + .preferredDeviceSelected + .preferredDeviceUnselected, .mobile .relationship-content .preferredDeviceSelector.selected .preferredDeviceUnselected {
+  display: none; }
+.relationship-content .iconLabel {
+  vertical-align: middle;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0.25rem; }
+.relationship-content .ghostInput.email {
+  width: 50%; }
+
+.mobile .card.relationship-content .cardline, .mobile .relationship-content .header.name.icon + .cardline.halfwidth {
+  display: block;
+  width: 100%;
+  margin: 0; }
+
+.mobile .card.relationship-content .cardline.rightHalf {
+  margin-top: 1rem; }
+
+.card .cardline {
+  line-height: 1.1rem; }
+
+.mobile #main .title.relationship-content {
+  display: inherit; }
+
+.mobile .relationship-content.card .buttonList.right {
+  width: 100%; }
+  .mobile .relationship-content.card .buttonList.right .button {
+    width: 49%;
+    margin-right: 1%; }
+    .mobile .relationship-content.card .buttonList.right .button:only-child {
+      width: 100%; }
+    .mobile .relationship-content.card .buttonList.right .button.cancelworkflow {
+      background-color: #ffffff;
+      border: 1px solid #0098BA;
+      color: #0098BA; }
+
+.saveFailSpacer, .vrkSpacer {
+  position: relative;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  margin-left: -0.5rem;
+  padding: 0.25rem 0rem 0.25rem 2rem;
+  opacity: 0; }
+
+.helptip {
+  /*
+		1. This block should be removed eventually and use vrkBanner instead.
+		2. vrkBanner should be renamed properly then.
+		3. Both saveFail banner and addFail banner are now using a spacer div 
+		to occupy the height and then using position:absolute to display the
+		banner on page, which cause screen reader (voiceover and talkback)
+		read twice. The spacer div should be removed after switch to vrkBanner.
+		4. It won't be fixed along with DLG 603967 because it's a change order
+		DLG.
+	*/ }
+  .helptip.saveFail, .helptip.addFail {
+    position: absolute;
+    top: 0;
+    font-size: 0.8rem;
+    margin-left: -0.5rem;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0.25rem 1rem 0.25rem 2rem;
+    background-size: 1rem 1rem;
+    min-height: auto;
+    min-height: initial; }
+  .helptip.vrkBanner {
+    position: relative;
+    top: -0.5rem;
+    left: -0.5rem;
+    max-width: none;
+    width: calc(100% + 1rem);
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0.25rem 1rem 0.25rem 2rem;
+    background-size: 1rem 1rem;
+    min-height: auto;
+    min-height: initial; }
+
+.closeBG {
+  background: url("../images/close.svg") no-repeat scroll left 0.7rem center #ffffd0; }
+
+.checkBG {
+  background: url("../images/requirement_met.svg") no-repeat scroll left 0.7rem center #ffffd0; }
+
+.infoBG {
+  background: url("../images/info.png") no-repeat scroll left 0.7rem center #ffffd0; }

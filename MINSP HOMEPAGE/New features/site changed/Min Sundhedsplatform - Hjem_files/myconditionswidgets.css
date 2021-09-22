@@ -1,0 +1,1052 @@
+﻿/* Copyright 2018-2019 Epic Systems Corporation */
+/* #region Plan of Care Component widget */
+.component.pocdefault ul li.listelement, .component.pocdefault ul li.nodatalistelement, .component.pocdefault .accesserror, .component.pocdefault .pretext {
+  position: relative;
+  margin: 0;
+  padding: 0.7rem; }
+
+.component.pocdefault ul li.listelement:hover {
+  cursor: pointer; }
+
+.pocdefault.component .printdata {
+  display: none; }
+
+.component.pocdefault .accesserror {
+  font-weight: bold; }
+
+.component.pocdefault *, .component.pocdefaultpopup * {
+  word-wrap: break-word; }
+
+/* #endregion Plan of Care Component widgets */
+/* #region Medications Widget */
+.component .medicationlistelement .rightsection .refillBtn img {
+  opacity: 0.7;
+  width: 1.5rem; }
+  .component .medicationlistelement .rightsection .refillBtn img:hover {
+    opacity: 1; }
+.component .medicationlistelement a {
+  display: block; }
+.component .medicationlistelement .rightsection {
+  width: 15%;
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: right;
+  max-height: 40px; }
+.component .medicationlistelement .leftsection {
+  width: 85%;
+  display: inline-block;
+  vertical-align: middle; }
+
+.component.medicationslist > .titlebar ul.buttons {
+  left: 10px;
+  float: none !important; }
+
+.component .medicationlistelement .refilldisabledstatus {
+  margin-top: 5px;
+  display: block; }
+.component .medicationlistelement .rightsection .pendwarning img:hover {
+  cursor: default; }
+.component .medicationlistelement .commonname {
+  display: block; }
+
+.component.medicationslist .pickupbanner img.expandicon {
+  width: 9px;
+  vertical-align: middle;
+  margin-left: 3px; }
+.component.medicationslist .pickupbanner span, .component.medicationslist .admittedbanner, .component.medicationslist .pendingupdates {
+  padding: 0 0.7rem;
+  display: block;
+  font-size: 0.9rem;
+  margin: 0.5rem 0; }
+.component.medicationslist .titlebar ul.buttons li.filteredwarningicon a.selected {
+  background: none; }
+
+.medicationspopup .medcard {
+  top: 0;
+  transition: 0.5s ease 0.5s; }
+  .medicationspopup .medcard.selected {
+    top: -6px; }
+
+.medicationslist.component .filteredwarningtooltip {
+  width: 94%;
+  overflow: auto;
+  left: 3%;
+  position: absolute;
+  padding: 10px;
+  border-radius: 1px; }
+.medicationslist.component .filteredwarningicon {
+  margin-top: 5px; }
+
+.medicationspopup .card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem; }
+
+.medicationlistelement:after {
+  left: 0.7rem; }
+
+/* #endregion Medications widget */
+/* #region Goals Widget Start */
+.goalssmall.pocdefault.component .stats {
+  width: 27%;
+  font-size: 1.6em; }
+.goalssmall.pocdefault.component .goalrightsec {
+  margin-left: 5%;
+  width: 68%; }
+
+.goalslarge.pocdefaultpopup.Popup > div.content {
+  width: 100%; }
+
+.goalslarge.pocdefaultpopup .component .stats {
+  width: 37%;
+  font-size: 1.25em; }
+.goalslarge.pocdefaultpopup .component .goalrightsec {
+  margin-left: 5%;
+  width: 58%;
+  font-size: 0.9em; }
+
+.goalrightsec, .stats {
+  display: inline-block;
+  font-weight: normal;
+  vertical-align: middle;
+  line-height: 1.2em; }
+
+.stats {
+  text-align: right; }
+  .stats img {
+    font-size: 0.8em; }
+
+.goalslist .currentvalue {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.component.pocdefault.goalssmall ul li.goalslistelement.unclickable, .component.pocdefault.goalssmall ul li.goalslistelement.unclickable:hover, .component.pocdefault.goalsleft ul li.goalslistelement.unclickable, .component.pocdefault.goalsleft ul li.goalslistelement.unclickable:hover {
+  cursor: default;
+  background-color: transparent; }
+
+.component.pocdefault ul li.listelement.goalslistelement {
+  padding-top: 12px; }
+  .component.pocdefault ul li.listelement.goalslistelement:after {
+    width: 62%;
+    left: 32%; }
+
+ul li.listelement.goalslistelement a.selectlianchor {
+  display: block;
+  padding-top: 2px; }
+
+.goalssmall .goaldatarow, .goalsleft .goaldatarow {
+  font-size: 0.9em; }
+
+.goalslarge.component.Popup > div.content {
+  padding: 0;
+  min-height: 70vh; }
+
+.goalsleft > .content {
+  min-height: 70vh; }
+
+.goalsright {
+  min-width: 600px;
+  padding: 0.6rem 1rem;
+  font-size: 1.2em; }
+
+.goalsvb6.component, .goalsvb6.component > .content, .goalsdetails.component {
+  display: block;
+  max-width: 100%;
+  height: auto !important; }
+
+.goalsvb6.component {
+  padding-top: 20px;
+  margin: 0; }
+
+.goalsdetails.component {
+  font-size: 0.9em; }
+
+.goalsleft ul.goalslist {
+  padding: 0;
+  margin: 0; }
+
+.goalsleft .goalslistelement {
+  transition: background 0.2s ease;
+  cursor: pointer;
+  margin: 0.6rem 0.4rem;
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.4);
+  padding: 0.6rem 0.4rem;
+  min-height: 4rem;
+  position: relative; }
+
+.goalsvb6 .goaltitle {
+  width: 95%;
+  font-size: 1.4em; }
+.goalsvb6 .goalrecentvalue {
+  margin: 0.5rem 0; }
+.goalsvb6 .goalbuttonlist > ul.buttons {
+  margin: 3px 6px;
+  text-align: right;
+  display: block; }
+.goalsvb6 .buttons li {
+  display: inline;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em; }
+.goalsvb6 .buttons a.button {
+  background: none;
+  display: inline;
+  padding: 1px 18px;
+  box-shadow: none;
+  font-weight: normal;
+  color: inherit;
+  margin: 0; }
+
+.goalsvb6 .section .chart table tr.header th, .goalsdetails .content table th {
+  text-align: center; }
+
+.goalsvb6 .section .content div.tooltipDiv {
+  font-size: 0.87em; }
+.goalsvb6 div.tooltipDiv {
+  line-height: 1.2em; }
+.goalsvb6 .buttons a.button:hover, .goalsvb6 .buttons a.button:focus {
+  background-color: transparent; }
+
+.goalsdetails.section .chart table tr td.scroll, .goalsvb6 .section .chart table tr td.scroll {
+  min-width: 73px;
+  text-align: center;
+  width: 15%; }
+
+.goalsdetails.section .chart table tr td.scroll.noncompliant {
+  background-image: url("../images/noncompliant.png");
+  background-position: 50% 9%;
+  background-repeat: no-repeat;
+  background-size: 32px auto;
+  font-size: 0.7em;
+  padding-top: 31px; }
+.goalsdetails.section .chart table tr td.scroll.compliant {
+  background-image: url("../images/compliant.png");
+  background-position: 50% 9%;
+  background-repeat: no-repeat;
+  background-size: 32px auto;
+  font-size: 0.7em;
+  padding-top: 31px; }
+  .goalsdetails.section .chart table tr td.scroll.compliant.buffer {
+    background-image: none; }
+
+.goalsvb6 .section .tableWrapper, .goalsdetails.section .tableWrapper {
+  padding-bottom: 0; }
+
+.goalsvb6 .linkdiv, .goalsvb6 .nodata, .goalsvb6 > .content > .title, .goalsvb6 > .content > .noprint.innernavparent, .goalsvb6 > .content > .section.mycondsec > .title {
+  display: none; }
+
+.goalsvb6 div#goallist, .goalsdetails div#goallist {
+  box-shadow: none; }
+  .goalsvb6 div#goallist > div, .goalsdetails div#goallist > div {
+    border-bottom: none; }
+
+.goalsvb6 .section .tallchart table tr.header th, .goalsvb6 .section .chart table tr.header th {
+  line-height: 0.9em;
+  font-size: 0.9em; }
+
+.goalsdetails div#goallist > div {
+  line-height: 0.896em; }
+
+.gaolsvb6 div.content > div#goallist div.chartgraph .chart table {
+  font-size: 1em; }
+
+.goalsvb6 .section .chart, .goalsvb6 .section .tallchart {
+  margin: 0; }
+
+.goalsvb6 .section, .goalsvb6 .section .content, .goalsvb6 .section .chartgraph {
+  margin: 0; }
+
+.goalsvb6 .section .cgContainer div.cgImgContainer, .goalsvb6 .section canvas.graphCanvas {
+  border: none; }
+
+.goalsdetails.section > .content > div#goallist .chart table, .goalsvb6 .section > .content > div#goallist .chart table {
+  width: 100%; }
+
+.goalsdetails.section .chart table tr td.name.fixed, .goalslarge .section .chart table tr th.name.fixed, .goalsvb6 .section .chart table tr td.name.fixed {
+  vertical-align: middle;
+  visibility: visible;
+  opacity: 1; }
+
+.goalsdetails .noteslabel {
+  font-size: 1.1em;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  padding-top: 20px; }
+  .goalsdetails .noteslabel:before {
+    border-top-width: 1px;
+    border-top-style: solid;
+    content: "";
+    width: 98%;
+    display: block;
+    margin: -1em auto 1.8em; }
+
+.section div.tableWrapper {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.goalsdetails .notesbox {
+  height: auto;
+  margin-right: 4px;
+  margin-bottom: 15px;
+  padding: 8px 4px;
+  width: auto; }
+
+.goalsnarrow {
+  text-align: left; }
+  .goalsnarrow .component.pocdefault {
+    box-shadow: none;
+    border: 0; }
+
+/* #endregion Goals Widget End */
+/* #region Care Team Widget Small Start */
+.fullscreen.careteam.pocdefault.component {
+  display: block; }
+
+.fullscreen ul.careteam li > a {
+  padding: 0.2rem 0.4rem;
+  position: relative; }
+
+.fullscreen ul.careteam li.selected:before, .goalslarge li.goalslistelement.selected:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.25rem;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+.careteam ul li a.anchorListElement {
+  display: block; }
+
+.component.pocdefault ul.careteam li {
+  padding: 0.7rem 0; }
+
+.fullscreen ul.careteam li.careteam {
+  padding: 0.4rem;
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.4); }
+
+ul.careteam li.careteam .col1 .my1chartlogosmall {
+  width: 18px;
+  height: 18px;
+  background: url("../images/my1chartlogo.png") no-repeat;
+  background-size: contain;
+  text-align: center;
+  display: inline-block; }
+ul.careteam li.careteam .col1, ul.careteam li.careteam .col2 {
+  display: inline-block;
+  position: relative;
+  vertical-align: top; }
+ul.careteam li.careteam a .col1 {
+  min-height: 2.5rem; }
+ul.careteam li.careteam .col1 {
+  width: 2.5rem;
+  margin: 0 0.2rem 0 0;
+  text-align: center; }
+ul.careteam li.careteam .col2 {
+  width: calc(100% - 2.8rem);
+  max-width: 240px; }
+ul.careteam li.careteam a .col2 {
+  min-height: 2.5rem;
+  padding-left: 3px;
+  border: 0; }
+
+.fullscreen.careteam div.col2 .other {
+  overflow: hidden; }
+
+ul.careteam li.careteam .col2 .other {
+  display: block;
+  text-indent: -0.75em;
+  padding-left: 0.75em; }
+
+.fullscreen ul.careteam li.careteam .icons {
+  padding: 0.2rem 0.4rem 0 0.4rem;
+  margin: 0; }
+
+ul.careteam li.careteam .icons {
+  margin-top: 0.5rem;
+  line-height: 0; }
+
+ul.careteam .widgetIcon {
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-size: 18px !important; }
+  ul.careteam .widgetIcon:hover {
+    cursor: pointer; }
+  ul.careteam .widgetIcon.inactive {
+    display: none;
+    cursor: default; }
+  ul.careteam .widgetIcon.message {
+    background: url("../images/envelope.svg") no-repeat; }
+  ul.careteam .widgetIcon.schedule {
+    background: url("../images/calendar.svg") no-repeat; }
+
+.component.pocdefault ul.careteam li.listelement:after {
+  left: 2.7rem; }
+
+/* #endregion Care Team Widget Small End */
+/* #region Care Team Widget Full Screen Start */
+.Popup.careteam.component > div.content {
+  padding: 0; }
+
+.careteam.component.Popup.large {
+  min-width: 1100px; }
+
+.fullscreen.careteam div.column1 ul.careteam, .fullscreen.careteam div.column2 {
+  height: calc(100vh - 12.23rem); }
+
+.fullscreen.careteam div.column2 .profile iframe {
+  min-height: calc(100vh - 12.23rem - 5rem); }
+
+.datatile .md_registries_index .fullscreen.careteam div.column1 ul.careteam, .datatile .md_registries_index .fullscreen.careteam div.column2 {
+  height: auto; }
+.datatile .md_registries_index .fullscreen.careteam div.column2 .profile iframe {
+  min-height: calc(100vh - 10rem); }
+
+.datatile .Popup.careteam {
+  min-height: 600px; }
+
+.fullscreen.careteam div.column1 ul.careteam {
+  margin: 1px 0 0;
+  font-size: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%; }
+.fullscreen ul.careteam {
+  font-size: 1em;
+  margin-right: 3px;
+  margin-top: 10px;
+  text-align: left; }
+.fullscreen .careteam .listelement {
+  cursor: pointer;
+  padding: 13px 8px 0; }
+.fullscreen ul.careteam li.careteam:hover {
+  cursor: pointer; }
+.fullscreen ul.careteam .icons .col2 {
+  display: none; }
+
+.component.pocdefaultpopup.careteam ul li.listelement {
+  border: 0;
+  margin: 0.6rem 0.4rem;
+  min-height: 5rem; }
+
+.component.pocdefaultpopup.careteam ul.careteam li.listelement.careteam.selected, .goalslarge .goalsleft .goalslist.list .goalslistelement.selected {
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.4); }
+
+.component.pocdefaultpopup.careteam ul li.listelement.careteam ul li.listelement:after {
+  height: 0; }
+
+ul.careteam li.careteam .col1:empty {
+  height: 1px; }
+  .fullscreen ul.careteam li.careteam .col1:empty {
+    display: none; }
+
+.fullscreen.careteam div.column2 {
+  width: 100%;
+  padding: 0.6rem 1.2rem 0;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top; }
+  .fullscreen.careteam div.column2 .grid:after {
+    content: "";
+    display: table; }
+.fullscreen.careteam .providerTitle {
+  margin-bottom: 10px;
+  font-size: 2em;
+  line-height: initial; }
+.fullscreen.careteam .profileContent {
+  display: flex;
+  flex-direction: row-reverse; }
+.fullscreen.careteam div.column2 div.profile {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 1rem 0.5rem 0; }
+.fullscreen.careteam div.column2 .profile iframe {
+  width: 100%;
+  height: 100%;
+  border: medium none;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top; }
+.fullscreen.careteam .column2 .aboutme {
+  display: block;
+  line-height: 1.3rem; }
+.fullscreen.careteam .column2 .aboutmeHeading {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block; }
+.fullscreen.careteam .column2 .aboutme:nth-child(odd) {
+  font-weight: bold;
+  margin: 0.5rem 0 0.2rem; }
+.fullscreen.careteam div.column2 div.profilephoto {
+  max-width: calc(25% - 1rem);
+  overflow: hidden;
+  display: inline-block; }
+.fullscreen.careteam div.column2 .profilephoto img {
+  margin-bottom: 10px;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  display: block; }
+
+@media only screen and (max-width: 1300px) {
+  body:not(.md_registries_index) .component.careteam .pocexpand.viewmore {
+    display: none; }
+  body:not(.md_registries_index) .menudetailstable.leftmenu .rightcolumn {
+    overflow: visible; }
+  body:not(.md_registries_index) .fullscreen.careteam div.column2 .profile iframe {
+    min-height: calc(100vh - 7.5rem); } }
+
+@media only screen and (max-width: 768px) {
+  body:not(.md_registries_index) .fullscreen.careteam .profileContent {
+    flex-direction: row; }
+  body:not(.md_registries_index) .fullscreen.careteam div.column2 div.profilephoto {
+    max-width: none; }
+    body:not(.md_registries_index) .fullscreen.careteam div.column2 div.profilephoto img {
+      max-height: 30vh;
+      width: auto;
+      margin: 0 auto; } }
+
+.patientActions {
+  margin-top: 0.3rem; }
+  .patientActions a.button::before {
+    content: "";
+    display: inline-block;
+    height: 24px;
+    margin-right: 12px;
+    margin-top: -2px;
+    vertical-align: middle;
+    width: 24px; }
+  .patientActions a.button.message::before {
+    background: url("../images/envelope_white.png") no-repeat scroll 0 0;
+    background-size: contain; }
+  .patientActions a.button.schedule::before {
+    background: url("../images/calendar_white.png") no-repeat scroll 0 0;
+    background-size: contain; }
+  .patientActions a.button {
+    padding: 0.5rem; }
+    .patientActions a.button.disabled, .patientActions a.button.disabled:hover {
+      display: none; }
+
+/* #endregion Care Team Widget Full Screen End */
+/* #region Care Team Widget Visit Type Popup Start */
+.visittype.component .pretext, .visittype.component .posttext {
+  padding-top: 7px;
+  padding-bottom: 7px; }
+.visittype.component {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 123px; }
+.visittype .providerimage {
+  position: absolute;
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+.visittype .rightsection {
+  display: inline-block;
+  text-align: left;
+  padding-left: 120px;
+  width: 100%; }
+.visittype .providername {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.6em;
+  margin: 5px 0; }
+
+.visittypecontainer {
+  padding: 5px; }
+  .visittypecontainer a.visitlink {
+    background-image: none;
+    border-radius: 0;
+    font-size: 1em;
+    margin: 7px 5px;
+    padding: 9px 18px;
+    display: inline-block;
+    text-decoration: none; }
+  .visittypecontainer .visitspan {
+    font-weight: bold;
+    text-align: center;
+    width: auto; }
+
+/* #endregion Care Team Widget Visit Type Popup End */
+/* #region ToDoEvents Container component styles */
+.ToDoEvents {
+  min-height: 300px;
+  max-height: 800px; }
+  .ToDoEvents > .content > .component {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .ToDoEvents .multiMonthCalendar.component {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top; }
+
+.HPcell.ToDoEvents .nodata {
+  background: transparent; }
+
+.ToDoEventsPopup.container .titlebar ul.buttons li a:hover, .ToDoEventsPopup.container .titlebar ul.buttons li a:focus {
+  text-decoration: none; }
+
+/* #endregion ToDoEvents Container component styles */
+/* #region Todo list view component styles */
+.ToDoEvents .ToDolist.component {
+  width: 62%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 4%;
+  padding: 0; }
+
+.component .ToDolist.pocdefault ul li.todolistelement, .component .ToDolist.pocdefault ul li.todolistelement.overdueslistelement {
+  padding: 0.7rem 0.7rem 0.7rem 1.3rem; }
+
+.component .ToDolist .todolistelement:after {
+  left: 1.3rem; }
+
+.component .ToDolist .name, .component .ToDolist .orderedby {
+  display: block; }
+
+.todolistelement .leftsection {
+  display: inline-block;
+  vertical-align: top; }
+
+.todolistelement .rightsection {
+  display: inline-block;
+  text-align: right;
+  vertical-align: top; }
+
+.component .ToDolist ul li.todolistelement .rightsection a.button {
+  margin: 0; }
+  .component .ToDolist ul li.todolistelement .rightsection a.button.schedtkt, .component .ToDolist ul li.todolistelement .rightsection a.button.viewinstrn {
+    margin-bottom: 0.5rem; }
+
+.component .todolistelement .echeckinstatus, .todotiles .echeckinstatus {
+  display: block;
+  margin-top: 3px; }
+
+.todotiles .lastdone a {
+  font-size: 1em; }
+
+.icon img.echeckin {
+  position: absolute;
+  right: 1%;
+  top: 4%;
+  text-align: right;
+  width: 1.7rem;
+  height: auto;
+  vertical-align: middle; }
+
+.pocdefault.component .todolistelement .providername {
+  display: inline; }
+
+.todolistelement.appointment span.arrivaltime {
+  display: block; }
+
+.pocdefault.component .todolistelement.order .orderedby {
+  margin: 3px 0; }
+
+.overdues {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem; }
+
+.overduelist li {
+  padding: 0.3rem 0; }
+
+/* #endregion Todo list view componenet styles */
+/* #region Todo Events popup container */
+.Popup .ToDoEventsPopup.container {
+  padding: 0 1rem; }
+
+.ToDoEventsPopup .cardlist.column_2 .card {
+  width: 47.5%;
+  margin: 1rem 1%; }
+
+.pocdefaultpopup .ToDoEventsPopup.container .titlebar {
+  padding: 5px 0;
+  margin-top: 10px; }
+  .pocdefaultpopup .ToDoEventsPopup.container .titlebar ul.buttons {
+    position: relative;
+    text-align: left;
+    display: block;
+    right: 0;
+    top: 0; }
+
+.ToDoEventsPopup.container .titlebar ul.buttons li a {
+  padding: 2px 10px;
+  font-size: 1.25em;
+  font-weight: normal; }
+
+/* #endregion Todo Events popup container */
+/* #region Todo popup list view */
+#todoevents .months {
+  margin-bottom: 15px; }
+  #todoevents .months h3 {
+    font-size: 1.35em;
+    font-weight: normal; }
+
+.ToDoEventsPopup.container .component {
+  margin-bottom: 0; }
+
+.todotiles.appointment .title a:hover, .todotiles .knowmore a:hover {
+  text-decoration: underline; }
+
+.todotiles {
+  transition: 0.5s ease 0s;
+  transition-property: top, box-shadow; }
+  .todotiles:after {
+    width: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    height: 100%; }
+  .todotiles.selected {
+    top: -8px; }
+  .todotiles.healthadvisory .titleholder .title {
+    width: 65%; }
+  .todotiles.healthadvisory .actionButton {
+    width: 35%; }
+  .todotiles.healthadvisory .requestlink:not(.button) {
+    margin-top: 0.5rem;
+    display: inline-block; }
+  .todotiles .actionButton {
+    width: 30%;
+    position: absolute;
+    right: 1%;
+    top: 0;
+    text-align: right; }
+    .todotiles .actionButton a.button {
+      padding: 0.25rem 0.25rem;
+      word-wrap: break-word; }
+  .todotiles .titleholder.noactionbutton .title {
+    width: 100%; }
+  .todotiles .titleholder.multipleOrderEvent {
+    padding-bottom: 1.5rem; }
+  .todotiles .titleholder .title {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 78%;
+    display: inline-block; }
+  .todotiles .titleholder .date {
+    width: 78%; }
+  .todotiles .date, .todotiles .location {
+    display: block; }
+  .todotiles > div {
+    padding: 0 10px;
+    width: auto; }
+    .todotiles > div.buttonList {
+      width: 100%; }
+  .todotiles.card > .buttonList > .button {
+    opacity: 1;
+    margin: 0px; }
+  .todotiles.card.healthadvisory > .buttonList > a.multi {
+    margin-right: 0.5rem; }
+  .todotiles .actionbuttons {
+    position: absolute;
+    right: 10px;
+    bottom: 10px; }
+  .todotiles .knowmore {
+    padding-left: 10px; }
+    .todotiles .knowmore img {
+      margin-right: 5px; }
+  .todotiles.healthadvisory .eventdetails {
+    margin: 0; }
+  .todotiles .eventdetails {
+    width: 100%;
+    vertical-align: top;
+    margin-top: 12px;
+    position: relative;
+    padding: 0 10px; }
+  .todotiles:not(.healthadvisory) .eventdetails {
+    min-height: 75px; }
+  .todotiles .eventleftsec {
+    width: 50px;
+    display: inline-block; }
+  .todotiles.appointment .eventdetails::after {
+    content: "";
+    width: 80%;
+    position: absolute;
+    left: 3%;
+    bottom: 0;
+    height: 1px; }
+  .todotiles.appointment .eventdetails.last::after {
+    background: none; }
+  .todotiles .eventrightsec {
+    width: 75%;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+    min-height: 75px; }
+  .todotiles .providername a {
+    text-decoration: underline; }
+  .todotiles .buttons li {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 5px; }
+  .todotiles .eventdetails span {
+    display: block; }
+  .todotiles .eventdetails .hmt-previously-done span, .todotiles .eventdetails .orderinstrn span {
+    display: inline; }
+
+.todoeventspopup .todoactionimage, .ToDolist .todoactionimage, .todotooltip .todoactionimage {
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+  display: inline-block; }
+
+.todotiles.appointment span.arrivalreason {
+  display: block; }
+.todotiles.appointment .addtocalicon {
+  background: url("../images/visits/addtocal.svg") no-repeat;
+  display: inline-block;
+  padding: 0 0.5rem 0 1.7rem;
+  background-size: 22px;
+  margin-top: 0.25rem;
+  width: auto; }
+.todotiles.appointment .drivingdirections a {
+  background: url("../images/visits/drivingdirections.svg") no-repeat;
+  display: inline-block;
+  padding: 0 0.5rem 0 1.6rem;
+  background-size: 1.2rem;
+  width: auto;
+  line-height: 1.4rem;
+  text-decoration: none; }
+
+.todotiles.order .eventdetails .leftsection, .todotiles.order .eventdetails .rightsection {
+  width: 48%;
+  display: inline-block;
+  margin: 0 1% 0 0;
+  vertical-align: top; }
+.todotiles.order .eventdetails .rightsection {
+  text-align: right;
+  margin: 0 0 0 1%; }
+.todotiles.order .ordercomments {
+  margin-bottom: 10px; }
+  .todotiles.order .ordercomments span {
+    display: block; }
+.todotiles.order .eventdetails {
+  min-height: 20px;
+  margin-bottom: 3rem; }
+.todotiles.order .orderdetails {
+  position: absolute;
+  bottom: 0;
+  min-height: 2.5rem;
+  width: 97%;
+  padding-bottom: 5px; }
+  .todotiles.order .orderdetails .leftsection, .todotiles.order .orderdetails .rightsection {
+    width: 49%;
+    display: block; }
+  .todotiles.order .orderdetails .leftsection {
+    margin-right: 1%; }
+  .todotiles.order .orderdetails .rightsection {
+    margin-left: 1%;
+    text-align: right; }
+  .todotiles.order .orderdetails span {
+    display: block;
+    margin-bottom: 4px; }
+    .todotiles.order .orderdetails span.orderval {
+      display: inline; }
+
+/* #endregion To Do popup list view */
+/* #region Todo popup calendar view */
+.todoweekcalendarcontent table.weekcalendar {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse; }
+  .todoweekcalendarcontent table.weekcalendar thead th:nth-child(1), .todoweekcalendarcontent table.weekcalendar tbody td:nth-child(1) {
+    width: 4rem; }
+.todoweekcalendarcontent #weekcalendar thead {
+  display: none; }
+.todoweekcalendarcontent #weekcalendarevents {
+  overflow-y: visible;
+  position: relative;
+  max-height: calc(100vh - 25rem); }
+.todoweekcalendarcontent #healthadvisories {
+  position: relative; }
+.todoweekcalendarcontent #weekcalendarheadings {
+  table-layout: fixed; }
+  .todoweekcalendarcontent #weekcalendarheadings td, .todoweekcalendarcontent #weekcalendarheadings .haevent {
+    overflow: hidden; }
+.todoweekcalendarcontent {
+  position: relative; }
+  .todoweekcalendarcontent #weekcalendar tr.halfhour td {
+    border-top-style: dotted; }
+  .todoweekcalendarcontent .weekcalendar th.timecolumn, .todoweekcalendarcontent #weekcalendar tr.fullhour td.timecolumn, .todoweekcalendarcontent .weekcalendar td.timecolumn {
+    border: 0;
+    background: none; }
+
+.todoweekcalendar #weekcalendarheadings td {
+  border-bottom-width: 3px;
+  padding-bottom: 8px; }
+
+.todoweekcalendarcontent #weekcalendar tr.fullhour td, .todoweekcalendarcontent .weekcalendar th {
+  border-width: 1px 1px 0; }
+.todoweekcalendarcontent .event, .todoweekcalendarcontent .haevent {
+  border-radius: 3px;
+  text-align: center;
+  margin-bottom: 2px;
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden; }
+.todoweekcalendarcontent .event.staticevent {
+  position: relative; }
+.todoweekcalendarcontent .event a:hover {
+  cursor: default;
+  text-decoration: none; }
+.todoweekcalendarcontent .event.notime .eventinner:before {
+  content: "";
+  width: 20%;
+  height: 25%;
+  position: absolute;
+  left: -15%;
+  z-index: -1;
+  border-radius: 2px; }
+.todoweekcalendarcontent .event.notime .eventinner {
+  width: 85%;
+  display: inline-block;
+  border-radius: 2px;
+  left: 8%;
+  position: relative;
+  height: inherit; }
+.todoweekcalendarcontent .event .eventinner a:focus {
+  border-width: 1px;
+  border-style: dotted; }
+.todoweekcalendarcontent .event a .clearlabel {
+  display: inline-block !important;
+  visibility: hidden; }
+.todoweekcalendarcontent .event:hover {
+  cursor: default; }
+.todoweekcalendarcontent .nextweekbuttons {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .todoweekcalendarcontent .nextweekbuttons ul li {
+    display: inline-block;
+    padding: 2px 0.6em; }
+    .todoweekcalendarcontent .nextweekbuttons ul li.corner-left {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px; }
+    .todoweekcalendarcontent .nextweekbuttons ul li.corner-right {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px; }
+    .todoweekcalendarcontent .nextweekbuttons ul li:hover {
+      cursor: pointer; }
+.todoweekcalendarcontent .calendartitle {
+  height: 2em;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 27px;
+  font-size: 1.6em; }
+.todoweekcalendarcontent .nextweekbuttons li a {
+  font-weight: bold;
+  text-decoration: none; }
+.todoweekcalendarcontent .nextweekbuttons li.previousweek a:after {
+  content: "<"; }
+.todoweekcalendarcontent .nextweekbuttons li.nextweek a:after {
+  content: ">"; }
+
+.weekcalendar td {
+  height: 1.5em;
+  border: 1px solid; }
+
+.weekcalendartooltip {
+  text-align: left;
+  width: 33%; }
+
+.weekcalendartooltip .todotiles {
+  width: 100%;
+  margin: 0; }
+
+.todotiles .providerimage, .todoweekcalendarcontent #weekcalendar tr.fullhour td, .todoweekcalendarcontent .weekcalendar th, .todoweekcalendarcontent .nextweekbuttons ul li, .tooltip, .todotooltip .arrow:after, .todotooltip, .weekcalendartooltip {
+  border-width: 1px;
+  border-style: solid; }
+
+.todoweekcalendarcontent table .event {
+  margin-bottom: 2px; }
+
+.datatile .todoweekcalendarcontent #weekcalendarevents {
+  max-height: none; }
+
+@media only screen and (max-width: 1300px) {
+  body:not(.md_registries_index) .todoeventspopup .todolistspopup #todoevents, body:not(.md_registries_index) .todoeventspopup .todoweekcalendar .todoweekcalendarcontent {
+    min-height: 0; }
+  body:not(.md_registries_index) .todoweekcalendarcontent #weekcalendarevents {
+    max-height: none; }
+  body:not(.md_registries_index) .weekcalendartooltip {
+    margin-left: 2rem;
+    max-width: calc(100vw - 6rem); } }
+
+@media only screen and (max-width: 768px) {
+  body:not(.md_registries_index) .todoweekcalendarcontent .weekcalendar th {
+    word-wrap: normal;
+    font-size: 0; }
+  body:not(.md_registries_index) .todoweekcalendarcontent .weekcalendar th:first-letter {
+    font-size: 1.25rem; }
+  body:not(.md_registries_index) .todoweekcalendarcontent .calendartitle {
+    height: auto; }
+  body:not(.md_registries_index) .todoweekcalendarcontent .nextweekbuttons {
+    text-align: center;
+    position: static;
+    margin: 0.5rem 0; } }
+
+/* #endregion Todo popup calendar view */
+/* #region Todo tooltip */
+.todotooltip .arrow:after {
+  content: "";
+  position: absolute;
+  left: 37px;
+  width: 15px;
+  height: 15px;
+  transform: rotate(225deg); }
+.todotooltip .arrow.top:after {
+  top: -9px;
+  border-width: 0 1px 1px 0; }
+.todotooltip .arrow.right:after {
+  right: 18px;
+  left: inherit; }
+.todotooltip .arrow.bottom:after {
+  bottom: -9px;
+  border-width: 1px 0 0 1px; }
+
+#todotooltip .todotiles {
+  width: 100%;
+  margin: 0;
+  background: none;
+  box-shadow: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }
+#todotooltip .popupbubble div.todotiles:last-child {
+  border-bottom: 0; }
+
+.todotooltip, .weekcalendartooltip {
+  width: 26rem;
+  padding: 0;
+  position: absolute;
+  border-radius: 3px; }
+
+.todotooltip .more {
+  padding: 8px 11px;
+  margin-top: -2px;
+  border-top-width: 1px;
+  border-top-style: solid; }
+.todotooltip .arrow {
+  display: inline; }
+
+/* #endregion Todo tooltip */

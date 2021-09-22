@@ -1,0 +1,43 @@
+﻿/* Copyright 2018-2019 Epic Systems Corporation */
+#hm-list-activity div.container-loading-icon {
+  text-align: center; }
+
+div.hmt-schedule {
+  margin-top: 2px; }
+  div.hmt-schedule img {
+    margin-right: 5px;
+    vertical-align: bottom;
+    width: 1.2rem;
+    height: 1.2rem; }
+
+div.hmt-item-card img.actionimage {
+  width: 1.2rem;
+  height: 1.2rem; }
+div.hmt-item-card div.hmt-learnmore img {
+  vertical-align: bottom;
+  margin-right: 5px; }
+div.hmt-item-card > div.hmt-learnmore {
+  margin-top: 5px; }
+div.hmt-item-card > div.hmt-previously-done > div {
+  color: #767676; }
+  div.hmt-item-card > div.hmt-previously-done > div > span {
+    margin-right: 3px; }
+div.hmt-item-card > div.hmt-status {
+  overflow: visible; }
+div.hmt-item-card div.hmt-status-not-due > span {
+  vertical-align: middle; }
+div.hmt-item-card div.additional-hmt-info {
+  display: inline-block; }
+div.hmt-item-card div.hmt-status a.popupinstructionsicon > img {
+  margin-left: 0px; }
+
+.markascomplete.section {
+  margin-left: 0.25rem; }
+  .markascomplete.section .content {
+    overflow: visible; }
+  .markascomplete.section .formbuttons {
+    margin-top: 1.5rem; }
+  .markascomplete.section .disabledinputspan {
+    font-size: 1.125rem; }
+  .markascomplete.section .content label, .markascomplete.section .content .label {
+    margin-top: 0.5rem; }

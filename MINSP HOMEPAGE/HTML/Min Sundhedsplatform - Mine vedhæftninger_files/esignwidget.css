@@ -1,0 +1,175 @@
+﻿/* Copyright 2016-2018 Epic Systems Corporation */
+#esignaturewidget .document:hover {
+  cursor: pointer;
+  background-color: #f2f2f2; }
+
+#esignaturewidget .ptext, .posttext {
+  margin-left: 0;
+  width: 100%;
+  margin: 5px 3px;
+  padding-bottom: 10px; }
+
+#documenttable .document .doctitle {
+  width: calc(100% - 48px);
+  font-size: 1.2em;
+  margin-bottom: 5px; }
+#documenttable .document .docinfo {
+  width: 100%;
+  margin-left: 0%;
+  height: 21px; }
+#documenttable .document .consentimg {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 48px; }
+#documenttable .document .unsigned {
+  color: #ffffff;
+  background-color: #cccccc;
+  text-align: center;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: inline; }
+#documenttable .document .deferred img {
+  width: 22px;
+  vertical-align: text-top;
+  margin-right: 3px; }
+#documenttable .document .signed {
+  color: #43a559; }
+  #documenttable .document .signed img {
+    width: 25px;
+    vertical-align: text-top;
+    margin-right: 1px; }
+#documenttable .document .sign-later {
+  margin: 5px; }
+  #documenttable .document .sign-later input:focus {
+    border: 3px solid #0098BA; }
+#documenttable .document .docButtons {
+  text-align: right; }
+  #documenttable .document .docButtons input.button {
+    display: inline; }
+
+.documentpopup {
+  text-align: left; }
+  .documentpopup .title a {
+    float: right;
+    margin-top: -10px;
+    width: 32px;
+    height: 32px;
+    display: inline-block; }
+    .documentpopup .title a:focus {
+      outline: solid 2px #000000; }
+  .documentpopup .button {
+    margin: 5px;
+    margin-left: 0px; }
+  .documentpopup div[data-message-display-for] {
+    margin-top: 8px;
+    height: 22px; }
+  .documentpopup td div {
+    padding: 2px; }
+    .documentpopup td div > ._ftSpan {
+      margin: 0; }
+
+.documentpopup div > span[dataname], ._esigOptionListOuter {
+  margin-left: 15px; }
+
+/* we need this level of specificity so we can override some other css (copied from old DeviceManager.css) */
+.documentpopup div > ._ftSpan[dataname] {
+  margin-left: 0px; }
+
+.fullPopup {
+  max-width: 100% !important;
+  left: 15px !important; }
+
+#loadingScreen {
+  padding-bottom: 15px; }
+  #loadingScreen img {
+    display: block;
+    margin: auto; }
+
+#documentcontent {
+  margin: 10px 0px; }
+  #documentcontent div.xgRow {
+    width: auto; }
+
+#documentcontent input[type='checkbox'], input[type='radio'] {
+  display: inline; }
+
+._headerContent, ._mainContent, ._footerContent {
+  padding: inherit !important;
+  width: inherit !important;
+  min-height: inherit !important; }
+  ._headerContent div, ._mainContent div, ._footerContent div {
+    width: auto; }
+
+#popupFooter {
+  border-width: 1px 0 0;
+  border-style: solid;
+  border-color: #767676;
+  padding-top: 15px; }
+  #popupFooter input {
+    display: inline-block; }
+  #popupFooter input[type='password'] {
+    min-width: 100px; }
+  #popupFooter label {
+    margin: -1em 0 0 0;
+    display: inline;
+    top: 0em;
+    padding: 0 1% 0 0; }
+
+#passwordSigDiv {
+  margin: 5px; }
+  #passwordSigDiv .passwordSig {
+    margin-bottom: 10px; }
+
+#timestamp {
+  color: #43a559;
+  margin-bottom: 5px; }
+
+input.button.sign-later, input.button.sign-later:focus, input.button.sign-later:hover {
+  background: transparent;
+  color: #0098BA;
+  border: 1px solid #0098BA;
+  padding-top: 2.5px; }
+
+.dataFieldClickArea {
+  padding: 0 10px 10px 0; }
+  .dataFieldClickArea input[type='checkbox'] {
+    transform: scale(1.5); }
+  .dataFieldClickArea input[type='radio'] {
+    transform: scale(1.5);
+    margin: 10px 0px 0px 10px;
+    border-radius: 10px; }
+
+span[dataalignment='0'] ._esigOptionListOuter.required {
+  margin-left: 4px; }
+
+.dataFieldClickArea input[type='checkbox'] {
+  margin: 10px 0px 0px 10px; }
+.dataFieldClickArea input[type='radio'] {
+  margin: 10px 0px 0px 10px; }
+.dataFieldClickArea > ._esigCheckboxSpan ~ span {
+  margin-left: 5px;
+  font-size: 120%;
+  color: #565656; }
+.dataFieldClickArea span {
+  white-space: normal; }
+.dataFieldClickArea ._dataFieldHorizontal {
+  padding-left: 0px;
+  padding-right: 16px; }
+
+div._dataFieldVertical {
+  width: 100%; }
+
+._dataFieldHorizontal span, ._dataFieldVertical span {
+  margin-left: 10px;
+  font-size: 120%; }
+
+._ftSpan.required:before {
+  position: relative;
+  left: 12px; }
+
+#popupFooter textarea {
+  margin: 0 0 10px 0;
+  -webkit-text-security: disc;
+  line-height: 2; }

@@ -1,0 +1,243 @@
+﻿/* Copyright 2019 Epic Systems Corporation */
+.TestResultsList .SingleResult {
+  border-bottom: solid 1px;
+  border-color: #dbdbdb;
+  font-weight: bold;
+  margin: 0;
+  transition-duration: 1s;
+  transition-property: background, border, height, max-height, opacity, visibility; }
+.TestResultsList.testresultspoc .SingleResult {
+  transition: none; }
+.TestResultsList .SingleResult.Read {
+  font-weight: normal; }
+.TestResultsList .SingleResult li {
+  text-decoration: none;
+  position: relative; }
+.TestResultsList .SingleResult .SenderName {
+  max-width: calc(100% - 32px);
+  display: inline-block;
+  vertical-align: top; }
+.TestResultsList [class*='Wrapper'] > span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden; }
+
+.BeforeTestResultsList .ResultsSearchImage {
+  position: relative;
+  left: -22px;
+  bottom: -3px;
+  border: none;
+  padding: 0 0 0 0;
+  box-shadow: none;
+  height: 15px;
+  width: 15px;
+  cursor: pointer; }
+
+div.BeforeTestResultsList {
+  margin-top: 1rem;
+  overflow: hidden; }
+
+.BeforeTestResultsList .SearchSpan {
+  margin: 0 1em 0 0;
+  width: 30%;
+  position: relative; }
+.BeforeTestResultsList .SearchList {
+  height: 2rem;
+  width: 100%;
+  padding: 0 36px 0 10px;
+  font-size: 1rem;
+  margin: 0; }
+.BeforeTestResultsList .SearchImage {
+  position: relative;
+  margin-left: -30px;
+  top: 4px; }
+.BeforeTestResultsList .Filter {
+  border: 0;
+  margin: 0;
+  font-size: 1em;
+  cursor: pointer;
+  margin-left: 10px;
+  width: calc(100% - 10px); }
+.BeforeTestResultsList .FilterWrapper, .BeforeTestResultsList .ToggleWrapper {
+  display: inline-table;
+  padding-left: 1rem; }
+  .BeforeTestResultsList .FilterWrapper > *, .BeforeTestResultsList .ToggleWrapper > * {
+    display: table-cell;
+    height: 2rem; }
+.BeforeTestResultsList .ToggleInpatient {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: 0.65rem; }
+.BeforeTestResultsList .ToggleInpatientString {
+  cursor: pointer; }
+.BeforeTestResultsList label, .BeforeTestResultsList input {
+  border: medium none;
+  display: inline;
+  vertical-align: middle; }
+
+.TestResultsList .SingleResult.Header > [class] {
+  vertical-align: middle;
+  margin-top: 12px; }
+.TestResultsList .SingleResult .ListIcon.ResultTypeWrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 6px; }
+.TestResultsList .SingleResult .CommentIcon {
+  width: 25px;
+  height: 25px;
+  margin-left: 7px; }
+.TestResultsList .SingleResult .ListIcon.ResultTypeWrapper span.icon-container {
+  min-width: 32px;
+  display: inline-block;
+  position: relative; }
+.TestResultsList .SingleResult .ListIcon.ResultTypeWrapper span.unviewed-indicator {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.2rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: -0.25rem;
+  margin-bottom: -0.35rem;
+  border-radius: 50%;
+  font-size: 0px;
+  border: 2px solid #ffffff;
+  background-color: #41a0ff; }
+.TestResultsList .SingleResult .UpdatedLabel {
+  padding-right: 0.25rem; }
+.TestResultsList li:last-child::after {
+  height: 0; }
+
+.Clickable {
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem; }
+
+.externalorglabel {
+  vertical-align: middle;
+  display: inline; }
+
+.afterList {
+  text-align: center;
+  margin-top: 20px; }
+  .afterList a {
+    font-weight: bold; }
+
+.TestResultsList .SingleResult .externalicon {
+  width: 1.2rem;
+  height: auto; }
+.TestResultsList .SingleResult .orgicon .popupiconcontainer {
+  margin: 0; }
+.TestResultsList .SingleResult .ResultNameWrapper .ResultName > a:hover, .TestResultsList .SingleResult .ResultNameWrapper .ResultName > a:focus {
+  background: none; }
+.TestResultsList .SingleResult .ResultName, .TestResultsList .SingleResult .SenderName, .TestResultsList .SingleResult .Date {
+  padding: 0.1rem; }
+
+.TestResults.component.notoolbar {
+  margin-top: 0; }
+
+.IconHeader, .TestHeader, .OrderedByHeader, .DateHeader {
+  cursor: pointer; }
+
+.descending::after {
+  border-left: 7px solid transparent !important;
+  border-right: 7px solid transparent !important;
+  border-top: 7px solid #767676 !important;
+  bottom: 2px;
+  content: "";
+  display: inline-block;
+  height: 0;
+  left: 7px;
+  position: relative;
+  width: 0; }
+
+.ascending::after {
+  border-left: 7px solid transparent !important;
+  border-right: 7px solid transparent !important;
+  border-bottom: 7px solid #767676 !important;
+  bottom: 2px;
+  content: "";
+  display: inline-block;
+  height: 0;
+  left: 7px;
+  position: relative;
+  width: 0; }
+
+input:focus, select:focus, label:focus {
+  border: 1px dotted #000000; }
+
+.FilterWrapper {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.8rem; }
+
+.SearchLabel {
+  display: inline-block;
+  margin: 0; }
+
+.heading:focus {
+  outline: none; }
+
+.ColumnHeader:focus {
+  outline: none; }
+
+.resultsfooter > .inlineloading + .content {
+  display: none; }
+
+.resultsfooter > .inlineloading.hidden + .content {
+  display: inline-block; }
+
+.TestResultsList .SingleResult.Header.hidden.animate {
+  display: block !important;
+  max-height: 0 !important;
+  height: 0 !important;
+  padding: 0;
+  margin: 0;
+  border: solid 0 transparent;
+  opacity: 0;
+  visibility: hidden; }
+
+.TestResultsList .SingleResult.Header {
+  max-height: 50px;
+  height: 50px; }
+
+.TestResults .TestResultsHeader {
+  height: auto;
+  opacity: 1;
+  transition: opacity 1s; }
+  .TestResults .TestResultsHeader.hidden {
+    height: 0;
+    display: inline-block !important;
+    opacity: 0; }
+
+.posttext.noresult {
+  margin-top: 1em; }
+
+#orginfo {
+  margin-top: -0.75rem; }
+  #orginfo .orginfo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto; }
+    #orginfo .orginfo-container .orglogo {
+      flex-shrink: 0; }
+  #orginfo p {
+    padding: 0.5rem; }
+
+#testResultContainer .grid {
+  margin-top: 0;
+  margin-bottom: 0; }
+  #testResultContainer .grid .row .cptLink {
+    margin: -0.5rem 0 1rem; }
+
+.multiline {
+  white-space: pre-wrap; }
+
+.release-method {
+  color: #00396B;
+  padding: 0.75rem 0 0.5rem; }

@@ -1,0 +1,38 @@
+SELECT DISTINCT description FROM (
+SELECT ID FROM Results WHERE Results.Patients_cpr='2503902323'
+) AS foo 
+LEFT JOIN ResultsData ON foo.ID = ResultsData.ID;
+
+===================================================================
+selet all måleenheder
+
+SELECT DISTINCT description FROM (
+	SELECT ID FROM Results WHERE Results.Patients_cpr='2405952323'
+	) AS foo
+LEFT JOIN ResultsData ON foo.ID = ResultsData.ID;
+
+================================================================
+
+SELECT * FROM (
+SELECT ID,some_Date
+FROM Results
+WHERE Results.Patients_cpr='2503902323'
+)as foo
+LEFT JOIN ResultsData
+ON foo.ID = ResultsData.ID;
+
+
+
+================================================================
+SELECT some_Date, data FROM(
+SELECT * FROM(
+SELECT ID,some_Date
+FROM Results
+WHERE Results.Patients_cpr='2503902323'
+)as foo
+LEFT JOIN ResultsData
+ON foo.ID = ResultsData.ID
+) as RD
+WHERE RD.description = 'Blotsugger';
+
+================================================================

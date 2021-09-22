@@ -1,0 +1,32 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+div#goallist > div {
+  border-bottom: 1px solid #dbdbdb;
+  line-height: 1.5em;
+  font-size: 1em;
+  width: auto;
+  background-color: #ffffff; }
+  div#goallist > div.hover {
+    background-color: #eaeff3; }
+  div#goallist > div > span, div#goallist > div > a > span {
+    display: inline-block;
+    padding: 5px; }
+  div#goallist > div > form {
+    line-height: 1.2em; }
+  div#goallist > div > a {
+    text-decoration: none;
+    color: inherit;
+    display: block; }
+  div#goallist > div span.icon {
+    width: 21px; }
+  div#goallist > div > form div.section div.tableWrapper table tbody, div#goallist > div > form div.section div.tableOverlay table tbody {
+    font-size: 0.9em; }
+div#goallist div.chartgraph {
+  padding: 5px;
+  width: auto;
+  background-color: transparent; }
+  div#goallist div.chartgraph .button {
+    font-size: 1em; }
+  div#goallist div.chartgraph .chart table, div#goallist div.chartgraph .chart .button {
+    font-size: 0.83em; }
+.section > .content > div#goallist .chart table {
+  width: auto; }

@@ -1,0 +1,8 @@
+* All the code that we have made (python and sql), mapping the functions to a diagram
+* Sequence diagram showing our functions
+* ER diagram domain vs prototype
+* Relations - which tables they depent upon, such as person and patient
+	- Write the attributes of each tables and their depentcy
+	- Write the er diagram in plain text
+	- Write where relations are in different tables if they are spread out
+

@@ -1,0 +1,45 @@
+
+health professionals which is in contact with patient
+
+-------------------------------------------------------------------------------
+SELECT name,phone_number,address, role
+FROM (
+SELECT * 
+FROM (
+SELECT healthprofessionals_cpr 
+FROM person
+Inner JOIN patientshealthprofessionals
+ON person.cpr = patientshealthprofessionals.patients_cpr) AS HP
+Inner JOIN person
+ON HP.healthprofessionals_cpr = person.cpr) AS Helth
+Inner JOIN healthprofessionals
+ON Helth.healthprofessionals_cpr = healthprofessionals.person_cpr;
+
+--------------------------------------------------------------------------------
+
+
+
+
+health professionals which is in contact with patient 2503902323
+-------------------------------------------------------------------------------
+
+SELECT name,phone_number,address, role
+FROM (
+SELECT * 
+FROM (
+SELECT healthprofessionals_cpr 
+FROM (
+SELECT * 
+FROM person
+WHERE person.cpr='2503902323') AS foo
+Inner JOIN patientshealthprofessionals
+ON foo.cpr = patientshealthprofessionals.patients_cpr
+) AS HP
+Inner JOIN person
+ON HP.healthprofessionals_cpr = person.cpr) AS Helth
+Inner JOIN healthprofessionals
+ON Helth.healthprofessionals_cpr = healthprofessionals.person_cpr;
+
+
+
+-------------------------------------------------------------------------------

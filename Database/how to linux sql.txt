@@ -1,0 +1,84 @@
+sudo apt-get --purge remove postgresql\* -y
+
+sudo apt install postgresql postgresql-contrib -y
+
+sudo -u postgres -i
+
+# in the new shell that opened up, use the command 
+createuser --interactive
+
+# create a user with the same name as your linux user. 
+# Remember to say yes to super user
+
+#Go into psql
+psql
+
+# afterwards run the following commands
+CREATE USER uis WITH PASSWORD 'uis';
+
+CREATE DATABASE uis;
+
+COMMENT ON DATABASE uis IS 'Development of Information Systems (UIS) Sample databases';
+
+GRANT CONNECT, TEMPORARY ON DATABASE uis TO public;
+
+GRANT ALL ON DATABASE uis TO uis;
+
+# quit and move your terminal to the path "databases/movie/movie-database"
+# run, where 'emil' is the username the one you just made, 
+# and the password is your password for linux
+
+psql -d uis -U emil -f movie_schema_p.sql -W
+
+# The following output should be on screen now
+# CREATE TABLE
+# START TRANSACTION
+# INSERT 0 1
+# but a lot of them
+
+# You should be returned to the base of your shell (outside postgresql and psql)
+# Setup is now done, to test try the following
+
+
+$ sudo -u postgres -i
+$ psql
+$ \c uis
+> You are now connected to database "uis" as user "postgres".
+$ \d 
+
+> List of relations
+ Schema |   Name    | Type  | Owner 
+--------+-----------+-------+-------
+ public | movieexec | table | emil
+ public | movies    | table | emil
+ public | moviestar | table | emil
+ public | starsin   | table | emil
+ public | studio    | table | emil
+(5 rows)
+
+$ SELECT title FROM movies;
+         
+>         title           
+--------------------------
+ Pretty Woman
+ The Man Who Wasn't There
+ Logan's run
+ Star Wars
+ Empire Strikes Back
+ Star Trek
+ Star Trek: Nemesis
+ Terms of Endearment
+ The Usual Suspects
+ Gone With the Wind
+ Wayne's World
+ Galaxy Quest
+ Eight Below
+ The Sting
+ Philadelphia
+ Speed
+ Moonsoon Wedding
+ Philosophy of a Knife
+ The Never Ending Story
+ AC/DC: Family Jewels
+ Bride and Prejudice
+(21 rows)

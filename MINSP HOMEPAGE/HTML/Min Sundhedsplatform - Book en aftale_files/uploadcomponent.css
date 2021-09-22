@@ -1,0 +1,103 @@
+﻿/* Copyright 2017-2018 Epic Systems Corporation */
+.card.addItem .addlabel.upload--add-file-label {
+  position: relative;
+  left: 0.85rem; }
+  .card.addItem .addlabel.upload--add-file-label:before {
+    content: "";
+    background-size: auto;
+    display: inline-block;
+    height: 2.5rem;
+    margin: 0.5rem;
+    position: absolute;
+    left: -2.5rem;
+    top: -1rem;
+    width: 2rem; }
+.card.addItem .addlabel.upload--document-icon:before {
+  background: url("../images/add_document.svg") no-repeat; }
+.card.addItem .addlabel.upload--uploading-icon:before {
+  background: url("data:image/gif;base64,R0lGODlhEAAQAPIAAPz8/AAAAMDAwEFBQQAAAGFhYYCAgJCQkCH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==") no-repeat center center; }
+
+/* #region file type icons */
+.icon-left:before {
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  display: block;
+  height: 3.5rem;
+  margin: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3.5rem; }
+
+.file-type-icon--jpg:before, .file-type-icon--png:before, .file-type-icon--bmp:before, .file-type-icon--gif:before, .file-type-icon--jpeg:before, .file-type-icon--tga:before, .file-type-icon--fmf:before, .file-type-icon--pcx:before, .file-type-icon--dcx:before, .file-type-icon--wpg:before {
+  background-image: url("../images/document_img.svg"); }
+
+.file-type-icon--doc:before, .file-type-icon--docx:before, .file-type-icon--rtf:before {
+  background-image: url("../images/document_doc.svg"); }
+
+.file-type-icon--tiff:before, .file-type-icon--tif:before {
+  background-image: url("../images/document_tiff.svg"); }
+
+.file-type-icon--pdf:before {
+  background-image: url("../images/document_pdf.svg"); }
+
+.file-type-icon--mp4:before, .file-type-icon--mov:before, .file-type-icon--mpg:before, .file-type-icon--mpeg:before, .file-type-icon--wmv:before, .file-type-icon--avi:before, .file-type-icon--mkv:before, .file-type-icon--flv:before, .file-type-icon--3gp:before, .file-type-icon--3gpp:before, .file-type-icon--vob:before, .file-type-icon--ogv:before, .file-type-icon--ogg:before, .file-type-icon--qt:before, .file-type-icon--rm:before, .file-type-icon--rmvb:before, .file-type-icon--asf:before, .file-type-icon--m4p:before, .file-type-icon--m4v:before, .file-type-icon--f4v:before, .file-type-icon--f4p:before, .file-type-icon--f4a:before, .file-type-icon--f4b:before, .file-type-icon--mpeg4:before, .file-type-icon--mpg4:before {
+  background-image: url("../images/document_video.svg"); }
+
+/* #endregion */
+.card.upload--document-card > .cardline {
+  padding-left: 4rem; }
+.card.upload--document-card > .cardline.upload--document-card-line {
+  overflow: visible; }
+.card.upload--document-card > .name.icon.upload--document-icon:after {
+  left: 0; }
+
+.upload--edit-icon {
+  background: url("../images/edit_pencil.svg") no-repeat;
+  background-size: 100%;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.5rem;
+  display: inline-block;
+  vertical-align: top; }
+
+.upload--file-name {
+  display: inline-block;
+  max-width: calc(100% - 3.5rem);
+  color: #00396B;
+  padding-left: 1rem;
+  position: relative; }
+
+.upload--document-card[data-is-editing='true'] [data-function='name-label'] {
+  display: none;
+  position: absolute;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: calc(100% - 1rem); }
+.upload--document-card[data-is-editing='false'] [data-function='name-label'] {
+  visibility: visible;
+  position: absolute;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: calc(100% - 1rem); }
+.upload--document-card[data-is-editing='false'] [data-function='edit-label-input'] {
+  visibility: hidden; }
+.upload--document-card [data-function='edit-label-input'] {
+  width: 100%; }
+.upload--document-card [data-function='edit-label'] {
+  cursor: pointer; }
+
+.card-center {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+  .card-center > div {
+    display: table-cell;
+    vertical-align: middle; }
+
+.upload--limit-reached {
+  padding: 0.5rem 1rem 0 1rem; }

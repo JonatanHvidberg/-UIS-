@@ -1,0 +1,2 @@
+/*! Copyright (c) Epic Systems Corporation 2016 */
+$$WPUtil.guaranteeExistence($$WP,"Clinical.Allergies.Components");$$WP.Clinical.Allergies.Components.AllergiesLookup=function $$WP$Cln$Alrg$Lkup(a){this.Components$LookupComponent(a)};$$WP.Clinical.Allergies.Components.AllergiesLookup.prototype={makeUrl:function(b,c){var a=50;if(c===this.SUGGESTION)a=10;return makeLink("Clinical/Allergies/Search?searchKey="+encodeURIComponent(b)+"&maxHits="+a)}};$$WP.Clinical.Allergies.Components.AllergiesLookup.extend("Components.LookupComponent")

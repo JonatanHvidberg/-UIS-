@@ -1,0 +1,2 @@
+/*! Copyright (c) Epic Systems Corporation 2015 */
+$$WPUtil.guaranteeExistence($$WP,"Clinical.CareTeam.Components");$$WP.Clinical.CareTeam.Components.SelectVisitTypePopup=function $$WP$Cln$SelVstTypePopup(a){this.Components$TemplateComponent(a)};$$WP.Clinical.CareTeam.Components.SelectVisitTypePopup.prototype={template:$$WP.Templates.Clinical.SelectVisitType};$$WP.Clinical.CareTeam.Components.SelectVisitTypePopup.extend("Components.TemplateComponent")

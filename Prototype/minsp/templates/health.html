@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>{{title}}</h1>
+<div class="content-section">
+	<form method="POST" action="">
+		<div class="form-group">
+      {% if doctor %}
+			{% for doc in doctor %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <h3 class="article-content1"> {{ doc[3] }}</h3>
+
+            </div>
+              <p class="article-content0">{{ doc[0] }} </p>
+            <p class="article-content">Adresse: {{ doc[2] }}</p>
+            <p class="article-content2">Telefon: {{ doc[1] }}</p>
+          </div>
+        </article>
+    {% endfor %}
+    {% else %}
+    <h2><a class="article-title" href="#"> Ingen læge tilknyttet</a></h2>
+    {% endif %}
+	</div>
+</div>
+	
+{% endblock content %}

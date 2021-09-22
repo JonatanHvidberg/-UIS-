@@ -1,0 +1,50 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+.sectionLevelContainer {
+  position: relative;
+  height: auto;
+  display: block;
+  min-height: 160px; }
+
+.sectionLevelContents {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.sectionImage {
+  height: 70px;
+  width: auto;
+  display: block;
+  margin: auto; }
+
+.sectionLabel {
+  text-align: center; }
+
+.linkImage {
+  height: 35px;
+  width: auto;
+  float: left;
+  padding: 0.2rem 0.5rem 0.2rem 0.2rem; }
+
+.linkContents {
+  padding: 5px;
+  color: #000000; }
+
+.linkHeader {
+  padding: 5px; }
+
+.divider {
+  margin: 0.5rem; }
+
+@media (min-width: 768px) {
+  .vCenterContainer {
+    position: relative;
+    height: auto;
+    display: block; }
+  .vCenterGrid {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); } }
+
+@media (max-width: 768px) {
+  .divider {
+    visibility: hidden; } }

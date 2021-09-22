@@ -1,0 +1,6 @@
+
+#select all makers that has not made a pc
+SELECT maker FROM product 
+WHERE maker NOT IN
+	(SELECT maker FROM product
+	WHERE type = 'pc');

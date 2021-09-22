@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<article class="media content-section" style="background-color:#f0ec0c">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a href="https://www.sst.dk/da/corona" style="text-align: center;"><h2><u>Nyheder om COVID-19</h2></u></a>
+    </div>
+  </div>
+</article>
+{% for post in posts %}
+{% if current_user.is_authenticated %}
+
+<main class="container" role="main"> 
+  <div class="row">
+    <div class="col-md-8">
+      <article class="content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <h3>Min Profil</h3>
+              <a class="mr-2" href="#">{{ post.author }}</a>
+              <small class="text-muted">{{ post.date_posted }}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+          <p class="article-content">{{ post.content }}</p>
+
+          <a class="nav-item nav-link"> <p> &#128100 </p> {{ current_user[2] }} </a>
+          <a class="nav-item nav-link"> <p> &#128222 </p> {{ current_user[4] }} </a>
+          <a class="nav-item nav-link"> <p> &#128236 </p> {{ current_user[2].replace(" ","_")+current_user[6] }} </a>
+          </div>
+        </div>
+{% else %}
+        <div></div>
+        
+      </article>
+ 
+{% endif %}
+{% endfor %}
+     
+        </article>
+{% if current_user.is_authenticated %}
+        <div class="col-md-4"> 
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+                <h3>Mine Genveje</h3>
+          <a class="nav-item nav-link" href="{{ url_for('Login.results') }}"> <p> &#128451</p> Mine Testresultater </a>
+          <a class="nav-item nav-link" href="{{ url_for('Login.health') }}"> <p> &#128101 </p> Mine Læger</a>
+          <a class="nav-item nav-link" href="{{ url_for('Login.graph') }}"> <p> &#128201 </p> Mine Grafer</a>
+          </div>
+        </div>
+        </div>
+{% else %}
+            <div></div>
+{% endif %}
+            
+    </main>
+
+    
+{% endblock content %}

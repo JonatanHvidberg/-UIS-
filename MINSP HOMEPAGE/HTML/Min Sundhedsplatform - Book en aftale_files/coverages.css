@@ -1,0 +1,383 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+.insuranceVerification .card .cardline.halfwidth:nth-of-type(odd) {
+  padding-right: 0.5rem; }
+
+.insuranceVerification .cardlist.hasPendingStatus .card .cardline.name:focus {
+  outline: none; }
+
+/* #region Card banner styles */
+.insuranceVerification div.card.hasActions {
+  padding-bottom: 0; }
+.insuranceVerification div.card.hasBanner {
+  padding-top: 0; }
+.insuranceVerification .cardBanner {
+  align-items: center;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  margin-left: -0.75rem;
+  max-width: none;
+  min-height: 42px;
+  width: calc(100% + 1.5rem);
+  padding: 0.5rem;
+  margin-top: 0.5rem; }
+  .insuranceVerification .cardBanner div.infoIcon {
+    background-image: url("../images/info.png");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    height: 24px;
+    min-width: 24px;
+    position: relative;
+    vertical-align: middle;
+    width: 24px; }
+    .insuranceVerification .cardBanner div.infoIcon.verified {
+      background-image: url("../images/checkmark_large.svg");
+      display: inline-block; }
+  .insuranceVerification .cardBanner div.infoText {
+    display: block;
+    margin: auto;
+    width: auto;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    font-size: 0.9rem; }
+    .insuranceVerification .cardBanner div.infoText.verified {
+      display: inline-block;
+      padding-bottom: 0;
+      line-height: 24px;
+      width: calc(100% - 48px - 1rem); }
+
+.cardBanner .linkcontainer {
+  text-align: center;
+  max-height: none; }
+
+.cardBanner a.bannerLink {
+  width: auto;
+  margin: auto; }
+  .cardBanner a.bannerLink img {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    margin-right: 0.3rem; }
+  .cardBanner a.bannerLink:hover {
+    text-decoration: underline; }
+  .cardBanner a.bannerLink.abnormal:hover, .cardBanner a.bannerLink.abnormal:focus {
+    color: #d80000; }
+
+.addImagesContainer {
+  height: 150px;
+  margin-bottom: 0.5rem; }
+
+/* #endregion */
+[data-id='uploadFields'] span.label.uploadLabel {
+  display: inline-block;
+  vertical-align: middle; }
+  [data-id='uploadFields'] span.label.uploadLabel.required {
+    margin-left: 0.75rem;
+    font-size: 1rem; }
+  [data-id='uploadFields'] span.label.uploadLabel:focus {
+    outline: none; }
+
+.insuranceVerification h2:focus, .insuranceVerification h3:focus {
+  outline: none; }
+
+span.cardline.header.name:focus {
+  outline: none; }
+
+.insuranceVerification .cardlist.hasPendingStatus .card .cardline.name span {
+  display: inline-block;
+  vertical-align: top; }
+  .insuranceVerification .cardlist.hasPendingStatus .card .cardline.name span.payorName {
+    hyphens: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 66%; }
+  .insuranceVerification .cardlist.hasPendingStatus .card .cardline.name span.coverageStatus {
+    padding-top: 0.125rem;
+    width: 34%; }
+.insuranceVerification .messagedisplay {
+  display: inline; }
+.insuranceVerification select, .insuranceVerification input[type="text"] {
+  min-width: 100%; }
+.insuranceVerification [data-id='updateCoverage'] #comments + .messagedisplay {
+  display: inline-block; }
+.insuranceVerification p.required::before, .insuranceVerification legend.required::before {
+  margin-left: 0; }
+
+.insuranceVerificationSpinner {
+  margin-left: 0.5rem; }
+
+/* #region Loading overlay styles */
+.loadingoverlay {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  height: auto;
+  margin-top: 2.5rem; }
+  .loadingoverlay .loadingspinner {
+    width: 64px;
+    display: block;
+    margin: 0 auto; }
+  .loadingoverlay .loadingmessage {
+    margin: 0 auto;
+    text-align: center;
+    width: 20%;
+    border-radius: 0.5rem;
+    padding: 0.5rem; }
+
+/* #endregion */
+.insinfo {
+  display: inline-block;
+  vertical-align: top; }
+
+[data-id='updateCoverage'] {
+  margin-top: 1rem; }
+  [data-id='updateCoverage'] [data-id='insuranceCards'] {
+    margin-top: -1.25rem; }
+    [data-id='updateCoverage'] [data-id='insuranceCards'] .insuranceCard {
+      height: 12.5rem;
+      width: 100%; }
+      [data-id='updateCoverage'] [data-id='insuranceCards'] .insuranceCard:empty {
+        height: auto; }
+      [data-id='updateCoverage'] [data-id='insuranceCards'] .insuranceCard img {
+        display: none;
+        max-height: 100%;
+        max-width: 100%; }
+        [data-id='updateCoverage'] [data-id='insuranceCards'] .insuranceCard img.selected {
+          display: inline-block; }
+    [data-id='updateCoverage'] [data-id='insuranceCards'] .navigation {
+      text-align: center;
+      margin-top: 1rem; }
+      [data-id='updateCoverage'] [data-id='insuranceCards'] .navigation a {
+        display: inline-block;
+        height: 24px;
+        margin: 0.5rem 0.25rem 0;
+        width: 24px; }
+        [data-id='updateCoverage'] [data-id='insuranceCards'] .navigation a.disabled {
+          cursor: default; }
+        [data-id='updateCoverage'] [data-id='insuranceCards'] .navigation a[data-id='insurancecard-back'] {
+          background-image: url("../../Content/images/arrow_left.svg"); }
+          [data-id='updateCoverage'] [data-id='insuranceCards'] .navigation a[data-id='insurancecard-back'].disabled {
+            background-image: url("../../Content/images/arrow_left_inactive.png"); }
+        [data-id='updateCoverage'] [data-id='insuranceCards'] .navigation a[data-id='insurancecard-next'] {
+          background-image: url("../../Content/images/arrow_right.svg"); }
+          [data-id='updateCoverage'] [data-id='insuranceCards'] .navigation a[data-id='insurancecard-next'].disabled {
+            background-image: url("../../Content/images/arrow_right_inactive.png"); }
+    .mobile [data-id='updateCoverage'] [data-id='insuranceCards'] {
+      margin-left: 0;
+      width: 100%; }
+
+.cardflip-container {
+  perspective: 1000px;
+  margin: auto;
+  max-width: 100%; }
+  .cardflip-container.flip .cardflipper {
+    transform: rotateY(180deg); }
+
+.cardflip-container, .cardfront, .cardback {
+  width: 300px;
+  height: 150px;
+  max-width: 100%; }
+
+.cardflip-container .successIcon {
+  z-index: 3;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  opacity: 1;
+  top: -18px;
+  left: -18px; }
+.cardflip-container .loadingimage {
+  background: url("data:image/gif;base64,R0lGODlhEAAQAPIAAPz8/AAAAMDAwEFBQQAAAGFhYYCAgJCQkCH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==") no-repeat; }
+
+.cardflipper {
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 300px; }
+
+.cardfront, .cardback {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.cardfront {
+  z-index: 2;
+  transform: rotateY(0deg); }
+
+.cardback {
+  transform: rotateY(180deg); }
+
+.cardfront .image, .cardback .image {
+  display: block;
+  margin: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 150px; }
+.cardfront .image.previewWarningIcon, .cardback .image.previewWarningIcon {
+  height: 30px;
+  width: 30px;
+  margin-top: 40px; }
+.cardfront .loadingimage, .cardback .loadingimage {
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+  height: 18px;
+  width: 18px;
+  background: url("data:image/gif;base64,R0lGODlhEAAQAPIAAPz8/AAAAMDAwEFBQQAAAGFhYYCAgJCQkCH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==") no-repeat; }
+.cardfront .label.previewWarning, .cardback .label.previewWarning {
+  text-align: center;
+  display: block; }
+.cardfront:focus, .cardback:focus {
+  outline: none; }
+  .cardfront:focus > .image, .cardfront:focus > .nopreview, .cardback:focus > .image, .cardback:focus > .nopreview {
+    outline: 1px dotted #000000;
+    outline: -webkit-focus-ring-color auto 5px; }
+
+.flipIcon {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px; }
+
+.flipButton {
+  z-index: 3;
+  position: relative;
+  top: 0;
+  display: block;
+  width: 40px; }
+  .flipButton:hover .flipIcon {
+    background-color: #eaeff3; }
+
+.popupButtons {
+  text-align: center; }
+
+.card.addItem.addImages {
+  display: block;
+  margin: 0.5rem;
+  width: 90%; }
+  .card.addItem.addImages:hover {
+    border: 2px dashed transparent; }
+
+.card.addItem.upload-addFile:hover {
+  border: 2px dashed transparent; }
+
+.mobile .card.addItem.addImages {
+  margin: 0.5rem;
+  width: 90%; }
+
+.card.addItem .addlabel.withUploadIcon {
+  position: relative;
+  left: 0.85rem;
+  margin-left: 1rem;
+  margin-right: 1rem; }
+
+.addMessage.insuranceHelpText {
+  padding-top: 0.5rem; }
+
+.card.addItem .addlabel.withUploadIcon:before {
+  background-image: url("../images/add_document.svg");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: auto;
+  display: inline-block;
+  height: 2.5rem;
+  margin: 0.5rem;
+  position: absolute;
+  left: -2.5rem;
+  top: -1rem;
+  width: 2rem; }
+
+.insuranceVerification #viewdocumentwidget .documenttable {
+  border-spacing: 0px 10px; }
+.insuranceVerification #viewdocumentwidget .docinfo {
+  display: none; }
+.insuranceVerification #viewdocumentwidget .docsummary {
+  margin-top: 15px; }
+
+.Popup.uploadInsurancePopup .button {
+  margin-bottom: 0; }
+
+.insuranceVerification #addCoverageButton.card.addItem {
+  min-height: 4rem; }
+
+[data-id="uploadFields"] .cardlist .card .cardline.name {
+  position: static; }
+
+.insurance_card_actions_link {
+  align-items: center;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: #dbdbdb;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13pt;
+  justify-content: flex-start;
+  min-height: 34px;
+  padding-left: 0.5rem;
+  width: 100%;
+  color: #00396B; }
+  .mobile .insurance_card_actions_link {
+    justify-content: center;
+    padding: 0;
+    text-transform: uppercase; }
+  .insurance_card_actions_link:hover, .insurance_card_actions_link:focus, .insurance_card_actions_link:active {
+    text-decoration: none; }
+  .insurance_card_actions_link:hover, .insurance_card_actions_link:focus, .insurance_card_actions_link:active {
+    background-color: #eaeff3;
+    color: #00396B; }
+
+.insurance_card_actions_label_container {
+  text-align: center; }
+
+.insurance_card_actions_link img + span {
+  padding-left: 0.5rem; }
+.insurance_card_actions_link img {
+  height: 24px;
+  vertical-align: middle;
+  width: 24px; }
+.insurance_card_actions_link:last-child {
+  border-bottom-width: 1px;
+  border-bottom-style: solid; }
+
+.insurance_card_actions_label {
+  line-height: 32px; }
+
+.insurance_card_actions_subtext {
+  padding-left: 0.5rem;
+  font-size: 10pt; }
+
+.insurance_card_actions_container {
+  padding-top: 0.5rem;
+  margin-left: -0.5rem;
+  max-width: none;
+  width: calc(100% + 1rem); }
+
+.insurance_card_actions {
+  bottom: 0; }
+
+fieldset#isSubscriber {
+  margin-top: 0.5rem; }
+
+/* #endregion */
+@-moz-document url-prefix() {
+  .insuranceVerification a[data-id='cancel']:focus, .uploadInsurancePopup a[data-id='cancel']:focus, a[data-id='toolbarcontinue']:focus, a[data-id='toolbarcancel']:focus, a[data-id='toolbarclose']:focus {
+    outline: 1px dotted #000000;
+    outline-offset: -0.4rem; } }
+
+@media screen and (max-width: 768px) {
+  .loadingoverlay {
+    position: fixed;
+    margin: 0 auto;
+    top: 35%;
+    left: 0;
+    right: 0; }
+    .loadingoverlay .loadingmessage {
+      width: auto; }
+  .flipButton {
+    margin: auto; }
+  .card.addItem.addImages, .mobile .card.addItem.addImages {
+    width: 99%;
+    margin: 0.25rem 0.5%; } }

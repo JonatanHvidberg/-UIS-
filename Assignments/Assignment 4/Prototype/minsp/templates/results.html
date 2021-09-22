@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!--Should be in the CSS file, but it is here for now-->
+<style type='text/css'>
+        table.test { border-collapse: collapse; }
+        table.test td { border-bottom: 1px solid black; }
+</style>
+<!--Should be in the CSS file, but it is here for now-->
+
+<form method="POST" action="">
+<div>
+	<fieldset class="form-group">
+		<div class="form-group">
+            {{ form.search.label(class="form-control-label") }}
+            {% if form.search.errors %}
+                {{ form.search(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.search.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.search(class="form-control form-control-lg") }}
+            {% endif %}
+        </div>
+	</fieldset>
+ <div class="form-group">
+    {{ form.submit(class="btn btn-outline-info") }}
+	</div>
+</div>
+<div class="content-section">
+	{% if types != [] %}
+		<div class="form-group">
+			{% set id = [] %}
+
+
+			{% for r in types %}
+
+			{%if id==[] %}
+			<div></div> <!--empty div to create the correct layout-->
+			{%endif%}
+
+			{%if r[0] != id[-1]%}
+			</table>
+			</div>
+		</article>
+		<article class="media content-section">
+			<div class="media-body">
+				<h2><a class="article-title" href="#">{{ r[1] }}</a></h2>
+				<table class='test' style="width:100%">
+					<tr>
+						<td>{{ r[3] }}</td>
+						<td>{{ r[4] }}</td>
+						<td>{{ r[2] }}</td>
+					</tr>
+
+				{%else%}
+				<tr>
+					<td>{{ r[3] }}</td>
+					<td>{{ r[4] }}</td>
+					<td>{{ r[2] }}</td>
+				</tr>
+				{%endif%}
+
+				{% if id.append(r[0]) %}{% endif %}
+    {% endfor %}
+	</div>
+	{% else %}
+	<div>
+		<h2><a class="article-title" href="#">Ingen test resultater fundet</a></h2>
+	</div>
+	{% endif %}
+</div>
+{% endblock content %}

@@ -1,0 +1,37 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+.ellipsisControl {
+  position: relative;
+  padding-right: 16px; }
+  .ellipsisControl > a.ellipsisControl-caret {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1rem;
+    width: 1.75rem;
+    display: block;
+    z-index: 2;
+    color: inherit; }
+  .ellipsisControl.ellipsisControl-has-hidden-children {
+    cursor: pointer; }
+  .ellipsisControl:not(.ellipsisControl-no-ellipsis) > a.ellipsisControl-caret {
+    position: relative;
+    display: inline-block; }
+    .ellipsisControl:not(.ellipsisControl-no-ellipsis) > a.ellipsisControl-caret:before {
+      content: "\2026"; }
+  .ellipsisControl > a.ellipsisControl-caret:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -2px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid #767676;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent; }
+  .ellipsisControl.ellipsisControl-no-ellipsis > a.ellipsisControl-caret:after {
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid #767676; }
+  .ellipsisControl:not(.ellipsisControl-no-ellipsis) > span.ellipsisControl-extra {
+    display: none; }

@@ -1,0 +1,31 @@
+patienter(cpr, fornavn, efternavn, adresse, postnummer, land, journal)
+allergier(allergen, allergitype, allergisk_reaktion)
+patientallergier(allergen, cpr)
+
+Select fornavn from patienter where cpr in (select * from patientallergier where)
+(select * from allergier where allergitype = 'pollen' and allergitype = 'dyr')
+
+
+#patienters fornavn
+select fornavn from patienter;
+# der er allergiske 
+
+#allergier af typen dyr og pollen
+select fornavn from patiernter where cpr in (
+select cpr from patientallergier 
+where allergen in 
+	(select allergen from allergier 
+	where allergitype = 'pollen' and allergitype = 'dyr'));
+
+
+
+
+
+
+
+
+
+#select all makers that has not made a pc
+select maker from product where maker not in
+(select maker from product
+where type = 'pc');

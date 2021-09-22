@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="content-section">
+    <form method="POST" action="">
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Se dine resultater som en graf</legend>
+        <div class="form-group">
+            {{ form.from_date.label(class="form-control-label") }}
+            {% if form.from_date.errors %}
+                {{ form.from_date(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.from_date.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.from_date(class="form-control form-control-lg") }}
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.to_date.label(class="form-control-label") }}
+            {% if form.to_date.errors %}
+                {{ form.to_date(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.from_date.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.to_date(class="form-control form-control-lg") }}
+            {% endif %}
+        </div>
+        <div class="form-group">
+    <div> Vælg type for graf</div> 
+    {{ form.types(class="btn btn-outline-info") }}
+    </div>
+    </fieldset>
+    <div class="form-group">
+        {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+    {% if form.submit.data%}            
+        <img src="{{ url }}" height="420" width="420">
+    {% else %}
+        <div></div>
+    {% endif %}
+</div>
+
+{% endblock content %}

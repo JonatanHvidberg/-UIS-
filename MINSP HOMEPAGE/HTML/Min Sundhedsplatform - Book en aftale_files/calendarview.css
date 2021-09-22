@@ -1,0 +1,31 @@
+﻿/* Copyright 2011-2018 Epic Systems Corporation */
+#topic_9 a {
+  color: #FF5531; }
+#topic_9 .button {
+  background-color: #0098BA;
+  color: #ffffff; }
+#topic_9 ul {
+  list-style: none; }
+#topic_9 .iconcal_composite {
+  width: 700px;
+  margin: 20px auto 28px auto; }
+  #topic_9 .iconcal_composite .iconcalendar .nav {
+    color: #00396B;
+    padding: 10px; }
+  #topic_9 .iconcal_composite .iconcalendar .month_label {
+    padding: 10px; }
+  #topic_9 .iconcal_composite .iconcalendar td {
+    border-color: #cccccc;
+    border-style: solid; }
+  #topic_9 .iconcal_composite .iconcalendar .month_context {
+    color: #cccccc; }
+  #topic_9 .iconcal_composite .iconcalendar .today {
+    background-color: #eaeff3; }
+  #topic_9 .iconcal_composite .iconcalendar .numlabel {
+    padding: 3px; }
+#topic_9 .icalimport {
+  text-align: center;
+  margin-top: 4px; }
+#topic_9 .iconcal_legend .label {
+  margin: 1px 5px 1px 5px;
+  padding: 4px; }

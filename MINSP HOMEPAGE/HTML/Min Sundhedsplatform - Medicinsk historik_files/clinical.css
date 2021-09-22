@@ -1,0 +1,642 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+div.cardlist {
+  margin-top: 1rem; }
+
+.medicationcontainer .nodata, .healthissuecontainer .nodata, .allergycontainer .nodata, .immunizationcontainer .nodata {
+  margin-top: 0.5rem; }
+
+#allergies .component > .content {
+  overflow: visible; }
+
+span.allergyreactions {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.9em;
+  margin-top: -0.5rem; }
+
+.medicationcontainer .addItem {
+  height: 6rem; }
+
+.card .cardline.sig, .medcard .cardline.sig {
+  margin: 0.5rem 0 0;
+  font-size: 1em; }
+  .card .cardline.sig.sigbottom, .medcard .cardline.sig.sigbottom {
+    margin: 0 0 0.3rem 0; }
+
+.card .cardline.pharmacyname, .card .cardline.shippedto {
+  margin-top: 1em; }
+
+.cardline .popupiconcontainer .popupinstructionsicon > svg {
+  height: 0.9rem;
+  width: 0.9rem;
+  fill: #FF5531; }
+
+.externalcontainer {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem; }
+
+.card .externalcontainer + .buttonList {
+  width: calc(100% - 3rem); }
+
+.medicationsdetails.component > .content {
+  overflow: visible; }
+
+.card.medcard {
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  padding-bottom: 0;
+  margin: 0.6rem 0;
+  width: 100%; }
+  .card.medcard.withButton {
+    padding-bottom: 3rem; }
+  .card.medcard .medmessage, .card.medcard .medwarning, .card.medcard .warning {
+    display: inline-block;
+    padding: 0.3rem 0.5rem 0.3rem 1.5rem;
+    font-size: 1em;
+    box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.75);
+    width: auto;
+    margin: 0.5rem 0 0 -1.2rem; }
+
+.medcard .medtop {
+  margin-bottom: 1rem;
+  padding-right: 0.5rem; }
+  .medcard .medtop div.refillremaining {
+    margin-top: 0.5rem; }
+.medcard .medname {
+  font-size: 1.25rem;
+  margin: -0.5rem 0 0;
+  padding: 0 0 0.25rem; }
+
+.bannercontent {
+  display: flex; }
+  .bannercontent svg {
+    flex-shrink: 0; }
+
+.medcard div.secondWarning {
+  margin-top: 0.5rem; }
+
+.medcard .commonname + .warning {
+  margin-top: 0.7rem; }
+
+.commonname {
+  margin-right: 0.4rem; }
+
+.medmessage img, .medwarning img {
+  margin: 0 1.25rem -0.1rem 0;
+  opacity: 0.4;
+  height: 1rem;
+  width: 1rem;
+  vertical-align: top; }
+
+.medwarning img.info {
+  margin-left: 0.25rem;
+  margin-right: 0rem; }
+
+img.info {
+  opacity: 1; }
+
+.medcard .warning .popupiconcontainer {
+  margin-left: 0.4rem; }
+
+div.medbottom {
+  background-color: #f8f8f8;
+  width: calc(100% + 3.5rem);
+  max-width: calc(100% + 3.5rem);
+  left: -1rem;
+  position: relative; }
+  div.medbottom .meddetail {
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem; }
+    div.medbottom .meddetail .meddetailcolumns {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row; }
+
+span.cardicon.med {
+  display: inline-block; }
+
+img.medformicon {
+  width: 32px;
+  height: 32px;
+  float: left;
+  margin-left: -38px;
+  margin-top: 10px; }
+
+img.External {
+  display: inline-block;
+  width: 25px;
+  height: auto; }
+
+img.orgiconimg {
+  width: 25px;
+  height: auto; }
+
+img.contentimg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: top;
+  display: inline-block; }
+
+.card .contentlink a {
+  display: inline-block; }
+
+.orghelper {
+  margin-top: 1rem; }
+  .orghelper img {
+    vertical-align: top;
+    width: 23px;
+    height: 23px;
+    margin-right: 1%; }
+  .orghelper div {
+    vertical-align: middle;
+    display: inline-block;
+    width: auto; }
+
+table.organization th {
+  color: #767676;
+  font-size: 0.75em; }
+
+.medbottom div {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0.5%;
+  word-wrap: break-word; }
+
+.medbottom.buttonList {
+  z-index: 98; }
+
+.medcard .medinfocolumn {
+  width: auto;
+  z-index: 99;
+  position: relative;
+  flex-grow: 1; }
+  .medcard .medinfocolumn .medinfo {
+    display: block;
+    padding: 0; }
+.medcard .medinfocolumn {
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem; }
+.medcard a.providerlink {
+  cursor: pointer; }
+.medcard .meddata {
+  font-size: 0.8em;
+  display: inline; }
+.medcard .medlabel {
+  display: inline;
+  padding-right: 4px; }
+
+.clinicalcard.allergycard .clinicalinfo {
+  padding-left: 3rem; }
+.clinicalcard .clinicalinfo {
+  padding-right: 1.5rem; }
+
+a.nottakingBtn, a.editBtn, a.refillBtn, a.refillBtn:hover {
+  text-decoration: none;
+  color: #363636; }
+
+div.duplicatewarningwrapper + div.cardline.medmessage {
+  margin-top: 0.5rem; }
+div.duplicatewarningwrapper div.popupiconcontainer img {
+  width: 20px;
+  height: 20px; }
+
+div.deleteitem div.pretext, div.additem div.pretext {
+  margin-bottom: 10px; }
+
+.card.medcard:before {
+  background: transparent none no-repeat scroll center center/2rem 2rem;
+  content: "";
+  display: block;
+  height: 2rem;
+  margin: 0.5rem 0.5rem 0 0;
+  position: absolute;
+  vertical-align: middle;
+  width: 2rem;
+  right: 0;
+  top: 0; }
+
+.clinicalcard .clinicalicon:before {
+  background: transparent none no-repeat scroll center center/2rem 2rem;
+  content: "";
+  display: block;
+  height: 2rem;
+  margin: 0.25rem 0 -2rem -2.75rem;
+  position: relative;
+  vertical-align: middle;
+  width: 2rem; }
+
+.medications.lookup li.suggestion.infotext.hasdisclaimer.noresults span.infospan, .medications.lookup li.suggestion.infotext.hasdisclaimer.allresults span.infospan {
+  display: none; }
+
+.clinicalcard .clinicalicon.type_1:before {
+  background-image: url("../images/clinical/Allergy_Type_1.png"); }
+.clinicalcard .clinicalicon.type_2:before {
+  background-image: url("../images/clinical/Allergy_Type_2.png"); }
+.clinicalcard .clinicalicon.type_3:before {
+  background-image: url("../images/clinical/Allergy_Type_3.png"); }
+.clinicalcard .clinicalicon.type_4:before {
+  background-image: url("../images/clinical/Allergy_Type_4.png"); }
+.clinicalcard .clinicalicon.type_5:before {
+  background-image: url("../images/clinical/Allergy_Type_5.png"); }
+.clinicalcard .clinicalicon.type_6:before {
+  background-image: url("../images/clinical/Allergy_Type_6.png"); }
+.clinicalcard .clinicalicon.type_7:before {
+  background-image: url("../images/clinical/Allergy_Type_7.png"); }
+.clinicalcard .clinicalicon.type_8:before {
+  background-image: url("../images/clinical/Allergy_Type_8.png"); }
+.clinicalcard .clinicalicon.type_9:before {
+  background-image: url("../images/clinical/Allergy_Type_9.png"); }
+.clinicalcard .clinicalicon.type_default:before {
+  background-image: url("../images/clinical/Allergy_Default.png"); }
+
+.medcard.form_1:before {
+  background-image: url("../images/clinical/Meds_Form_1.svg"); }
+.medcard.form_2:before {
+  background-image: url("../images/clinical/Meds_Form_2.svg"); }
+.medcard.form_3:before {
+  background-image: url("../images/clinical/Meds_Form_3.svg"); }
+.medcard.form_7:before {
+  background-image: url("../images/clinical/Meds_Form_7.svg"); }
+.medcard.form_8:before {
+  background-image: url("../images/clinical/Meds_Form_8.svg"); }
+.medcard.form_29:before {
+  background-image: url("../images/clinical/Meds_Form_29.svg"); }
+.medcard.form_55:before {
+  background-image: url("../images/clinical/Meds_Form_55.svg"); }
+.medcard.form_100:before {
+  background-image: url("../images/clinical/Meds_Form_100.svg"); }
+.medcard.form_102:before {
+  background-image: url("../images/clinical/Meds_Form_102.svg"); }
+.medcard.form_103:before {
+  background-image: url("../images/clinical/Meds_Form_103.svg"); }
+.medcard.form_104:before {
+  background-image: url("../images/clinical/Meds_Form_104.svg"); }
+.medcard.form_105:before {
+  background-image: url("../images/clinical/Meds_Form_105.svg"); }
+.medcard.form_106:before {
+  background-image: url("../images/clinical/Meds_Form_106.svg"); }
+.medcard.form_default:before {
+  background-image: url("../images/clinical/Meds_Form_Default.png"); }
+
+.vb_navigation {
+  transition: opacity 4s ease;
+  opacity: 0; }
+  .vb_navigation.show {
+    opacity: 1;
+    margin: 0.5rem 0; }
+
+.personalnotes .card {
+  width: 67%;
+  margin-bottom: 0; }
+.personalnotes textarea {
+  min-width: 67%; }
+.personalnotes .button {
+  margin-top: 0.5rem; }
+
+div.personalnotes .card {
+  margin: 0; }
+
+.haspersonalnotes.hidepersonalnotes .personalnotessection.component {
+  display: none; }
+
+/* #region Lookup */
+.lookup .beforeselection {
+  padding: 1rem 0;
+  transition: height 0.2s; }
+.lookup .afterselection:focus {
+  outline: none; }
+.lookup .list.hoverable a.suggestionlink, .lookup .list.hoverable a.suggestionlink:hover, .lookup .list.hoverable a.suggestionlink:focus {
+  font-style: normal;
+  cursor: pointer; }
+.lookup .list.hoverable a.suggestionlink:hover, .lookup .list.hoverable .selected a.suggestionlink {
+  text-decoration: underline; }
+.lookup .list.hoverable a.suggestionlink:focus, .lookup .list.hoverable .selected a.suggestionlink {
+  outline: 1px dotted #000000;
+  outline: 5px auto-webkit-focus-ring-color; }
+.lookup .searchheader {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem; }
+.lookup .custombuttons {
+  padding: 1rem 0; }
+.lookup .center .searchinputs {
+  margin: 0 auto; }
+.lookup .searchinputs {
+  position: relative; }
+.lookup .searchinputs, .lookup .customcontainer, .lookup ul.suggestions {
+  width: 100%; }
+.lookup .searchinputs::after {
+  background: #FF5531;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 50%;
+  width: 2rem;
+  z-index: 9;
+  top: 0; }
+.lookup .searchinputs input::-ms-clear, .lookup .customcontainer input::-ms-clear {
+  display: none; }
+.lookup .searchcontainer .searchinputs::after {
+  right: 0; }
+.lookup .button.inlineaccept.custom {
+  width: 200px; }
+.lookup input[type='text'] {
+  margin-bottom: 0;
+  width: 100%; }
+.lookup .searchinputs.ghostInput label {
+  text-align: left; }
+.lookup .resultscount {
+  display: inline-block;
+  width: 50%;
+  padding: 0.25rem 1rem;
+  color: #767676; }
+.lookup a.startoveranchor {
+  margin-left: 0.2rem;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/edit.svg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+.lookup img.startoverimg {
+  height: 20px;
+  cursor: pointer;
+  vertical-align: top; }
+.lookup a.startover {
+  vertical-align: top;
+  line-height: 1.7rem; }
+.lookup .searchresults:not(:empty) {
+  padding: 1rem 0; }
+.lookup .resultspretext.heading {
+  font-weight: bold; }
+.lookup .disclaimerdiv {
+  font-style: italic; }
+.lookup .searchloading {
+  text-align: center;
+  min-height: 250px;
+  padding-top: 100px; }
+.lookup input.imgbutn {
+  background: transparent;
+  border: none;
+  line-height: 1.5rem;
+  margin: 0;
+  position: absolute;
+  right: calc(50% + 0.4rem);
+  top: 0.25rem;
+  width: 1.5rem;
+  z-index: 99;
+  padding: 0.4rem 0.2rem; }
+.lookup .searchcontainer input.imgbutn {
+  right: 0.25rem; }
+.lookup ul.suggestions {
+  border: 1px solid #dbdbdb;
+  border-top: 0;
+  line-height: 1.2rem;
+  position: absolute;
+  background: #ffffff;
+  cursor: pointer;
+  text-align: left; }
+.lookup .suggestions li {
+  padding: 0.1rem 0.25rem 0.1rem 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+.lookup li.suggestionsearch::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url("../images/search_small.png") no-repeat;
+  left: 0.35rem;
+  top: 0.25rem; }
+.lookup li.suggestion span.searchkey {
+  font-weight: bold; }
+.lookup li.suggestion span.searchlabel {
+  color: #565656; }
+.lookup ul.suggestions li.suggestion.selected {
+  background: #eaeff3; }
+.lookup li.suggestion.infotext {
+  color: #767676;
+  text-align: center;
+  padding: 0.5rem 0.1rem 0.25rem 0.1rem; }
+  .lookup li.suggestion.infotext:hover, .lookup li.suggestion.infotext:focus {
+    background: none;
+    cursor: default;
+    outline: none; }
+  .lookup li.suggestion.infotext span.disclaimerspan {
+    display: block;
+    font-style: italic; }
+
+.lookupcontainer > .content {
+  background: #f8f8f8; }
+
+.lookup #results {
+  margin: 1rem 0; }
+
+.lookupcontainer .formrow {
+  margin: 0.7rem 0; }
+  .lookupcontainer .formrow:first-child {
+    margin-top: 0; }
+  .lookupcontainer .formrow .leftcol {
+    width: 23%;
+    display: inline-block;
+    text-align: right;
+    margin-right: 2%;
+    padding-top: 0.3rem; }
+  .lookupcontainer .formrow .rightcol {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 70%;
+    overflow-wrap: break-word; }
+  .lookupcontainer .formrow .rightcol.name {
+    padding-top: 0.3rem;
+    font-size: 1.1rem; }
+  .lookupcontainer .formrow input.date.nativeCalendar {
+    width: 8rem;
+    line-height: 28px; }
+
+.lookup .anchorListElement.resultelement {
+  display: inline-block;
+  width: 49.5%;
+  padding: 1rem;
+  border: 1px solid #eaeaea;
+  background: #ffffff;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+.lookup .noprint.imgbutn img {
+  width: 16px;
+  height: 16px; }
+.lookup .customtext a {
+  cursor: pointer; }
+.lookup .rightcol input.selectionlabel {
+  font-size: 1.1rem;
+  display: inline-block;
+  margin: 0;
+  min-width: 50%;
+  max-width: 90%; }
+  .lookup .rightcol input.selectionlabel[disabled] {
+    background-color: #dbdbdb; }
+
+.lookupcontainer .formheader {
+  margin: 0.5rem 0 1rem;
+  outline: none; }
+.lookupcontainer .rightcol input, .lookupcontainer .rightcol select, .lookupcontainer .rightcol textarea {
+  font-size: 1rem;
+  margin-bottom: 0; }
+.lookupcontainer .itemdetails label.togglebutton[for] {
+  font-weight: 500; }
+.lookupcontainer .itemdetails {
+  padding-bottom: 0.5rem; }
+
+/* #endregion Lookup */
+/* #region Pharmacy */
+.phrcard.card.anchorListElement {
+  padding-bottom: 2rem; }
+.phrcard.card {
+  padding-bottom: 2rem;
+  margin: 0;
+  text-transform: uppercase; }
+
+.phrcard-container {
+  width: 32.66%;
+  display: inline-block;
+  position: relative;
+  margin: 0.25rem 0.5%;
+  margin-left: 0; }
+.phrcard-container .favoritelabel {
+  background-image: url("../images/fave-unselected.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: none;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.75rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  cursor: pointer; }
+  .phrcard-container .favoritelabel.favorited {
+    background-image: url("../images/fave-selected.png"); }
+
+a[data-id='expandzipcodefield'] {
+  display: inline-block;
+  margin-left: 0.25rem; }
+
+.expanded input {
+  min-width: 0; }
+.expanded #search {
+  padding-right: 1%; }
+.expanded #searchnearlabel {
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 0%;
+  font-size: 1.25rem;
+  width: 9%; }
+.expanded #zipcode-expanded {
+  margin-right: 1%;
+  width: 10ch; }
+.expanded #searchimg {
+  position: static;
+  height: 2.08rem;
+  width: 2.08rem;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  background: #FF5531;
+  display: inline-block; }
+.expanded:after {
+  display: none; }
+
+#searchsuggestions .suggestion {
+  padding: 0.25rem 0.25rem 0.25rem 1.5rem; }
+  #searchsuggestions .suggestion:not(:last-child) {
+    border-bottom: 1px solid #eaeaea; }
+  #searchsuggestions .suggestion .name {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0; }
+  #searchsuggestions .suggestion .address {
+    text-align: left;
+    margin: 0; }
+
+.PharmacyContainer {
+  margin: 1rem 0 1rem 0; }
+
+#searchinputs:after {
+  top: 0;
+  height: 1.75rem; }
+
+#zipcodeinputs-expanded {
+  display: inline;
+  width: 11.5rem;
+  margin-right: 1rem; }
+
+#searchinputs.expanded {
+  width: 100%; }
+#searchinputs > * {
+  vertical-align: middle; }
+#searchinputs .alert {
+  text-align: left; }
+
+#searchsuggestions.suggestions-zipcode-expanded {
+  width: 100%;
+  left: 0; }
+
+#invalidziperrmsg.alert.helptext {
+  text-align: center;
+  margin-top: 1rem; }
+
+#phrcard-other .freetext-change {
+  width: 1.25rem;
+  vertical-align: middle;
+  margin-left: 0.25rem; }
+#phrcard-other .name {
+  display: inline; }
+
+.card .phrcard-additional-desc {
+  bottom: 0;
+  position: absolute;
+  background-color: #f8f8f8;
+  left: 0;
+  padding: 0.5rem; }
+
+.refillpickupoptions select {
+  display: inline-block;
+  margin: 0 0.25rem 0 0;
+  min-width: 0; }
+.refillpickupoptions #pickuptime .fieldtime label {
+  display: inline-block !important;
+  line-height: 2rem;
+  margin: 0 0.25rem 0 0; }
+.refillpickupoptions#pickupoptions > #pickuptime > legend, .refillpickupoptions#pickupoptions > label {
+  color: #00396B;
+  display: block;
+  font-weight: normal;
+  padding: 0.75rem 0 0.5rem;
+  width: 100%;
+  font-size: 1.5em; }
+
+.section .content label[for="pharmacy"] {
+  float: left;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem; }
+.section .content select#pharmacy ~ p.helptext {
+  padding-top: 0.1rem; }
+
+fieldset#deliveryoptions input.radio[name="deliverymethod"], fieldset#deliveryoptions input.radio[name="deliverymethod"] + label, fieldset#paymentoptions input.radio[name="paymentmethod"], fieldset#paymentoptions input.radio[name="paymentmethod"] + label, fieldset#addressoptions input.radio[name="address"], fieldset#addressoptions input.radio[name="address"] + label {
+  vertical-align: baseline; }
+
+#mobileonlypretext {
+  display: none; }
+
+#pharmacylookup div.pharmacysearchinput {
+  display: inline-block;
+  position: relative;
+  width: 65%; }
+#pharmacylookup div.pharmacyzipinput {
+  display: inline-block;
+  width: auto; }
+#pharmacylookup div.searchresults, #pharmacylookup label {
+  text-align: left; }

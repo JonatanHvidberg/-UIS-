@@ -1,0 +1,411 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{graphicx}
+\usepackage{su19}
+
+\begin{document}
+\begin{titlepage}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+    \center
+    \textsc{\LARGE University of Copenhagen}\\[1.5cm]
+    \textsc{\Large Development of Information Systems}\\[0.5cm]
+    \textsc{Course ID: NDAB16009U}
+
+    \vfill
+    \HRule\\[0.4cm]
+    {\huge\bfseries Assignment 4}\\[0.4cm]
+    \HRule\\[1.5cm]
+
+    \large\textit{\textbf{Authors}}
+    
+    \large\textit{\textbf{Team 2 -  group 8}}
+    \\Emil Bæk Henriksen - \texttt{WSL798}
+    \\Jasmin Brinch Pedersen - \texttt{WCP197}
+    \\Jonatan Geysner Hvidberg - \texttt{PJC990}
+    
+    \vfill
+
+    \large\textit{\textbf{Teaching Assistant}}
+    \\Ziming Luo
+    \\Marco Ugo Gambetta
+
+    \vfill
+    \large\textit{\textbf{Deadline}}
+    \\12th of June
+    \vfill
+
+\includegraphics[width=0.7\textwidth]{pics/ucph.png}
+\end{titlepage}
+
+\pagenumbering{arabic}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Objective}
+\subsection{Objective and Premise of the Design}
+'\textit{Min Sunhedsplatform}' is a subsidiary of the larger platform '\textit{Sundhedsplatformen}'. This particular division is preserving their focus on the patients and their relatives.\\ Particularly, interested in optimizing the patients' use of the platform and how they can get the best treatment possible so that they can live as normal a life as possible without any avoidable apprehensions.\\
+
+The participatory aim of this assignment is to find where there is a need for improvements and whether it is achievable using the MUST-method.\footnote{Keld Bødker, Finn Kensing and Jesper Simonsen, \textit{Participatory IT Design - Designing for Business and Workplace Realities} (MIT Press 2004), 17}
+To narrow the focus of our assignment down we have a focal point on diabetics and their peculiar use and needs for the platform.\\
+
+%der skal måske tilføjes lidt her under
+For this we are developing a prototype with two minimum requirements:
+\begin{itemize}
+    \item A GUI where diabetics can access their data regarding blood glucose level in a optimized way
+    \item A prototype database that is in contact with GUI
+\end{itemize}
+
+
+\subsection{Main points of the in-line analysis phase}
+During our in-line phase we started out by making a document analysis of the strategy of \textit{MinSP} which provided us with fundamental knowledge of how the platform was meant to be used. Using the finding in our in-situ interview\footnote{Bødker, Kensing, Simonsen, Participatory IT Design, 228} where we first hand got to experience how a user from our target group uses the platform.\\ In other words, this made sure that we had a genuine user participation\footnote{Bødker, Kensing, Simonsen, Participatory IT Design, 58} and first hand experience with work practices\footnote{Bødker, Kensing, Simonsen, Participatory IT Design, 65}, by securing visions that preserves the users needs and mutual learning, but also to make sure that the observed needs are in fact executed.\\
+
+Furthermore, this experience gave us insight into the workings of the platform and highlighted some issues that hindered the user when using the platform. Most noticeable was that some functions were missing which would have made sense for out target group to have, e.g. a graph depicting the changes in a diabetics blood glucose levels over time. Currently the user of the platform would need to go through each test result in order to see the change.\\
+
+As the data was present but not utilised indicates a systemic issue that touched on many more facets, for instance how the contact list of health professionals was only implemented superficially, i.e. holding only a single health professional by means of only showing their name and no other contact information.\\ 
+
+As our target group is in contact with numerous health professionals the patients had to make use of external tools in order to find the desired contact information of their practitioners.\\
+
+In addition to this we also found that some functions were never used by our interviewee, an example of this could be how he never used the platform to book an appointment. The reason being that this was handled at the end of each consultation, where a new date was agreed upon. So by collaborating with the user we gained a coherent vision\footnote{Bødker, Kensing, Simonsen, Participatory IT Design, 53} as this get the best possible basis for decisions.\\
+
+\textbf{Goals for \textit{MinSP}}
+
+\begin{itemize}
+    \item Strengthened patient involvement
+    \item Improved quality
+    \item Reduced Resource Usage
+\end{itemize}
+
+\textbf{Challenges and problems for \textit{MinSP}}
+\begin{itemize}
+    \item Getting patients to use its' functionality is not easy
+    \item Getting the health professionals to use it
+    \item There are missing key functionalities
+    \item It has a poor interaction design
+\end{itemize}
+
+
+\subsection{Main Points of the In-Depth Analysis Phase}
+In our in-depth analysis phase we made use of a more thorough approach to the assignment and target group. This was for instance done by a round of surveys where we tried to get as many diabetic users to participate. Amongst others, we made use of this approach to find out if our initial findings was a general tendency among our target group. Again, this provided a first hand experience with the user's work practices\footnote{Bødker, Kensing, Simonsen, Participatory IT Design, 65} as we gained relevant and coherent descriptions of the interviewees perspective of \textit{MinSP}. \\
+
+Overall, the survey showed that our initial findings was in agreement with the general tendency as well as shining a light on issues that we had not yet considered in our in-line analysis. e.g. the of usability for our target group where a significant number had opted out of using the platform altogether and continued as they had before the beginning of \textit{MinSP}.\\
+
+Though, the regular users was somewhat satisfied with the functionality that were present on \textit{MinSP}, for example the ability to view appointments from within the app, but less so with how their data was presented which was something that was noticed in the first in-situ interview.\\
+
+Based on the gathered information we created a series of user stories to describe the functionality to be implemented to help improve the platform and to gain a superficial insight in how it would work on an abstract level.\\
+
+
+
+ % Mapping
+ %principles
+%1   coherent vision (page 53-58)
+%2   Genuine user participation (page 58-65)
+%3   first hand experience with work practices (page 65-70)
+%4   Anchoring visions (page 70-75)
+
+%What tools did we use?
+ %  Baseline Planning
+ %  Document Analysis
+ %  Hearing (principle 2 and 4)
+ %  SWOT Analysis(principle 1,2 and 4)
+ %  Interview (principle 2 and 3)
+ %  Observation (principle 1 and 3)
+ %  workshop (principle 1,2,3 and 4)
+ %  Experimenting with Prototypes (Principle 1,2 and 4)
+ 
+
+The unutilized functionalities could with the proper work place organization educate the health professionals in how to take full advantage of the unused functionality such as \textit{'mine prøvesvar'}. This might be to incorporate the users own tests answers that is currently only needed for the specific consultation in paper form, but is not admitted into the users actual test results. This would give the patient the opportunity to revisit his or her previous test results.\\
+
+
+\textbf{How to fulfil goals for \textit{MinSP}}
+\begin{itemize}
+    \item Interview with users
+    \item Preparation / distribution of questionnaire
+    \item Design of mock-ups for use in interviews with users and stakeholders
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%MUST%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%What tools did we use?
+% Experimenting with Prototypes (Principle 1,2 and 4)
+%  workshop(Principle 1,2,3 and 4)
+    % Dead Sea Scroll
+    % Freehand Drawing 
+    % Timelines 
+% Thinking Aloud (Principle 1,2 and 3)
+
+% Scenarios(principle 1 and 4)
+ 
+% Mapping the principles
+%1   coherent vision
+%2   Genuine user participation
+%3   first hand experience with work practices
+%4   Anchoring visions
+
+%  Baseline Planning
+%  Document Analysis
+%  Hearing (principle 2 and 4)
+%  SWOT Analysis(principle 1,2 and 4)
+%  Interview (principle 2 and 3)
+%  Observation (principle 1 and 3)
+%  workshop (principle 1,2,3 and 4)
+%  Experimenting with Prototypes (Principle 1,2 and 4)
+
+\section{Visions for Overall Change}
+%What did we see as places we could improve upon the platform
+%What did we want to accomplish with our changes
+%What tools would we need to do this
+%Platformen findes, vi skal altså ikke genopfinde den dybe tallerken så vi videreudvikler på den, og omdesigner visse aspekter af den
+%
+Based on the findings and knowledge that we gained during the preceding phases we have created an outline of our vision for overall changes in a mock-up of our prototype. This was furthermore used to narrow in, the changes that our final prototype will be adapted to, making this a more iterative process. e.g:
+
+\begin{itemize}
+    \item Developing an interactive prototype in Power Point
+    \item Presenting it to a representative from our target group, getting feedback that is used to make adjustments
+    \item Adjusting the prototype based on the given feedback
+    \item Ensuring that our vision is anchored in the users' experience
+\end{itemize}
+
+%prototype 1,2,4
+
+In which the parts that will be developed from scratch are 
+
+\begin{itemize}
+    \item A GUI for the graph, with the option to select the range of dates
+    \item The logical flow handling the queries to the database
+    \item A comprehensive contact list
+\end{itemize}
+
+Overall our vision is to make changes in how a graph is produced based on personal data and statistics so that we can make it a more serviceable tool for diabetics to use. Not to mention making the available utensils and functionalities easier to use while also more self-explanatory. If successful and the patients, and potential users of \textit{MinSP}, starts taking the platform more seriously than presently, it would reduce the administrative burden for health professionals as they then can focus their time on much more needed tasks.
+
+\subsection{Technology}
+%Do we need new technology or do we have it all in-house?
+%What would we need to develop to complete our own goals 
+%Expanding on what has been developed before we
+%functionalities like graph should be easy to find and use
+%Using the functions that are present and incorporating it in to the work practise of both users and health professionals
+
+
+\subsubsection{IT Systems and IT Platform}
+
+The above mentioned changes will by implemented using \texttt{Flask} as a framework, implementing a \texttt{database} handled by \texttt{SQL}s and create a graphical user interface in \texttt{HTML}.\\
+
+\subsubsection{Functions}
+The core areas of changes for \textit{MinSP} will be the search function to make it easier for the user to find their desired data, a graphical tool which allows the users to get an overview presented as a graph that represent their desired data, and at least a contact list which should contain the diabetics numerous doctors and their respective contact information, e.g. telephone number and address.\\
+
+For our solutions we have the following criteria for the platform, \textit{MinSP}
+
+\begin{itemize}
+    \item An easy and intuitive interactive design
+    \item Search function
+        \begin{itemize}
+            \item Test results
+            \item Appointments
+            \item Questionnaires
+        \end{itemize}
+    \item Graphical tool to gain overview of test results
+    \item Better access to health professionals associated to the users unique treatments
+    \item Reminder for upcoming appointments
+\end{itemize}
+
+\subsubsection{User Interfaces}
+There are a lot of issues with the present version of the platform, mainly that there are a lot of pristine key features that are buried in different sub-menus, which require that the user knows exactly where to find them. \\
+
+Accordingly we aim to minimize the number of clicks by merging buttons/functionalities that lead towards the same destination. Along these lines it would be easier to access the different functionalities and no one would be confused by the names of the functions, etc.\\
+
+\subsection{Work Organization}
+After a successful implementation the user would swiftly experience a simple passage to the different functionalities, together with utensils such as our graph tool, to make their data easier to view and understand.\\
+
+Subsequently, this would strengthen their daily work process and likewise demand less contact with the health professionals regarding superfluous questions and test results.\\ 
+
+The overall work process would not be distorted by the implementations, quite opposite it would hopefully improve upon it and create less complications for all parties involved.\\
+
+On behalf of the health professionals this would take a slight amount of [getting use to] in regards to updating data on the platform, however, long term it would benefit them and cut down time spent on administrative work.\\
+
+
+\subsection{Qualification Needs}
+A few qualifications are needed for \textit{MinSP} to perform efficiently; The user will need to be able to operate a computer or any other device with internet access in order to interact with the platform. Furthermore, the health professionals would need clear instructions in how to upload the correct data into the right places. This also includes that the health professionals are able to answer the patients questions and being able to explain how to see, upload or read data displayed on \textit{MinSP}.\\
+
+Apart from these qualifications there are no other necessities as the platform is not an actual working environment.\\
+
+\section{Advantages and Disadvantages}
+\subsubsection{The Company's Business and IT Strategies}
+
+\section{The MUST Method}
+%Her skal vi lave en liste over ting vi har gjort, og hvilke erfarringer det har givet os, ny information vi har opnået og lignende
+
+%describe it in a new section, make a list of the things we did
+%    - our findings and how it knowlegde base expends because of [things]
+%    - interview gave us insight, things that was not used, and how it lived up to the must method
+%    - top priorities should be included and the should, in the report,
+
+
+
+\section{The MoSCoW method}
+% describe hwo we lived up to this and how we have used it
+% 
+From the MoSCoW 
+
+\section{Recommendations and Priorities}
+As mentioned above, it would be an immense addition if the health professionals were educated in the newly implemented functionality of the platform. More specifically, it was discovered that a utensil that could easily have been used to facilitate taking test results at home and transferring them directly to their physician. It is not clear why this was not utilized in \textit{MinSP}'s current version, however, with a small change to the work practise - from both the health professionals and the target group - it could remove an unnecessary burden and automate the collection of data.
+
+
+\section{Implementation Strategy and Plan}
+The implementation of the new version of \textit{MinSP} would not change the work practise directly of neither the health professionals nor the patients, as the framework of the platform would be maintained, though improved in certain aspects.\\ 
+
+As the implementations succeed, a group of both parties, health professionals and patients, could work together to test and see if our solution is a viable solution to the issues we have discovered.\\
+
+Also, it is highly recommended that the steps in implementation follows the SCRUM method\footnote{https://www.scrum.org/resources/what-is-scrum} to constantly ensure that the target group and health professionals get a product that can be used sufficiently and in a way that suits their respective work practises without overwhelming them with new tools to learn.\\
+
+\subsection{Technical}
+%Vi har lavet nye ting, men også fundet ud af at funktioner allerede findes som skal tages i brug
+
+
+\subsection{Domain Description}
+\label{sec:domain_des}
+% Dette afsnit er taget fra assignemnt 1
+%https://absalon.ku.dk/courses/38804/pages/text-description-of-information-managed-in-the-domain
+%intro til en person
+In our domain model we focus on the relationship between the patient and the platform, where the main role in this domain is of the patient and the health professional. We start out by defining a person by their CPR number which is also the key when looking up a specific person with their associated information. \\
+
+%person
+A patient might have different ongoing (or terminated) treatments at any moment, which could be independent of each other. So for each individual we are maintaining the relevant information such as the history, phone number, address and name through CPR number. As the platform needs to keep track of each patient's individual health profile we have a journal connected by their CPR number. The journal contains the relevant information of the patient's treatments such as replies to questionnaires, notes, test results and the relevant health professionals that are connected to that patient.\\
+
+%health professional
+The health professionals are connected with the patient and all patients have at least one doctor associated with them through their CPR number. All health professionals have a role in the health care system and work in a department which has a specialty. A simple example could be a doctor specialized in diabetes, which might be the prime feature of the department they are working in, thus the connection between speciality and department.\\
+
+%patient, Relatives , journal, Notes 
+Each patient has a single journal, which holds the notes regarding ongoing treatments and includes information about results obtained over time. From the journal the patient and health professionals can gain insight into the patient's history, results and notes - some patient may have a guardian or another close relative who are granted access to the patient's information. Notes can be of varying nature and hence contains a text body with the relevant information.\\
+ 
+%Results
+The results that are reported by the health professionals are applied to the patient's journal. These are identifiable by a unique ID, and contains data such as the date it was taken, the producer of the results and the files which contains the result of the tests.\\
+
+\subsection{Organizational}
+
+For those health professionals who have contact with our target group it would require a course in how the platform works from the user's perspective, so that they can inform the user with the tasks they have to perform, such as sending data from a measurement in a proper manner.\\
+
+\section{Conclusion}
+In this report we have formulated our proposed changes and extensions for the platform, which are based upon our findings from the in-line analysis and the in-depth phase. Drawing upon genuine user participation to create a coherent vision for change, while anchoring it in first hand experience.\\
+
+\newpage
+%We need to update our ER diagram to reflect our changes that has been made (Jonatan will do it) nice
+
+\section{The Prototype}
+\subsection{Intro}
+
+%(a) En højniveau beskrivelse af prototypens design;
+% Mangler stadig
+
+
+%(b) Et ER diagram af prototypens database;
+%tjek
+
+%(c) En beskrivelse af relationerne i prototypedatabasens ER diagram;
+%tjek, section 5.2
+
+%(d) Givet, relationerne udledt i (c) ovenfor: Hvilken normalform er hver af disse relationer i? Er der ikke-trivielle funktionelle afhængigheder, hvor venstresiden ikke er en supernøgle? Hvis ja, argumenter for hvilke yderligere normaliseringstrin du ser for dit databaseskema eller begrund hvorfor yderligere skridt ikke er nødvendige.
+%mangler 
+%Se lecture 10, for vejledning. Vi skal vise normalformen og andre database ord
+
+%Vi har f.esk delt læger op så department ikke er en direkte del af lægens databse del, det bliver brudt op så det er fordelt 
+%blå diamanter er et godt starts sted
+%jpurnal findes ikke som sådan, da den er slået sammen med patient da det er en afhægnighed, da den ikke kan eksistere uden en patient.
+
+%(e) Prototypens Python/Flask- samt SQL-kildekode. Kildekoden vedlægges som separat zip-fil, i tillæg til rapporten som en PDF.
+%Almost done
+
+We develop a prototype
+
+\subsection{High-level Description}
+%siqil diergan
+%alle qury
+%funtiloatet
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.60]{pics/doc.png}
+    \caption{}
+    \label{fig:er}
+\end{figure}
+
+It was importne for the tarkit grupe to se the helthprofesonals there wer in contakt with. we mate at sige on the protutype calt 'mine læger' wher contat inormation and locatin of helthprofesonals the courint user vwer in contatk with is shovn. the user will klick on 'mine lægeer' and will reyest to go to that suppate. the sigthe will send a sql reqest to the database there vil returne (name, phonenumber, address, role)  form healthprofessionals ther is in a relatid wit the curint user
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.60]{pics/Sqlreq.png}
+    \caption{E/R diagram (thick frames around entities and relation means that they are weak.)}
+    \label{fig:er}
+\end{figure}
+
+It was importen for the tagit grupe to get an esay overwur of ther data and searche in it without gettin fru allot of sup windos. the wen intring the result we prsent all data, the user can then search in the tata for spisifick key vords.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.60]{pics/graf.png}
+    \caption{E/R diagram (thick frames around entities and relation means that they are weak.)}
+    \label{fig:er}
+\end{figure}
+the tarket grup var nited to get a overwye of ther data in a graph. the user well go to the in a graph. the user well go to the in a graph.
+
+\srubsection{Description of ER}
+
+The ER diagram describes the relations that we have implemented in our prototype, our focus is on the Person, which is the base for all our relations that springs from this base. The role of patient and health professional both makes use of the Person to store the base information about them, such as their full-name, cpr number, address, phone number and their history.\\
+
+As each person has at least one doctor connected to them, as is the standard for any Danish resident, but it could also be that more health professionals are connected to any one patients, as is the case for most of our target group. Each health professional has a specific role, and are limited to one department that they are connected to as their workplace. Each workplace has a single address but can have more then one specialty.\\
+
+It is the job of the health professionals to provide results to their patients, which will then be included in each patients private journal, of which only one will exist at any given time for a patient.\\
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.60]{pics/sql_E_R_MinSundhedsplatform}
+    \caption{E/R diagram (thick frames around entities and relation means that they are weak.)}
+    \label{fig:er}
+\end{figure}
+
+
+we have a E/R diagram, and it is gorties 
+\subsection{Relations}
+I have no idea???
+
+%We got to describe how we have structed our tables and relations 
+
+
+
+\section{Appendix}
+\subsection{E/R diagram}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.60]{pics/ER2105.png}
+    \caption{E/R diagram (thick frames around entities and relation means that they are weak.)}
+    \label{fig:er}
+\end{figure}
+
+The original ER diagram that we used as a starting point before minimizing it to its' current form. This contains all the relations that we had envisioned to be part of the prototype. The domain description can be found at section \ref{sec:domain_des}.
+
+\subsection{User Stories}
+
+\textbf{PUS 1:} As a user I have easy access to my information, so I can find it without having to spend too much time and energy.\\
+
+\textbf{PUS 2:} As a user I can Customize the layout of the platform, so I can navigate the app easier according to my personal needs.\\
+
+\textbf{PUS 3:} As a user I can search trough my data, so I can find the relevant information I need.\\
+
+\textbf{PUS 4:} As a user I know what the different modules are about, so I can find the relevant information I need.\\
+
+\textbf{PUS 5:} As a user I have all associated health professionals gathered in one place (a contact list), so I can easily get in contact with whomever I need.\\
+
+\textbf{PUS 6:} As a user I have my data presented in a graphical way, so I can gain a better understanding of it and get a quick overview of my illness.\\
+
+\textbf{PUS 7:} As a user I am reminded by the app to take my medication, so I will not forget to take the correct medication at a given time\\
+
+\textbf{PUS 8:} As a user I am able to report possible mistakes to those responsible for providing the medical data, so I can be sure to that no one is misinformed about my illness.\\
+
+\textbf{PUS 9:} As a user I can see my calendar when I visit the platform as the first thing, so I can get a quick overview of my upcoming appointments.\\
+
+\newpage
+\section{Bibliography}
+\begin{itemize}
+    \item Keld Bodker, Finn Kensing, Jesper Simonsen - Participatory IT Design - Designing for Business and Workplace Realities-The MIT Press(2004)
+\end{itemize}
+
+\end{document}

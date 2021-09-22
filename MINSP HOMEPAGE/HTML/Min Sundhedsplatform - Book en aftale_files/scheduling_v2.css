@@ -1,0 +1,1292 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+/* #region Overall page definitions */
+#main .title {
+  height: auto; }
+
+.divider {
+  margin: 0.25rem 0;
+  border-top: 1px dashed #cccccc;
+  border-bottom: 1px dashed #cccccc; }
+
+h3 .subtext {
+  font-size: 0.9rem; }
+
+/* #endregion */
+/* #region card-related definitions */
+#scheduling-workflow .cardlist .card:not(.helptip) {
+  padding-left: 0.7rem; }
+
+.readonly .selectable {
+  pointer-events: none; }
+
+#scheduling-workflow .card.collapsed {
+  background-color: transparent;
+  box-shadow: none;
+  min-height: 4rem; }
+#scheduling-workflow .card.withButton:not(.ticket) {
+  padding-bottom: 3.5rem; }
+  html.mobile #scheduling-workflow .card.withButton:not(.ticket) {
+    padding-bottom: 5.5rem; }
+
+.card.favorite {
+  overflow: hidden; }
+  .card.favorite .cardline {
+    z-index: 1; }
+    .card.favorite .cardline:not(.bottom) {
+      position: relative;
+      max-width: 90%; }
+  .card.favorite .favoriteIcon {
+    background-image: url("../images/flat_star.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.3;
+    bottom: -1rem;
+    right: -1rem;
+    z-index: 0;
+    height: 6rem;
+    width: 6rem;
+    transform: rotate(-15deg); }
+  .card.favorite .removeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.2rem 0.4rem;
+    font-size: 1.25rem;
+    cursor: pointer; }
+    .card.favorite .removeButton:hover, .card.favorite .removeButton:focus {
+      font-size: 1.75rem; }
+    .mobile .card.favorite .removeButton {
+      font-size: 2rem; }
+    @media screen and (max-width: 768px) {
+      .card.favorite .removeButton {
+        font-size: 2rem; } }
+
+.card .actions-container {
+  display: flex;
+  justify-content: space-between; }
+  .card .actions-container .left {
+    align-self: flex-end;
+    width: auto;
+    flex-shrink: 1;
+    padding-right: 0.5rem; }
+  .card .actions-container .right {
+    align-self: flex-end;
+    width: auto;
+    flex-shrink: 0;
+    max-width: 70%; }
+  html.mobile .card .actions-container {
+    display: block; }
+  html.mobile .card .actions-container .right {
+    max-width: none; }
+
+/* #endregion */
+/* #region demographic verification */
+.demogcontainer.card .buttonList .button, .otherInfoContainer.card .buttonList .button {
+  opacity: 1; }
+
+/* #endregion */
+/* #region Individual slot styles */
+.slot {
+  width: auto;
+  padding: 0.32rem 0.2rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.125rem;
+  font-size: 0.95rem;
+  display: block;
+  font-weight: 600;
+  transition: padding 0.4s; }
+  .slot.selected, .slot:hover, .slot:focus {
+    text-decoration: none; }
+
+/* #endregion */
+/* #region Slot group styles */
+.allslotgroups {
+  width: calc(100% + $slotPaddingRight);
+  max-width: initial; }
+
+.slotgroup {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.4s; }
+
+.solutionpreview {
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  padding: 0.5rem;
+  padding-right: 0.6rem;
+  margin-top: calc(-0.6rem + 1px);
+  margin-bottom: 8px; }
+  .solutionpreview .verticalSubwayStop:focus {
+    outline: none; }
+
+.slotgroup.preview .slot {
+  padding-bottom: 16px; }
+
+.slotsData.previewmode .slotgroup:not(.preview) {
+  opacity: 0.5; }
+
+.grid .solutiondetails .slotdetails.lastinday {
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 12px; }
+  .grid .solutiondetails .slotdetails.lastinday:last-child {
+    border-bottom: none; }
+
+.solutionalerts .alert {
+  padding-bottom: 8px; }
+  .solutionalerts .alert::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+    margin-right: 6px;
+    position: relative;
+    top: 1px; }
+  .solutionalerts .alert.locationalert::before {
+    background-image: url("../images/visits/alert_location.png"); }
+  .solutionalerts .alert.datealert::before {
+    background-image: url("../images/visits/alert_date.png"); }
+
+/* #endregion */
+/* #region Slot in mobile optimized */
+html.mobile .locationcontainer {
+  margin-bottom: 0.75rem;
+  position: relative; }
+  html.mobile .locationcontainer:last-child {
+    margin-bottom: 0; }
+html.mobile .slotsData .card {
+  margin-left: 1px; }
+html.mobile .slot {
+  border-radius: 0.25em;
+  padding: 0.75rem 0.25rem; }
+
+/* #endregion */
+/* #region Non-slot styling of slots step */
+.slotsstep .preference, .slotsstep .daytimetable, .slotsstep .teamscheduling {
+  margin-bottom: 0.5rem; }
+.slotsstep .slotsData.card {
+  margin-top: 0;
+  padding: 0.75rem 0; }
+  .slotsstep .slotsData.card .day {
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 0.75rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    .slotsstep .slotsData.card .day .dayheader {
+      padding: 0.25rem 0 0 0;
+      display: inline-block;
+      font-weight: bold; }
+  .slotsstep .slotsData.card .providersection {
+    padding-top: 0.75rem; }
+  .slotsstep .slotsData.card .name {
+    font-size: 1rem; }
+  .slotsstep .slotsData.card .nodata .retryButton {
+    margin: 0.5rem auto 0 auto; }
+.slotsstep .solution.card {
+  padding: 12px; }
+
+.slotsstep .loadingoverlay, .loadingoverlay.relative {
+  position: relative;
+  margin-top: 0; }
+  .slotsstep .loadingoverlay .loadingmessage, .loadingoverlay.relative .loadingmessage {
+    width: auto;
+    padding: 1rem; }
+
+.slotsstep .loadingoverlay.absolute {
+  position: absolute;
+  top: 4rem; }
+
+.slotsstep .scrollwrapper {
+  overflow: hidden; }
+.slotsstep .providersection.card {
+  padding-bottom: 0.3rem; }
+.slotsstep .slotsData {
+  position: relative; }
+  .slotsstep .slotsData .schedulinginstructions .helptip {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 0.9rem;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    background-image: url("../images/visits/scheduling_instructions.png"); }
+  .slotsstep .slotsData .teamBanner .helptip {
+    background-image: url("../images/info.png");
+    background-position-y: calc(50%); }
+  .slotsstep .slotsData .teamBanner .buttonCell {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .slotsstep .slotsData #teamscheduling_label {
+    font-size: 0.9rem; }
+  @media screen and (max-width: 768px) {
+    .slotsstep .slotsData .teamBanner .helptip {
+      background-position-y: calc(50% - 1.4rem); }
+    .slotsstep .slotsData .teamBanner .button {
+      margin-left: -2rem; } }
+  .slotsstep .slotsData.card .schedulinginstructions .helptip {
+    position: relative;
+    top: -0.75rem; }
+  .slotsstep .slotsData .day .card {
+    min-height: 3rem; }
+  .slotsstep .slotsData .day .dayheader {
+    padding: 0 0 0 0.25rem;
+    font-size: 1.1rem; }
+  .slotsstep .slotsData .cardline.name.heading {
+    padding-bottom: 0.5rem; }
+
+.loadmorecontainer {
+  text-align: center;
+  padding: 1rem 0; }
+
+.card.slotFilterToggle {
+  min-height: 0;
+  margin-top: 0;
+  margin-bottom: 12px; }
+
+a.filtertogglesection:hover, a.filtertogglesection:focus {
+  text-decoration: none; }
+
+.filtertogglesection {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem; }
+  .filtertogglesection h3.filtertext {
+    width: auto; }
+  .filtertogglesection img.filterIcon {
+    margin-left: 16px;
+    min-width: 0;
+    min-height: 0;
+    transition: all 0.4s; }
+    .filtertogglesection img.filterIcon.selected {
+      transform: rotate(-180deg); }
+
+.filtertogglecontent {
+  padding: 16px 0 0; }
+
+.mobile a.button.loadanotherbatchbutton.jqHidden {
+  width: 100%; }
+
+/* #endregion */
+/* #region fallback request styling */
+.requestheader {
+  padding: 0.5rem;
+  margin-top: 0.5rem; }
+
+.request .requestprovider {
+  font-size: 1.1rem;
+  display: inline-block;
+  width: 100%; }
+
+.requestList a.departmentbutton {
+  display: inline-block;
+  margin-left: 24px;
+  width: calc(100% - 24px); }
+  .requestList a.departmentbutton:before {
+    background: transparent none no-repeat scroll center center/18px 18px;
+    background-image: url("../images/inbasket_small_over.svg");
+    content: "";
+    height: 1.25rem;
+    margin: 0 0 0 -24px;
+    position: absolute;
+    width: 18px; }
+
+.expandedrequestsection .row > div {
+  padding: 12px; }
+
+.nodays.expandedrequestsection .row > div {
+  padding: 0 24px; }
+
+/* #endregion */
+/* #region Provider and location header styles */
+.providerinfo {
+  width: calc(100% - 3.75rem);
+  display: inline-block; }
+  .providerinfo.nophoto {
+    width: 100%; }
+
+span.address, span.specialty {
+  display: block; }
+
+.slotsstep .locationheader {
+  font-size: 1rem;
+  padding-bottom: 0.25rem; }
+
+.card .locationssection.cardline.partial {
+  width: calc(100% - 3.75rem); }
+
+/* #endregion */
+/* #region Provider photo related styles */
+.providerphotos .photo, .card .providerphoto .photo, .card.providersection .photo.colorpreview, .confirmationstep .providerphoto, .originalappointment .providerphoto, .originalappointment .colorpreview.providerphoto, .requeststep .providerphoto {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #dbdbdb;
+  float: left;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 1.5rem;
+  background-size: cover;
+  vertical-align: top;
+  margin: 0 0.75rem 0 0; }
+
+.card .cardline.partial.photo {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #dbdbdb;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 1.5rem;
+  background-size: cover;
+  vertical-align: top; }
+
+.providerphotos {
+  float: left;
+  margin: 0 0.75rem 0 0;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  /* In order for absolute positioning to work for child elements */ }
+  .providerphotos.small {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    margin-top: -0.25rem; }
+    .providerphotos.small .photo {
+      width: 2rem;
+      height: 2rem; }
+  .providerphotos.multiple {
+    left: -0.45rem; }
+    .providerphotos.multiple.small {
+      left: 0;
+      width: 2.7rem; }
+    .providerphotos.multiple .photo {
+      z-index: 1; }
+      .providerphotos.multiple .photo + .photo {
+        position: absolute;
+        left: 0.7rem;
+        z-index: 0; }
+
+/* #endregion */
+/* #region Reason for visit step related styles */
+.badge.rfvImage img {
+  max-height: 3.5rem; }
+
+/* #endregion */
+/* #region Location step styles */
+.locationstep .card.helptip.helpicon {
+  background-image: url("../images/help.png"); }
+.locationstep .card.helptip a, .locationstep .card.helptip.expanded select {
+  display: inline;
+  margin: 0 0.5rem; }
+.locationstep .card.helptip select, .locationstep .card.helptip.expanded a {
+  display: none; }
+.mobile .locationstep .card.helptip a, .mobile .locationstep .card.helptip.expanded select {
+  display: block;
+  margin: 0; }
+.mobile .locationstep .card.helptip select, .mobile .locationstep .card.helptip.expanded a {
+  display: none; }
+
+/* #endregion */
+/* #region Loading overlay styles */
+.loadingoverlay {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  height: auto;
+  margin-top: 2.5rem; }
+  .insuranceVerification .loadingoverlay {
+    position: relative; }
+
+.mobile .quickschedule.loadingoverlay {
+  position: fixed;
+  z-index: 3;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .mobile .quickschedule.loadingoverlay.jqHidden {
+    display: none; }
+
+.loadingoverlay .loadingspinner {
+  width: 64px;
+  display: block;
+  margin: 0 auto; }
+.loadingoverlay .loadingmessage {
+  margin: 0 auto;
+  text-align: center;
+  width: 20%;
+  border-radius: 0.5rem;
+  padding: 0.5rem; }
+
+.mobile .quickschedule.loadingoverlay .loadingmessage {
+  width: auto; }
+
+.schedulingoverlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.quickschedule .loadingHeart:before {
+  position: relative; }
+
+.loadingmessage .loadingHeart {
+  text-align: initial; }
+
+/* #endregion */
+/* #region Date range styles */
+.datepickercontainer {
+  display: inline-block;
+  width: auto; }
+
+.slotstep .sidebarfilters {
+  margin: 0.5rem 0 1rem 0; }
+
+.daterangecontainer label.daterangeinput {
+  margin: 0 0.4rem;
+  display: inline; }
+
+.sidebarfilters.daterangecontainer {
+  margin-bottom: 0.5rem; }
+
+.slotsstep .timeTable, .requeststep .timeTable {
+  margin-top: 0; }
+
+.timepreferencecontainer .daytimetable tr td, .timepreferencecontainer .daytimetable tr th {
+  max-width: 5rem;
+  word-wrap: break-word; }
+
+.mobile .timepreferencecontainer {
+  width: 100%;
+  margin: 0.5rem 0; }
+
+.mobile .timepreferencewidget {
+  overflow: hidden; }
+  .mobile .timepreferencewidget > [id$='_daytimetable'] {
+    overflow: hidden; }
+
+.timepreferencecontainer.vertical .daytimetable span.daystring {
+  display: inline-block;
+  width: 50%; }
+.timepreferencecontainer.vertical .daytimetable .rangebuttons {
+  width: auto;
+  display: inline-block; }
+  .timepreferencecontainer.vertical .daytimetable .rangebuttons .timerange {
+    width: auto; }
+
+/* #endregion */
+/* #region Misc. styles */
+.stepcontainer {
+  position: relative; }
+
+.stepcontainer h2:focus, .headerwrapper h2:focus, .requestfinishedstep h2:focus, .schedulingstopped h2:focus {
+  outline: none; }
+
+/* #endregion */
+/* #region Confirmation step styles */
+.confirmation.card {
+  padding: 0;
+  margin-left: 0; }
+  .confirmation.card .loadingoverlay {
+    margin: 2rem 0; }
+  .confirmation.card > .grid {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 16px 0; }
+
+.requeststep .confirmation form > section {
+  margin: 0 0 1rem 0; }
+  .requeststep .confirmation form > section > label {
+    padding-bottom: 0.25rem; }
+.requeststep .confirmation form .otherprovidersection .messagedisplay, .requeststep .confirmation form .otherrfvsection .messagedisplay {
+  display: inline; }
+
+.confirmationstep .button.schedule {
+  display: inline-block; }
+.confirmationstep .apptDeptInstructions {
+  padding-bottom: 1rem; }
+.confirmationstep .instructionContent > section {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+.confirmationstep .confirmationPanelDetails {
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0; }
+
+.confirmationstep .button.schedule.disabled, .requeststep .button.request.disabled {
+  pointer-events: none; }
+
+.extrasContainer {
+  border: 1px solid #dbdbdb;
+  min-height: 0;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0; }
+  .extrasContainer .header {
+    padding-top: 0; }
+  .extrasContainer:after {
+    content: ""; }
+  .extrasContainer.calendarFlair:after {
+    background-image: url("../images/calendar.svg");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.3;
+    bottom: -2rem;
+    right: -2rem;
+    z-index: 0;
+    height: 6rem;
+    width: 6rem;
+    transform: rotate(-15deg); }
+  .extrasContainer input.buttoncheck + label.buttoncheck {
+    background: none;
+    box-shadow: none;
+    border: none;
+    /* Padding is so text doesn't wrap under the checkbox and instead is aligned with the rest of the text
+		 * 2px accounts for the checkbox margin of 1px on each side */
+    padding: 0 0 0 calc(1.2rem + 2px);
+    margin: 0;
+    word-break: normal; }
+    .extrasContainer input.buttoncheck + label.buttoncheck:not(:last-child) {
+      margin-bottom: 0.35rem; }
+    .extrasContainer input.buttoncheck + label.buttoncheck::before {
+      margin-left: calc(-1.2rem - 2px); }
+  .extrasContainer input.buttoncheck:checked + label.buttoncheck {
+    top: 0; }
+
+.schedulebutton .button.schedule, .requestbutton .button.request {
+  min-width: 50%; }
+
+.schedulebutton:only-child {
+  text-align: center; }
+
+.confirmationstep .providerphoto, .requeststep .providerphoto {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 4rem;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.2rem; }
+
+.appointmentWarnings.card.helptip {
+  margin: 0 0 1.5rem 0;
+  width: 100%; }
+
+.fakelabel {
+  font-size: 1.1rem;
+  padding-bottom: 0.2rem; }
+
+.photoContainer {
+  margin-bottom: 0.6rem; }
+
+.onmyway-signup:not(:first-child) {
+  border-top: 1px solid #dbdbdb;
+  padding-top: 0.5rem; }
+
+/* #endregion */
+.dateSelector .dtSelWrapper label.dateslabel {
+  margin: -0.25rem 0 0.25rem; }
+
+.timeTable, .dateSelector {
+  margin: 1.5rem 0 0 0; }
+
+input#useteams {
+  margin-bottom: 0.5rem; }
+
+span.time .hour {
+  font-size: 1.25rem;
+  font-weight: 600; }
+
+/* #region confirmation */
+.confirmation .apptProvider .provider, .originalappointment .apptProvider .provider {
+  padding-top: 0;
+  word-wrap: break-word; }
+
+.confirmation .apptProvider img {
+  margin: 0 0 0 0.3rem;
+  width: 0.7rem; }
+
+.confirmation .apptProvider {
+  text-align: center;
+  padding: 0 0.5rem 1rem 0.5rem; }
+  .originalappointment .confirmation .apptProvider {
+    text-align: left;
+    padding: 0.75rem 0 0 0.75rem; }
+
+.originalappointment .card.confirmation > .grid {
+  padding-top: 0; }
+
+.mobile .confirmation .apptProvider {
+  padding-bottom: 0; }
+
+.confirmation .apptDateTime, .confirmation .location, .confirmation .copay {
+  padding: 0 0 0 5.5rem;
+  min-height: 2rem; }
+
+.apptDetails {
+  display: inline-block;
+  vertical-align: top; }
+
+.apptDetails .apptDateTime:before, .apptDetails .location:before, .apptDetails .copay:before, .requestfinishedstep .requestfinishedcontent:before, .schedulingstopped .schedulingstoppedcontent:before, .apptDetails .apptDateTime:before, .apptDetails .location:before {
+  background: transparent none no-repeat scroll center center/2rem 2rem;
+  content: "";
+  height: 2rem;
+  margin: 0 0 0 -3.25rem;
+  position: absolute;
+  width: 2rem; }
+
+.apptDetails .apptDateTime:before {
+  background-image: url("../images/visits/clock.png"); }
+.apptDetails .location:before {
+  background-image: url("../images/visits/directions.png"); }
+.apptDetails .telemedicineVisit:before {
+  background-image: url("../images/visits/video.png"); }
+.apptDetails .copay:before {
+  background-image: url("../images/visits/copay.png"); }
+.apptDetails .row {
+  padding: 0; }
+
+.requestfinishedstep .requestfinishedcontent:before {
+  background-image: url("../images/success.svg");
+  margin-top: 0.4rem;
+  margin-left: -2.7rem; }
+
+.schedulingstopped .schedulingstoppedcontent:before {
+  background-image: url("../images/visits/icon_stop.png");
+  margin-top: 0.4rem;
+  margin-left: -2.7rem; }
+
+html:not(.mobile) .requestfinishedstep .requestfinishedcontent, html:not(.mobile) .schedulingstopped .schedulingstoppedcontent {
+  padding-left: 3rem; }
+
+.mobile .requestfinishedstep .requestfinishedcontent h2, .mobile .requestfinishedstep .requestfinishedcontent p, .mobile .schedulingstopped .schedulingstoppedcontent h2, .mobile .schedulingstopped .schedulingstoppedcontent p {
+  padding-left: 3rem;
+  margin-left: 0;
+  width: 100%; }
+
+html.mobile .requestfinishedstep .requestfinishedcontent:before, html.mobile .schedulingstopped .schedulingstoppedcontent:before {
+  margin-left: 0; }
+
+.section.appointmentInfo {
+  padding: 0 0 0.5rem 0; }
+
+.appointmentWarnings {
+  padding-bottom: 1.5rem; }
+
+/* #endregion */
+/* #region summary header */
+a.summaryInfo {
+  display: block;
+  float: left;
+  cursor: pointer;
+  position: relative;
+  padding: 1rem 0.5rem;
+  min-height: 4rem;
+  text-decoration: none; }
+  a.summaryInfo:hover {
+    text-decoration: none; }
+
+.summary.clearfix.width_7 .summaryInfo {
+  width: 14.2%; }
+
+.summary.clearfix.width_6 .summaryInfo {
+  width: 16.6%; }
+
+.summary.clearfix.width_5 .summaryInfo {
+  width: 20%; }
+
+.summary.clearfix.width_4 .summaryInfo {
+  width: 25%; }
+
+.summary.clearfix.width_3 .summaryInfo {
+  width: 33.3%; }
+
+.summary.clearfix.width_2 .summaryInfo {
+  width: 50%; }
+
+.summary.clearfix.width_1 .summaryInfo {
+  width: 100%; }
+
+a.summaryInfo:not(.summarySelectable):hover {
+  cursor: default;
+  background-color: transparent; }
+
+.summaryIcon {
+  background: transparent none no-repeat scroll center center/2rem 2rem;
+  content: "";
+  height: 2rem;
+  position: absolute;
+  width: 2rem;
+  opacity: 0.3; }
+
+.summaryProvider, .mobile .summaryComplete .summaryIcon.summaryProvider {
+  background-image: url("../images/visits/provider.png"); }
+
+.summaryRFV, .mobile .summaryComplete .summaryIcon.summaryRFV {
+  background-image: url("../images/visits/procedures.png"); }
+
+.summaryLocation, .mobile .summaryComplete .summaryIcon.summaryLocation {
+  background-image: url("../images/visits/directions.png"); }
+
+.summaryTime, .mobile .summaryComplete .summaryIcon.summaryTime {
+  background-image: url("../images/visits/clock.png"); }
+
+.summaryQuestionnaire, .mobile .summaryComplete .summaryIcon.summaryQuestionnaire {
+  background-image: url("../images/visits/questionnaire_black.png"); }
+
+.summaryRequest, .mobile .summaryComplete .summaryIcon.summaryRequest {
+  background-image: url("../images/visits/send_request.png"); }
+
+.summaryConfirmation, .mobile .summaryComplete .summaryIcon.summaryConfirmation {
+  background-image: url("../images/visits/schedule_header.png"); }
+
+.summaryConfirmation.telemedicine, .mobile .summaryComplete .summaryIcon.summaryConfirmation {
+  background-image: url("../images/visits/video.png"); }
+
+.summaryTelehealthLocation, .mobile .summaryComplete .summaryIcon.summaryTelehealthLocation {
+  background-image: url("../images/visits/directions.png"); }
+
+.summaryTelehealthXOrg, .mobile .summaryComplete .summaryIcon.summaryTelehealthXOrg {
+  background-image: url("../images/Telemedicine/hospital.png"); }
+
+.platformTelehealthXOrg, .mobile .summaryComplete .summaryIcon.platformTelehealthXOrg {
+  background-image: url("../images/Telemedicine/devices.png"); }
+
+.summarySpan {
+  margin-left: 2.5rem;
+  width: initial;
+  width: auto;
+  word-wrap: break-word; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.summaryInfo span {
+  display: inline; }
+  .summaryInfo span.selectedItem {
+    display: block; }
+
+a.summaryInfo span {
+  padding: 0 0.5rem 0 0; }
+  a.summaryInfo span.subtitle {
+    font-size: 1rem;
+    font-weight: 600; }
+
+.summaryInfo .subtle {
+  font-size: 0.9rem; }
+  .summaryInfo .subtle.editText {
+    display: none;
+    font-size: 0.8rem;
+    word-wrap: normal; }
+    .summaryInfo .subtle.editText::before {
+      content: " "; }
+
+.summaryInfo.summarySelectable:not(.summaryActive) .subtle.editText {
+  display: inline; }
+
+.summaryInfo.summaryActive .summaryIcon, .summaryInfo.summaryComplete .summaryIcon {
+  opacity: 1; }
+
+.summary {
+  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
+  max-width: none;
+  width: calc(100% + 2.6rem);
+  margin-left: -1.3rem;
+  min-height: 4rem; }
+
+.summaryInfo:first-child {
+  padding-left: 1.3rem !important; }
+
+.summaryInfo:before {
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -4px;
+  z-index: 1;
+  transform: scaleX(1);
+  transition: transform 1s ease-out;
+  transform-origin: 0 20%; }
+
+a.summaryInfo:not(.summaryActive):not(.summaryIncomplete):not(.summaryComplete):before {
+  display: none; }
+
+.summaryInfo.summaryActive.summaryIncomplete.animate:before {
+  transform: scaleX(0); }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes floatIn {
+  0% {
+    transform: translateY(8px); }
+
+  100% {
+    transform: translateY(0); } }
+
+@keyframes progress {
+  0% {
+    transform: scaleX(0); }
+
+  100% {
+    transform: scaleX(1); } }
+
+.fadeIn, .floatIn, .animated {
+  transition-property: all;
+  animation-duration: 0.5s;
+  animation-fill-mode: both; }
+
+.fadeIn {
+  animation-name: fadeIn; }
+
+.floatIn {
+  animation-name: floatIn; }
+
+.delay {
+  animation-delay: 0.25s; }
+
+.longdelay {
+  animation-delay: 0.5s; }
+
+.progress, .summaryInfo.summaryActive.summaryIncomplete.animate:before {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: progress; }
+
+.providerstep .spacer {
+  transition: all 0.5s; }
+  .providerstep .spacer.slideup {
+    max-height: 0 !important; }
+
+.summary .apptProvider .provider {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline; }
+.summary .apptProvider img {
+  margin: 0 0 0 0.3rem;
+  width: 0.7rem; }
+.summary .apptProvider, .summary .apptDateTime, .summary .location {
+  padding: 0.25rem 0.5rem; }
+.summary .apptDetails .apptDateTime:before, .summary .apptDetails .location:before {
+  background: transparent none no-repeat scroll center center/1.5rem 1.5rem;
+  content: "";
+  height: 1.5rem;
+  margin: 0 0 0 -2rem;
+  position: absolute;
+  width: 1.5rem; }
+.summary .apptDetails .apptDateTime:before {
+  background-image: url("../images/visits/clock.png"); }
+.summary .apptDetails .location:before {
+  background-image: url("../images/visits/directions.png"); }
+.summary .apptDateTime, .summary .location {
+  padding-left: 2.5rem; }
+
+/* #endregion */
+/* #region rescheduling */
+.content fieldset.reasonList legend.label {
+  padding-top: 0.5rem; }
+
+html:not(.mobile) .content fieldset.reasonList.hasrequired {
+  margin-left: 0.5rem; }
+
+/* #endregion */
+/* #region custom step */
+.customstep .custombody {
+  padding: 1rem;
+  margin: 0.5rem 0 1rem; }
+
+.customstep .customstepbutton {
+  margin-top: 1rem; }
+
+/* #endregion */
+/* #region Onboarding step */
+.grid.onboardingpanelstep {
+  margin-bottom: 3rem; }
+
+.onboardingpanelstep h2 {
+  line-height: initial; }
+
+/* #endregion */
+.cardlist .card.addItem {
+  padding-left: 0.5rem; }
+
+.slotsContainer {
+  display: inline-block;
+  min-height: 250px;
+  height: auto;
+  width: 100%; }
+
+.filtersContainer .prettycheck.container {
+  margin: 0.5rem 0;
+  width: calc(100% - 1.2rem); }
+.filtersContainer span.tbContainer {
+  width: 100%; }
+
+.filtersContainer input:checked + label.togglebutton[for], .filtersContainer input.buttoncheck:checked + label.buttoncheck, .filtersContainer label.togglebutton[for], .filtersContainer input.buttoncheck + label.buttoncheck, .requestDetails input:checked + label.togglebutton[for], .requestDetails input.buttoncheck:checked + label.buttoncheck, .requestDetails label.togglebutton[for], .requestDetails input.buttoncheck + label.buttoncheck {
+  width: 100%; }
+
+.content .filtersContainer p.buttoncheck {
+  display: block; }
+.filtersContainer input.date.withCalendar {
+  width: calc(100% - 2rem); }
+
+/* #region Landing Page */
+.banner {
+  position: relative;
+  padding: 1rem 0; }
+  .banner::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc(100% + 2.5rem);
+    margin-left: -1.25rem;
+    z-index: -1; }
+  .banner > .header {
+    padding: 0; }
+
+#standardworkflowselector {
+  position: relative; }
+  #standardworkflowselector > .separator > p {
+    position: absolute;
+    font-size: 1rem;
+    top: 0.8rem;
+    left: 50%;
+    transform: translateX(-50%); }
+  #standardworkflowselector > .separator > .line {
+    position: absolute;
+    top: 2.2rem;
+    bottom: 0;
+    left: 50%;
+    width: 1px; }
+  #standardworkflowselector .card .cardline {
+    line-height: 1rem; }
+
+#providerworkflow .headerwrapper > h2, #providerworkflow .headerwrapper > .subtle, #reasonforvisitworkflow .headerwrapper > h2, #reasonforvisitworkflow .headerwrapper > .subtle {
+  display: block;
+  text-align: center;
+  padding-bottom: 0; }
+#providerworkflow .card .name, #reasonforvisitworkflow .card .name {
+  font-size: 1rem;
+  word-break: break-word; }
+#providerworkflow .card .subtle, #reasonforvisitworkflow .card .subtle {
+  font-size: 0.8rem; }
+
+#providerworkflow .card .cardline, #reasonforvisitworkflow .card .subtle {
+  line-height: 1rem; }
+
+#providerworkflow .card .providerphoto .photo {
+  width: 2.6rem;
+  height: 2.6rem; }
+
+.expand {
+  transform-origin: top;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  transform: translateZ(0); }
+
+.ticket .col-4 .slot {
+  margin-bottom: 4px;
+  margin-right: 6px; }
+.ticket .col-4:nth-child(3) .slot {
+  margin-right: 0; }
+.ticket .providerphoto {
+  width: auto;
+  display: inline-block; }
+  .ticket .providerphoto .photo {
+    width: 2.6rem;
+    height: 2.6rem;
+    margin-top: 0.2rem;
+    margin-right: 0; }
+.ticket .slotGroupDetail {
+  margin-right: 8px; }
+  .ticket .slotGroupDetail:last-child {
+    margin-right: 0; }
+.ticket.card.withButton.col-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0.5rem; }
+.ticket .expireDate {
+  word-break: break-word; }
+
+/* #endregion */
+/* #region Mobile Subway style */
+.mobile .scheduling-embedded #dummydiv {
+  display: none; }
+.mobile .providerstep.combined, .mobile .reasonforvisitstep.combined {
+  display: none; }
+.mobile .summary.clearfix {
+  margin-bottom: 0;
+  height: 4.5rem;
+  top: -0.75rem;
+  position: fixed;
+  z-index: 5;
+  margin-left: -0.5rem;
+  width: 100%;
+  max-width: 50em; }
+.mobile .scheduling-embedded .summary.clearfix {
+  position: static;
+  margin: 0; }
+.mobile .summaryBannerContainer {
+  padding-top: 4.5rem; }
+.mobile .summarySpan {
+  display: none; }
+.mobile .summaryInfo:first-child {
+  padding-left: 0.5rem !important; }
+.mobile a.summaryInfo {
+  height: 4.3rem;
+  width: calc(25% - .6rem); }
+.mobile .summaryIcon {
+  margin: 0 auto;
+  position: relative; }
+
+.summaryInfo .mobileedittext.subtle {
+  width: 100%;
+  position: relative;
+  left: calc(50% - .8rem); }
+.summaryInfo .mobileedittext {
+  display: none; }
+.summaryInfo.summarySelectable:not(.summaryActive) .mobileedittext {
+  display: inline; }
+
+@media only screen and (max-width: 333px) {
+  .card .locationssection.cardline.partial {
+    width: 100%; }
+  .card .cardline.partial.photo {
+    display: none; } }
+
+@media (orientation: portrait) {
+  .mobile .list.workflowselect a {
+    display: inline-block;
+    height: 50%;
+    width: 99%;
+    text-align: center; }
+  .mobile .list.workflowselect .separator {
+    content: '';
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 1px;
+    margin: auto;
+    background-color: #dbdbdb; } }
+@media (orientation: landscape) {
+  .mobile .list.workflowselect a {
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    vertical-align: top; }
+  .mobile .list.workflowselect .separator {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 1px;
+    height: calc(90% - 3.5rem);
+    top: 3.5rem;
+    background-color: #dbdbdb; } }
+.mobile .list.workflowselect {
+  height: calc(100vh - 2rem);
+  position: relative;
+  top: 1rem; }
+  .mobile .list.workflowselect div.centered div.iconcontainer {
+    height: 5rem;
+    width: 5rem;
+    margin: auto;
+    position: relative;
+    background-size: cover; }
+
+.mobile .workflowselect a.card div.iconcontainer {
+  width: 3rem;
+  height: 3rem;
+  float: left;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 1.5rem;
+  background-size: cover;
+  vertical-align: top;
+  margin: 0 0.75rem 0 0; }
+.mobile .workflowselect a.card .workflowinfo {
+  display: inline-block;
+  width: calc(100% - 3.75rem); }
+.mobile .workflowselect .providerfirst div.iconcontainer {
+  background-image: url("../images/visits/schedule_existing_provider.png"); }
+.mobile .workflowselect .rfvfirst div.iconcontainer {
+  background-image: url("../images/visits/encounter_mobile.png"); }
+
+.mobile .list.workflowselect a div.centered {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 0.5rem; }
+.mobile .workflowselect span.header {
+  font-size: 1.1rem; }
+.mobile .filtersContainer span.tbContainer, .mobile .requestDetails span.tbContainer {
+  width: auto;
+  display: block; }
+.mobile .timepreferencecontainer .gridrow.headers {
+  word-wrap: normal;
+  overflow: hidden; }
+.mobile .stepcontainer > div > h2.header {
+  text-align: center; }
+.mobile .scheduling-embedded .stepcontainer > div > h2.header {
+  background: none;
+  margin-bottom: 0; }
+
+.scheduling-embedded > div:not(.summaryBannerContainer) {
+  padding: 0.5rem; }
+
+/* #endregion */
+/* #region Responsive overrides */
+@media screen and (min-width: 769px) {
+  .summaryComplete .summaryIcon {
+    background-image: url("../images/success.svg"); }
+  .apptDetails.col-4, .apptDetails.col-5 {
+    border-right: 1px solid #dbdbdb; }
+  .apptDetails, .requestDetails, .instructionsAndComments {
+    padding: 8px 24px; }
+  .slotgroup {
+    margin: 0 0.6rem 0.4rem 0;
+    width: calc(20% - .6rem); }
+  html:not(.mobile) .slotsstep .filtersContainer {
+    padding-right: 22px; }
+  .solutionpreview .verticalSubway {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media screen and (max-width: 768px) {
+  .summaryInfo.summaryComplete .summaryIcon:before {
+    background-image: url("../images/success.svg");
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    position: absolute;
+    left: 65%;
+    bottom: -10%;
+    background-size: 1rem; }
+  .summaryIcon {
+    margin: 0 auto;
+    position: relative; }
+  .title .headerlink {
+    display: none !important; }
+  .schedulebutton .button.schedule, .requestbutton .button.request {
+    min-width: calc(100% - 16px); }
+  .confirmationstep .providerphoto, .requeststep .providerphoto {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem; }
+  .apptDetails, .requestDetails, .instructionsAndComments {
+    padding: 8px 16px; }
+  .confirmation .apptDateTime, .confirmation .location, .confirmation .copay, .originalappointment .apptDateTime, .originalappointment .location {
+    padding: 0 0 0 3.75rem; }
+  .slotgroup {
+    width: calc(33% - .6rem);
+    margin: 0 0.6rem 0.6rem 0; }
+  .solutionpreview {
+    margin-top: calc(-0.6rem + -2px); }
+  .loadingoverlay {
+    position: fixed;
+    margin: 0 auto;
+    top: 35%;
+    left: 0;
+    right: 0; }
+    .slotsstep .loadingoverlay {
+      position: relative;
+      margin: 0 auto;
+      left: 0;
+      right: 0; }
+    .loadingoverlay .loadingmessage {
+      width: auto; }
+  .spacercolumn {
+    margin-bottom: 0 !important;
+    display: block !important; }
+  #scheduling-workflow {
+    min-height: 160px; } }
+
+.noCookies {
+  height: calc(100vh - 1rem);
+  max-height: 700px;
+  min-height: 15rem;
+  position: relative; }
+
+.noCookies .verticalCenter {
+  margin: 0 1rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - 2rem); }
+
+.noCookies .icon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto; }
+
+#noCookies .icon {
+  background-image: url("../images/visits/watermark_directions.png");
+  height: 150px;
+  margin-bottom: 1rem;
+  width: 150px; }
+
+#noCookiesError .icon {
+  background-image: url("../images/warning.png");
+  height: 64px;
+  width: 64px; }
+
+#schedulingSplashFooter > tbody > tr {
+  background-color: transparent; }
+
+#schedulingSplashFooter > tbody > tr > td {
+  vertical-align: middle; }
+
+#schedulingSplashFooter > tbody > tr > .splashFooterCol1 {
+  width: 50%;
+  text-align: right; }
+
+#schedulingSplashFooter > tbody > tr > .splashFooterCol2 {
+  width: 50%;
+  text-align: left; }
+
+#myChartPrompt {
+  display: block;
+  text-align: center; }
+
+.verticalButtonSeparator {
+  border-left: 1px solid black;
+  height: 50px;
+  width: 1px; }
+
+.centeredFlexContent {
+  display: flex;
+  justify-content: center; }
+
+/* #endregion */

@@ -1,0 +1,23 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+.questiongroup > .row > [class*='col-'] > legend {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0;
+  font-weight: normal; }
+
+.grid > .row > [class*='col-'] > input[type=text], .grid > .row > [class*='col-'] > textarea, .grid > .row > [class*='col-'] > select, .grid > .row > [class*='col-'] > input[type=password], body.md_saveform .section .messagedisplay:not(.__captchaMessage), .grid > .row > [class*='col-'] .messagedisplay:not(.__captchaMessage) {
+  width: 100%; }
+
+.grid > .row > [class*='col-'] > input[type=text].date.withCalendar {
+  width: 6.5rem;
+  margin-bottom: 0.5rem; }
+
+.grid > .row > [class*='col-'] > .helptext {
+  margin-top: 0; }
+
+@media only screen and (max-width: 768px) {
+  .grid > .row > .col-4.nodisp {
+    display: none;
+    font-size: 10rem; }
+  .grid > .row > [class*='col-'] > input[type=text], .grid > .row > [class*='col-'] > textarea, .grid > .row > [class*='col-'] > select, .grid > .row > [class*='col-'] > input[type=password], body.md_saveform .section .messagedisplay:not(.__captchaMessage), .grid > .row > [class*='col-'] .messagedisplay:not(.__captchaMessage) {
+    margin-top: 0.25rem; } }

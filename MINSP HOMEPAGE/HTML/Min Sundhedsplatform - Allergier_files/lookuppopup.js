@@ -1,0 +1,29 @@
+(function() {var template = Handlebars.template, templates = $$WP.Templates = $$WP.Templates || {};templates = templates.Lookup = templates.Lookup || {};templates['LookupPopup'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "<div class=\"beforeselection\"><div class=\"searchcontainer center\"><div class=\"searchinputs ghostInput ghosted\"><label for=\"searchval\">"
+    + container.escapeExpression(((helper = (helper = helpers.SearchPlaceholder || (depth0 != null ? depth0.SearchPlaceholder : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"SearchPlaceholder","hash":{},"data":data}) : helper)))
+    + "</label><input type=\"text\" id=\"searchval\" name=\"search\" class=\"search\" maxlength=\"40\" data-id=\"searchbox\" value=\""
+    + container.escapeExpression(((helper = (helper = helpers.SearchKey || (depth0 != null ? depth0.SearchKey : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"SearchKey","hash":{},"data":data}) : helper)))
+    + "\" autocomplete=\"off\"></input><input type=\"image\" id=\"searchimg\" name=\"searchimg\" class=\"searchimg noprint imgbutn\" alt=\""
+    + container.escapeExpression(((helper = (helper = helpers.SearchPlaceholder || (depth0 != null ? depth0.SearchPlaceholder : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"SearchPlaceholder","hash":{},"data":data}) : helper)))
+    + "\" data-id=\"searchimg\" src=\""
+    + container.escapeExpression(((helper = (helper = helpers.SearchImgSrc || (depth0 != null ? depth0.SearchImgSrc : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"SearchImgSrc","hash":{},"data":data}) : helper)))
+    + "\" tabIndex=\"-1\"></input></div><ul class=\"searchsuggestions suggestions list hoverable hidden\"></ul><div class=\"searchresults hidden\"></div><div class=\"searchloading hidden\"><img src=\""
+    + container.escapeExpression(((helper = (helper = helpers.LoadingImgSrc || (depth0 != null ? depth0.LoadingImgSrc : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"LoadingImgSrc","hash":{},"data":data}) : helper)))
+    + "\"></img></div></div><div class=\"customcontainer hidden\"><div class=\"searchheader\"><label for=\"customval\">"
+    + container.escapeExpression(((helper = (helper = helpers.CustomHeader || (depth0 != null ? depth0.CustomHeader : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"CustomHeader","hash":{},"data":data}) : helper)))
+    + "</label></div><input type=\"text\" id=\"customval\" name=\"custom\" class=\"custom\" maxlength=\"40\" data-id=\"custombox\" placeholder=\""
+    + container.escapeExpression(((helper = (helper = helpers.CustomPlaceholder || (depth0 != null ? depth0.CustomPlaceholder : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"CustomPlaceholder","hash":{},"data":data}) : helper)))
+    + "\"></input><div class=\"custombuttons\"><a href=\"#\" class=\"button inlinesave multi custom\" data-id=\"customaccept\">"
+    + container.escapeExpression(((helper = (helper = helpers.AcceptButtonLabel || (depth0 != null ? depth0.AcceptButtonLabel : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"AcceptButtonLabel","hash":{},"data":data}) : helper)))
+    + "</a><a href=\"#\" class=\"button multi cancel\" data-id=\"customback\">"
+    + container.escapeExpression(((helper = (helper = helpers.TrySearchButtonLabel || (depth0 != null ? depth0.TrySearchButtonLabel : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"TrySearchButtonLabel","hash":{},"data":data}) : helper)))
+    + "</a></div></div></div><div class=\"afterselection hidden\"><div class=\"formheader\" tabindex=\"0\">"
+    + container.escapeExpression(((helper = (helper = helpers.FormHeader || (depth0 != null ? depth0.FormHeader : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"FormHeader","hash":{},"data":data}) : helper)))
+    + "</div><div class=\"formrow\"><div class=\"leftcol\"><label for=\"selectedName\">"
+    + container.escapeExpression(((helper = (helper = helpers.NameLabel || (depth0 != null ? depth0.NameLabel : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"NameLabel","hash":{},"data":data}) : helper)))
+    + "</label></div><div class=\"rightcol name\"><span class=\"selectionlabel disabled\"></span><a href=\"#\" class=\"startoveranchor\" data-id=\"startoveranchor\"  title=\""
+    + container.escapeExpression(((helper = (helper = helpers.StartOverLabel || (depth0 != null ? depth0.StartOverLabel : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"StartOverLabel","hash":{},"data":data}) : helper)))
+    + "\"></a></div></div></div>";
+},"useData":true});})();

@@ -1,0 +1,1097 @@
+﻿/* Copyright 2018-2019 Epic Systems Corporation */
+#main > .title {
+  position: relative; }
+
+.pb-small {
+  padding-bottom: 0.5rem; }
+
+.pt-small {
+  padding-top: 0.5rem; }
+
+.pr-small {
+  padding-right: 0.5rem; }
+
+.providerphoto {
+  display: block;
+  width: 78px;
+  height: 78px;
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 2px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 0 auto; }
+  .providerphoto.small {
+    height: 52px;
+    width: 52px;
+    border-width: 1px; }
+  .link:hover > .providerphoto {
+    border-color: #df4a2b; }
+
+.photostack {
+  position: relative; }
+  .photostack > .providerphoto, .photostack > .link {
+    z-index: 1;
+    position: relative;
+    left: -0.75rem; }
+    .photostack > .providerphoto + .providerphoto, .photostack > .providerphoto + .link, .photostack > .link + .providerphoto, .photostack > .link + .link {
+      z-index: 0;
+      position: absolute !important;
+      top: 0;
+      left: calc(50% - 42px + 0.75rem); }
+
+.soonvisits .date {
+  width: 8%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 0.5rem; }
+.soonvisits .visitinfo {
+  width: 65%;
+  display: inline-block;
+  vertical-align: top; }
+  .soonvisits .visitinfo .timeContainer span {
+    display: inline-block;
+    margin-right: 0.2rem; }
+.soonvisits .visitwith {
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 0.6rem; }
+
+.subtle .bold {
+  line-height: 1.25rem;
+  font-size: 13pt;
+  color: #363636; }
+
+.column3 > .card {
+  width: 32.1%; }
+
+.soonvisits.card {
+  margin: 0.25rem 0;
+  min-height: 8rem; }
+
+.nodatalistelement {
+  padding-bottom: 1rem; }
+
+.actions {
+  width: 22%;
+  display: inline-block;
+  vertical-align: top; }
+
+.Visits .date div, .visitdetails .date div {
+  text-align: center; }
+.Visits .time, .visitdetails .time {
+  background: url("../images/visits/clock.png") left no-repeat;
+  padding-left: 1.7rem;
+  background-size: 22px; }
+.Visits > .grid, .visitdetails > .grid {
+  margin-top: 0; }
+
+.md_visitdetails_index {
+  /* Override some existing fast pass styles so the fast pass offer card is more visually consistent with the 2018 visit details redesign */ }
+  .md_visitdetails_index div .arrivaltime span {
+    padding-right: 0.2rem; }
+  .md_visitdetails_index div .popupiconcontainer {
+    margin: 0 0 0 0; }
+  .md_visitdetails_index .popupiconcontainer .popupinstructionsicon > img {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 0.1rem; }
+  .md_visitdetails_index div .arrivaltime * {
+    vertical-align: middle; }
+  .md_visitdetails_index #alertspanel-autowaitlist .body, .md_visitdetails_index #alertspanel-autowaitlist .head {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding-left: 0;
+    padding-right: 0;
+    width: auto; }
+
+.surgeries {
+  background: url("../images/visits/procedures.png") no-repeat;
+  padding-left: 1.7rem;
+  background-size: 22px; }
+
+.date .verticalMonth {
+  font-size: 1.3rem;
+  text-transform: uppercase; }
+  html[lang=fi] .date .verticalMonth {
+    font-size: 0.9rem;
+    overflow-wrap: normal; }
+  html[lang="ar"] .date .verticalMonth {
+    font-size: 1.12667rem; }
+.date .verticalDateOfMonth {
+  font-size: 2.3rem;
+  line-height: 2rem; }
+  html[lang="ar"] .date .verticalDateOfMonth {
+    font-size: 1.99333rem; }
+
+.visitcomponent .list {
+  position: relative; }
+  @media print {
+    .visitcomponent .list:not(.noprint):not(.hidden) {
+      display: block !important; } }
+
+@media print {
+  .timeLineDetails:not(.noprint):not(.hidden) {
+    display: block !important; } }
+
+.afterList {
+  text-align: center;
+  font-size: 1em; }
+
+.splitter {
+  width: 50%;
+  border: 1px solid #dbdbdb;
+  height: 1px;
+  margin: 2rem 33%; }
+
+.Visits .card:not(:empty) ~ .actions {
+  margin-bottom: 3rem; }
+.Visits .card.soonvisits .card_icons {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  text-align: right;
+  display: inline-block;
+  margin-left: 0.5rem; }
+  .Visits .card.soonvisits .card_icons .icon {
+    padding-bottom: 0.3rem;
+    padding-right: 0.3rem;
+    display: inline-block;
+    width: auto; }
+.Visits .card .card_icons .icon img.echeckin {
+  width: 1.7rem;
+  height: auto;
+  vertical-align: middle; }
+.Visits .smallcard .mainDetails {
+  display: flex; }
+  .Visits .smallcard .mainDetails .date {
+    width: auto;
+    padding-right: 0.5rem;
+    padding-left: 0.3rem; }
+  .Visits .smallcard .mainDetails .info {
+    flex-grow: 1;
+    min-width: 0; }
+  .Visits .smallcard .mainDetails .card_icons {
+    width: auto;
+    min-width: 1.5rem; }
+    .Visits .smallcard .mainDetails .card_icons .icon {
+      padding-bottom: 0.3rem; }
+
+a.button.topbutton.nextstep {
+  display: inline-block;
+  vertical-align: top; }
+
+.Visits .filters select {
+  border: 0;
+  min-width: 100px;
+  max-width: 250px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-right: 15px; }
+.Visits .filters > * {
+  display: inline-block; }
+
+.Visits .filters {
+  padding: 4px 10px 0px 22px;
+  margin-left: -1.5rem;
+  width: calc(100% + 2.8rem);
+  background-color: rgba(0, 57, 107, 0.05); }
+  .Visits .filters label {
+    margin: 0 0.5em 0 0; }
+
+.drivingdirectionsicon, .addtocalicon, .successIcon, .printBarcodeIcon {
+  background-repeat: no-repeat;
+  background-position: left;
+  display: inline-block;
+  background-size: 22px;
+  height: 22px;
+  width: 22px;
+  margin-bottom: -0.25rem;
+  margin-right: 0.25rem; }
+
+.addtocalicon, .drivingdirectionsicon {
+  margin-top: 0.25rem;
+  padding: 0 0.5rem 0 1.7rem;
+  width: auto; }
+
+.printBarcodeIcon {
+  background-image: url("../images/visits/print_inline.svg");
+  margin-right: 0; }
+
+.addtocalicon {
+  background-image: url("../images/visits/addtocal.svg"); }
+
+.drivingdirectionsicon {
+  background-image: url("../images/visits/drivingdirections.svg"); }
+
+.successIcon {
+  background-image: url("../images/visits/success.svg"); }
+
+.cancelreschedulecontainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-end; }
+  .cancelreschedulecontainer > span:last-child {
+    margin-top: 0.2rem; }
+
+.rescheduleicon {
+  background: url("../images/visits/reschedule.svg") left no-repeat;
+  padding: 0 0 0 1.4rem;
+  background-size: 1.2rem;
+  background-position-y: center; }
+
+.cancelicon {
+  background: url("../images/visits/cancel_red.svg") left no-repeat;
+  padding: 0 0 0 1.1rem;
+  background-size: 1rem;
+  background-position-y: center; }
+
+.otherprovider {
+  display: inline-block;
+  width: auto; }
+
+.visitinfo .visitwith .popupiconcontainer {
+  vertical-align: text-top; }
+
+div.card div.section.visitdetails div.popupInstructions, div.listsection div.infosession div.popupInstructions {
+  width: auto;
+  display: inline;
+  cursor: default; }
+
+.otherproviderinfo:not(:first-child) {
+  border-top: 1px solid #dbdbdb; }
+
+.otherproviderinfo {
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem; }
+  .otherproviderinfo .providerphoto {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0.8rem; }
+  .otherproviderinfo div {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle; }
+
+.copayicon {
+  background: url("../images/visits/creditcard.svg") no-repeat;
+  display: inline-block;
+  padding: 0 0.5rem 0 1.7rem;
+  background-size: 22px;
+  margin-top: 0.25rem;
+  width: auto; }
+
+.copay {
+  margin-top: 0.75rem; }
+
+.printerfriendlycopay {
+  display: none; }
+
+.calculating_spinner {
+  margin: 0.5rem 0; }
+
+.dollarAmountColumn {
+  display: inline-block;
+  width: auto;
+  text-align: right; }
+
+.textColumn {
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  margin-left: 5px; }
+
+.preDiscountAmount {
+  text-decoration: line-through; }
+
+.calendar table {
+  width: 100%; }
+  .calendar table tbody td a {
+    cursor: default; }
+
+.visitcalendar.widgets .component {
+  margin: 0; }
+
+.secondlabel {
+  margin-left: 1rem; }
+
+.visitfooter .afterList {
+  margin: 1rem auto; }
+
+.visitcomponent.CommunityListManager.hidden {
+  display: none !important; }
+
+.Visits .component:first-child {
+  margin-top: 0.3rem; }
+
+.list .card.nohover {
+  background-color: #ffffff !important; }
+
+.md_visitdetails_index div.section div.content {
+  margin: 0;
+  padding: 0.5rem 1rem; }
+.md_visitdetails_index h1 div {
+  margin-top: 0.5rem;
+  margin-left: 0.2rem; }
+.md_visitdetails_index h2 div {
+  margin-left: 0.2rem; }
+.md_visitdetails_index .copayspacer {
+  margin-bottom: 0.25rem; }
+
+.md_visitdetails_index .telemedicine div.section.card, .md_visitdetails_index div.section.card.echeckin {
+  margin-bottom: 1rem; }
+.md_visitdetails_index div.telemedicine.section div.content, .md_visitdetails_index div.section.smallcard div.content {
+  text-align: center; }
+.md_visitdetails_index div.echeckin a, .md_visitdetails_index div.telemedicine.section div.content a, .md_visitdetails_index div.section.smallcard div.content a {
+  display: inline-block;
+  margin-bottom: 0;
+  min-width: 130px; }
+
+.md_visitdetails_index div.visitdetails div.visitinformation .echeckin a {
+  display: inline-block;
+  vertical-align: top; }
+
+.md_visitdetails_index div.visitdetails div.visitinformation .echeckin a {
+  margin-top: 0.8rem; }
+.md_visitdetails_index div.section.card.echeckin div.leftcolumn > div.header {
+  padding-top: 0; }
+.md_visitdetails_index div.section.card.echeckin .barcode {
+  left: 0;
+  margin: 0.5rem 0;
+  position: inherit;
+  text-align: center; }
+.md_visitdetails_index div.section.card.echeckin div.barcode {
+  margin-bottom: 1rem; }
+.md_visitdetails_index div.section.visitdetails div.leftcolumn h2 {
+  padding-top: 0; }
+.md_visitdetails_index div.datetimeheader span.datetime {
+  font-size: 1.05rem; }
+.md_visitdetails_index div.datetimeheader span.duration {
+  font-size: 1rem; }
+.md_visitdetails_index div.arrivaltime {
+  margin: 0.1rem auto;
+  width: 100%; }
+.md_visitdetails_index div.waitlist div {
+  display: inline-block; }
+.md_visitdetails_index div.waitlist div.waitlisticon {
+  height: 20px;
+  margin-right: 0.5rem;
+  vertical-align: top;
+  width: 21px; }
+.md_visitdetails_index div.waitlist div.waitlisttext {
+  width: calc(100% - 21px - 0.5rem); }
+.md_visitdetails_index div.waitlist span.waitlistpretext {
+  margin-right: 0.5rem; }
+.md_visitdetails_index div.waitlist div.updatewaitlistlink {
+  width: auto; }
+
+div.updatewaitlist a.popupinstructionsicon img, div.arrivaltime a.popupinstructionsicon img {
+  margin-top: 0; }
+
+img.updatewaitlist-spinner {
+  vertical-align: text-top;
+  height: 1.4rem;
+  width: auto;
+  margin-left: 0.2rem; }
+
+.md_visitdetails_index div.locationinstruction {
+  padding-left: 1.7rem;
+  background: url("../images/visits/location.png") no-repeat;
+  background-size: 23px;
+  background-position-x: -1px;
+  margin-bottom: 1rem; }
+.md_visitdetails_index div.procedures {
+  padding-left: 1.7rem;
+  background: url("../images/visits/procedures.png") no-repeat;
+  background-size: 1.25rem;
+  background-position-x: -1px;
+  margin-bottom: 1rem; }
+.md_visitdetails_index div.section.visitdetails div.rightcolumn {
+  margin-bottom: 1rem; }
+.md_visitdetails_index div.department {
+  margin-bottom: 0.3rem; }
+.md_visitdetails_index div.departmentphone {
+  color: #767676; }
+.md_visitdetails_index div.arrivallocation {
+  color: #363636; }
+
+.visitinfo div.arrivallocation {
+  color: #363636; }
+
+.md_visitdetails_index div.providerphotocontainer {
+  display: block;
+  vertical-align: top;
+  width: auto; }
+  .md_visitdetails_index div.providerphotocontainer .link {
+    display: inline-block;
+    padding: 0 0.5rem; }
+  .md_visitdetails_index div.providerphotocontainer .providerphoto.infolink {
+    position: relative; }
+    .md_visitdetails_index div.providerphotocontainer .providerphoto.infolink::after {
+      content: '';
+      display: block;
+      background-image: url("../images/info.png");
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      bottom: 0;
+      left: calc(50% + 2rem - 0.6rem - 4px);
+      background-size: cover;
+      background-color: white;
+      border-radius: 50%; }
+.md_visitdetails_index div.visitinformation a.button {
+  display: inline-block;
+  min-width: 130px; }
+.md_visitdetails_index div.section.card.echeckin div.echeckinclinicsteps ul li img, .md_visitdetails_index .echeckin ul li img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 1.3rem;
+  margin-right: 6px; }
+.md_visitdetails_index div.section.card.echeckin div.echeckinclinicsteps ul li div, .md_visitdetails_index .echeckin ul li div {
+  vertical-align: middle;
+  display: inline-block;
+  width: auto; }
+.md_visitdetails_index div.visitinstructionsheader {
+  color: #767676;
+  font-size: 0.9rem; }
+.md_visitdetails_index div.visitinstructionscontent > div:last-child {
+  margin-bottom: 0; }
+.md_visitdetails_index div.smallcards {
+  border-top: 1px solid #dbdbdb;
+  padding: 14px 0 14px 0px; }
+  .md_visitdetails_index div.smallcards div.section.smallcard:not(:first-child) {
+    border-left: 1px solid #dbdbdb; }
+  .md_visitdetails_index div.smallcards > div {
+    display: inline-block;
+    vertical-align: top; }
+.md_visitdetails_index div.smallcard div.visitinformation {
+  max-width: calc(80% - 5.25rem); }
+.md_visitdetails_index div.smallcards div.section.smallcard div.content {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%; }
+  .md_visitdetails_index div.smallcards div.section.smallcard div.content .contentcontainer {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    position: relative; }
+  .md_visitdetails_index div.smallcards div.section.smallcard div.content .buttoncontainer {
+    position: absolute;
+    bottom: 0;
+    min-height: 2rem;
+    padding-top: 2rem; }
+.md_visitdetails_index .paymentamount {
+  font-size: x-large;
+  margin: 0 0 0.5rem 0; }
+  .md_visitdetails_index .paymentamount.originalprepayamount {
+    text-decoration: line-through; }
+.md_visitdetails_index .paymentPretext {
+  margin-right: 0.2rem; }
+.md_visitdetails_index .prepaydiscounttext {
+  font-size: 1rem;
+  vertical-align: middle;
+  margin: 0.2rem 0; }
+.md_visitdetails_index div.echeckindetails {
+  padding-left: 1rem; }
+
+#main .title {
+  height: auto; }
+  #main .title .subtitle {
+    font-size: 1rem;
+    color: #363636; }
+
+#sidebar .multiMonthCalendar {
+  font-size: 0.8rem; }
+#sidebar .visitcalendar .HPtemplate.component.container {
+  padding: 0 0 0 0; }
+
+.row.preadmissionActions > div.col-12 {
+  margin-bottom: 0; }
+
+.md_visitdetails_index div.surgerycard:first-child {
+  padding-bottom: 1rem; }
+.md_visitdetails_index div.surgerycard:not(:first-child):not(:last-child) {
+  border-top: 1px solid #dbdbdb;
+  padding: 1rem 0rem 1rem; }
+.md_visitdetails_index div.surgerycard:not(:first-child):last-child {
+  border-top: 1px solid #dbdbdb;
+  padding-top: 1rem; }
+.md_visitdetails_index div.casestitle {
+  font-size: 1.2rem;
+  padding: 0.7rem; }
+
+#sidebar .externalorgnotice {
+  margin: 1rem 0; }
+
+.smallcards.visitdetails.noborder {
+  border: none; }
+
+.PVGbanner {
+  background-color: #ffffd0;
+  max-width: none;
+  width: calc(100% + 2.5rem);
+  margin-left: -1.3rem;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0.75rem 0 0.75rem 1rem;
+  margin-bottom: 1rem;
+  display: block; }
+  .PVGbanner img {
+    width: auto;
+    height: 2.2rem;
+    vertical-align: middle; }
+
+.PVGbannertext {
+  display: inline-block;
+  width: 90%;
+  vertical-align: middle; }
+  .PVGbannertext .header {
+    padding: 0 0 0.2rem 0; }
+
+.detailspagePVG {
+  margin-bottom: 0.5rem; }
+  .detailspagePVG img {
+    width: 1.5rem;
+    vertical-align: middle; }
+  .detailspagePVG span {
+    vertical-align: middle; }
+
+div.syncingpage div.loadingmessage {
+  text-align: center; }
+  div.syncingpage div.loadingmessage img.loadingspinner {
+    margin: auto;
+    display: block; }
+
+span.loadingFilterProgressBar {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 6px;
+  height: 18px;
+  width: 18px;
+  background: url("data:image/gif;base64,R0lGODlhEAAQAPIAAPz8/AAAAMDAwEFBQQAAAGFhYYCAgJCQkCH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==") no-repeat; }
+
+div.filters.extendedBar {
+  background-color: rgba(0, 57, 107, 0.1);
+  height: 45px; }
+
+ul > li.noShowCanceledShiftedCard {
+  background-image: repeating-linear-gradient(135deg, #dbdbdb, #dbdbdb 5px, #eaeaea 5px, #eaeaea 15px); }
+
+.noShowCanceledShiftedCard > .date > div {
+  color: #767676; }
+
+/* #region more filters button */
+span.showFiltersButton {
+  vertical-align: middle; }
+
+label.filterButtonDisabled {
+  text-decoration: none !important;
+  cursor: default !important;
+  color: #565656 !important; }
+
+span.showFiltersButton > input {
+  display: inline-block;
+  opacity: 0;
+  margin: 0px; }
+
+span.showFiltersButton > input:focus + label {
+  outline: 1px dotted #000000;
+  outline: 5px auto-webkit-focus-ring-color; }
+
+label.filterButton {
+  cursor: pointer;
+  margin: 0px;
+  color: #FF5531; }
+  label.filterButton:hover {
+    text-decoration: underline;
+    color: #df4a2b; }
+
+/* #endregion more filters button */
+/* #region clear filters */
+span.clearFiltersButton {
+  vertical-align: middle; }
+  span.clearFiltersButton > input {
+    display: inline-block;
+    opacity: 0;
+    margin: 0px; }
+    span.clearFiltersButton > input:focus + label {
+      outline: 1px dotted #000000;
+      outline: 5px auto-webkit-focus-ring-color; }
+
+label.clearButton {
+  cursor: pointer;
+  color: #FF5531; }
+  label.clearButton:hover {
+    text-decoration: underline; }
+
+/* #endregion clear filters */
+.extendedBar > span.tbContainer > p.button.buttoncheck {
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center; }
+
+a.clickable.noprint.disabled {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #767676; }
+
+.canceledShiftedButton {
+  vertical-align: middle;
+  padding-top: 8px;
+  position: absolute;
+  right: 0; }
+
+.upcomingVisitsOnly {
+  visibility: hidden; }
+
+.toggleCanceledInput {
+  cursor: pointer;
+  display: inline; }
+
+.toggleCanceled {
+  cursor: pointer;
+  display: inline; }
+  .toggleCanceledInput:focus + .toggleCanceled {
+    outline: 1px dotted #000000;
+    outline: 5px auto-webkit-focus-ring-color; }
+
+/* #region New Filter Menu */
+.currentOptionLabel {
+  cursor: default !important;
+  margin: 0px !important; }
+
+.truncate {
+  max-width: 400px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.dropdown {
+  position: relative;
+  display: inline-block; }
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f8f8f8;
+  min-width: 300px;
+  max-width: 700px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+  .dropdown-content tr:hover td.optionCell > label {
+    color: #ffffff;
+    background-color: #0098BA; }
+  .dropdown.open .dropdown-content {
+    display: table; }
+
+tbody.optionsTableBody {
+  display: block;
+  max-height: 50vh;
+  overflow: auto; }
+
+.optionsRow > .optionCell > label {
+  cursor: pointer;
+  display: block;
+  min-width: 300px;
+  max-width: 700px;
+  position: relative;
+  padding: 0.1rem 1.5em;
+  z-index: 0;
+  float: none;
+  clear: none; }
+
+.optionCell > input {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  float: left;
+  margin: 0.3rem;
+  z-index: 1; }
+  .optionCell > input:focus + label {
+    color: #ffffff;
+    background-color: #0098BA; }
+
+.filterOptionsButtonsRow {
+  white-space: nowrap; }
+
+.filterOptionsButtons input {
+  display: inline;
+  margin: 8px 10px;
+  white-space: nowrap; }
+
+div.visitfooter div.ajaxspinner {
+  width: 18px;
+  height: 18px;
+  margin: 0 auto; }
+
+/* #endregion New Filter Menu */
+@media only screen and (max-width: 768px) {
+  .Visits .card.soonvisits .card_icons {
+    position: static;
+    display: block;
+    text-align: right;
+    padding: 0; }
+  .Visits .card .card_icons:not(:empty) ~ .actions {
+    margin-bottom: 24px; } }
+
+.visitcomponent .visitcomponent-header {
+  padding-bottom: 1rem; }
+
+/* #region unviewed indicator */
+.pastvisit.card.unviewed .info .visit-type, .pastvisit.card.unviewed .info .appointment-status {
+  font-weight: bold; }
+.pastvisit.card .unviewed-indicator {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: -0.25rem;
+  margin-bottom: -0.35rem;
+  border-radius: 50%;
+  font-size: 0px;
+  border: 2.2px solid #ffffff; }
+.pastvisit.card.unviewed .unviewed-indicator {
+  display: inline-block; }
+
+/* #endregion */
+/*#region OpenNote links */
+.timeLineDetails .cardlist .pastvisit.card {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.visit-details {
+  position: relative;
+  padding: 0.5rem; }
+
+.visit-summary-links {
+  position: relative;
+  border-top: 1px solid #dbdbdb; }
+  .noShowCanceledShiftedCard .visit-summary-links {
+    border-top: 1px solid #cccccc; }
+
+.visit-summary-link {
+  cursor: pointer;
+  text-align: left;
+  padding: 0.5rem;
+  padding-left: 0.8rem;
+  border-bottom: 1px solid #dbdbdb; }
+  .noShowCanceledShiftedCard .visit-summary-link {
+    border-bottom: 1px solid #cccccc; }
+
+.visit-summary-icon-container {
+  position: relative; }
+
+.visit-summary-icon {
+  width: auto;
+  height: 24px;
+  vertical-align: middle;
+  cursor: pointer; }
+
+.visit-summary-text {
+  display: inline-block;
+  padding-left: 0.5rem;
+  vertical-align: middle; }
+
+/* #endregion */
+.detailssectiondivider {
+  border-top: 1px solid #CCC;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem; }
+
+/*#region Visit Header (date, time, name, provider, location) */
+.subwaycontent {
+  font-size: 1rem; }
+  .subwaycontent .addtocalendar {
+    margin-bottom: 0.25rem; }
+  .subwaycontent .subwaycontentbody {
+    padding: 0.5rem;
+    border-radius: 2px;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards; }
+    .subwaycontent .subwaycontentbody .department .departmentName {
+      font-weight: normal;
+      font-size: inherit; }
+    .subwaycontent .subwaycontentbody .providerphoto.small {
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-right: 0.4rem; }
+
+.appointmentdetailsinfopane {
+  padding: 0 1.5rem 0 1rem;
+  margin-right: 0.5rem; }
+  .appointmentdetailsinfopane .visitheadercomponent .primarytext {
+    font-size: 1.05rem; }
+  .appointmentdetailsinfopane .visitheadercomponent::before {
+    content: "";
+    position: absolute;
+    background-color: transparent; }
+  .appointmentdetailsinfopane .visitheadercomponent.timecomponent:before {
+    background-image: url("../images/visits/clock.png"); }
+  .appointmentdetailsinfopane .visitheadercomponent.locationcomponent:before {
+    background-image: url("../images/visits/location.png"); }
+  .appointmentdetailsinfopane .grid .row .col-6, .appointmentdetailsinfopane .grid .row .sidebarComponentContainer.col-12 {
+    padding-top: 1rem; }
+  .appointmentdetailsinfopane .providerphotocell {
+    text-align: center;
+    padding-top: 0.7rem; }
+    .appointmentdetailsinfopane .providerphotocell .providerphotoandtitle .paddedtitle {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem; }
+  .echeckincomplete .appointmentdetailsinfopane .providerphotoandtitle .header {
+    text-align: left; }
+  .echeckincomplete .appointmentdetailsinfopane .providerphotocell {
+    padding-top: 0; }
+
+.discountedprepayamount {
+  padding-right: 0.5rem; }
+
+.singlevisittitle {
+  text-align: center;
+  padding-bottom: 1rem; }
+
+.visitdetailsquestionnaire a {
+  margin-right: 0.2rem; }
+
+.pseudobullet {
+  position: relative;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+  .pseudobullet.fdilink:before, .pseudobullet.estimatelink:before, .pseudobullet.questionnairebullet:before, .pseudobullet.procedurebody:before {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-size: 1rem 1rem;
+    top: 0.3rem; }
+  .pseudobullet.estimatelink:before {
+    background-image: url("../images/visits/creditcard.svg"); }
+  .pseudobullet.questionnairebullet:before {
+    background-image: url("../images/visits/questionnaire.svg"); }
+  .pseudobullet.fdilink:before {
+    background-image: url("../images/visits/send.svg"); }
+  .pseudobullet.procedurebody:before {
+    background-image: url("../images/visits/procedures.png"); }
+  .pseudobullet:before {
+    content: '\2022';
+    /* black bullet */
+    font-size: 2rem;
+    margin-top: -0.2rem;
+    position: absolute;
+    margin-left: -1.5rem; }
+
+/*#endregion quick and dirty */
+.cancelreschedulecontainer {
+  padding-top: 2rem;
+  margin-top: 2rem; }
+
+.cancelreschedulecontainer, .sidebarComponentContainer.col-12 {
+  border-top: 1px solid #eee; }
+
+.sidebarComponentContainer li.verticalSubwayStop {
+  margin-top: 1rem; }
+  .sidebarComponentContainer li.verticalSubwayStop:not(:last-child):before {
+    height: calc(100% + 1rem); }
+  .sidebarComponentContainer li.verticalSubwayStop:first-child {
+    margin-top: 0; }
+.sidebarComponentContainer .subwaystopexpand:after, .sidebarComponentContainer .subwaystopcontract:after {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-size: 0.75rem 0.75rem;
+  margin-top: 0.3rem;
+  margin-left: 0.2rem;
+  background-image: url("../images/down_chevron_blue.svg"); }
+.sidebarComponentContainer .subwaychevron {
+  height: 0.7rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  animation-fill-mode: forwards;
+  animation-duration: 300ms;
+  animation-name: none; }
+
+.cancelreschedulecontainer .button {
+  display: inline-block; }
+
+.pseudoEleHost:before, .pseudoEleHost:after {
+  content: "";
+  position: absolute;
+  background-color: transparent; }
+
+.visitactionbanner {
+  position: relative;
+  padding: 1rem; }
+  .visitactionbanner:first-child {
+    width: auto;
+    max-width: none;
+    margin-right: -9px;
+    margin-left: -0.5rem; }
+  .visitactionbanner:before, .visitactionbanner:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: auto 60%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.12;
+    height: 100%;
+    max-height: 260px; }
+  .visitactionbanner.checkinwatermark:before {
+    background-image: url("../images/visits/scheduling_checkin_watermark.png");
+    background-position: bottom left; }
+  .visitactionbanner.paymentwatermark:after {
+    background-image: url("../images/visits/scheduling_copay_watermark.png");
+    background-position: bottom right; }
+  .visitactionbanner.videovisitwatermark:after {
+    background-image: url("../images/visits/scheduling_videovisit_watermark.png");
+    background-position: bottom left; }
+  .visitactionbanner .header {
+    margin-bottom: 0.5rem; }
+  .visitactionbanner .onePayment:not(:only-child) {
+    margin-bottom: 0.65rem; }
+  .visitactionbanner .grid {
+    position: relative;
+    z-index: 1; }
+    .visitactionbanner .grid .row .subtitle {
+      margin-bottom: 1rem; }
+  .visitactionbanner .button.nextstep, .visitactionbanner .button.disabled {
+    margin-bottom: 0.4rem; }
+  .visitactionbanner .actionPretext {
+    margin-bottom: 0.25rem; }
+  .visitactionbanner .actionPretext + .actionPretext {
+    margin-top: 0.5rem; }
+
+.buttoncontainer .link {
+  display: inline-block;
+  margin-bottom: 0.5rem; }
+  .buttoncontainer .link:not(:first-child) {
+    margin-top: 0.75rem; }
+
+.questionnaireposttext {
+  margin-left: 0.2rem; }
+
+.finishecheckin {
+  margin-top: 0.5rem; }
+
+.compositeinstructions {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+  .compositeinstructions:first-child {
+    margin-top: 0; }
+
+.rescheduleAlertContents .header.small {
+  color: black;
+  padding: 0; }
+
+.visitactions:not(:first-child) {
+  margin-top: 0.75rem; }
+.visitactions > div {
+  margin-bottom: 0.5rem; }
+.visitactions .link {
+  display: inline-block; }
+
+.clickablecard {
+  cursor: pointer; }
+
+.echeckinbanner > .grid > .row:last-child, .echeckinbanner .grid .row > div {
+  margin-bottom: 0; }
+
+.col-12 > .cancelreschedulecontainer {
+  text-align: center; }
+
+.echeckinclinicsteps .echeckinsteplabel {
+  display: inline-block;
+  max-width: 80%;
+  top: 0.25rem;
+  margin-left: 0.2rem; }
+.echeckinclinicsteps ul li {
+  position: relative; }
+
+.echeckinbanner .barcodeinstructions {
+  margin-top: 0.5rem; }
+.echeckinbanner .barcode {
+  margin-top: 1rem;
+  border: 4px solid white;
+  border-radius: 3px; }
+.echeckinbanner.echeckin.success .questionnaireLink {
+  margin-bottom: 0.5rem; }
+.echeckinbanner .grid {
+  margin-top: 0;
+  margin-bottom: 0; }
+.echeckinbanner .formbuttons.grid {
+  display: flex;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem; }
+  .echeckinbanner .formbuttons.grid div {
+    width: auto; }
+  .echeckinbanner .formbuttons.grid .eCheckInBannerAction {
+    margin: 0.5rem; }
+
+@media only screen and (max-width: 768px) {
+  .confirmappointment * {
+    text-align: center; }
+  .hideresponsive {
+    display: none; }
+  .visitheadercomponent {
+    margin-left: 1rem;
+    padding-right: 1rem; }
+    .visitheadercomponent:before {
+      margin-left: -1.5rem;
+      height: 1.25rem;
+      width: 1.25rem;
+      background-size: 1.25rem 1.25rem; }
+  .barcode {
+    margin: 0.5rem 0; }
+  .unconfirmPostText {
+    display: block; }
+  .visitActions > div:not(:first-child) {
+    margin-top: 0.5rem; }
+  .videovisitwatermark.checkinwatermark:before {
+    display: none; }
+  .videovisitwatermark.checkinwatermark:after {
+    background-position-x: center; }
+  .echeckincomplete .formbuttons {
+    justify-content: center;
+    text-align: center; }
+  .pastVisit.card {
+    padding: 1rem; }
+    .pastVisit.card .col-12 {
+      width: 100%; } }
+
+@media only screen and (min-width: 769px) {
+  .visitactionbanner:first-child {
+    margin-left: -13px;
+    margin-top: -9px; }
+  .visitactionbanner .row div.col-6:not(:last-child), .visitactionbanner .row div.col-4:not(:last-child), .visitactionbanner .row div.col-3:not(:last-child) {
+    padding-right: 12px;
+    border-right: 1px solid #ccc; }
+  .visitactionbanner .row div.col-6:last-child .col-12, .visitactionbanner .row div.col-4:last-child .col-12, .visitactionbanner .row div.col-3:last-child .col-12 {
+    margin-right: 0; }
+  .hidenonresponsive {
+    display: none; }
+  .col-4.appointmentdetailsinfopane {
+    border-right: 1px solid #eee; }
+  .visitheadercomponent {
+    margin-left: 2rem;
+    padding-right: 2rem; }
+    .visitheadercomponent:before {
+      margin-left: -2.25rem;
+      height: 1.75rem;
+      width: 1.75rem;
+      background-size: 1.75rem 1.75rem;
+      margin-top: -0.2rem; }
+  .echeckincomplete .formbuttons {
+    margin-left: -0.5rem; } }

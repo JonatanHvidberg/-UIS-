@@ -1,0 +1,208 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+.contact-information-content .ghostInput, .other-information-content .ghostInput {
+  padding: 0 0.25rem 0.5rem 0.25rem; }
+  .contact-information-content .ghostInput input, .contact-information-content .ghostInput select, .contact-information-content .ghostInput textarea, .other-information-content .ghostInput input, .other-information-content .ghostInput select, .other-information-content .ghostInput textarea {
+    width: 100%; }
+  .contact-information-content .ghostInput input.date, .other-information-content .ghostInput input.date {
+    width: calc(100% - 34px);
+    float: left; }
+  html:not(.mobile) .contact-information-content .ghostInput input.date.withCalendar ~ .calendar, html:not(.mobile) .other-information-content .ghostInput input.date.withCalendar ~ .calendar {
+    margin-bottom: 0.5rem; }
+
+.other-information-content .ghostInput.multiselect label, .section .content .other-information-content .ghostInput.multiselect label {
+  font-size: 0.6rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  margin: 0.2rem 0.775rem -1.25rem;
+  padding: 0;
+  width: calc(100% - 1.8rem);
+  position: relative;
+  background-color: #ffffff; }
+  .other-information-content .ghostInput.multiselect label.required:before, .section .content .other-information-content .ghostInput.multiselect label.required:before {
+    margin: 0 -0.135rem 0 -0.315rem; }
+  .other-information-content .ghostInput.multiselect label:not(.required), .section .content .other-information-content .ghostInput.multiselect label:not(.required) {
+    margin: 0.2rem 0.325rem -1.25rem;
+    width: calc(100% - 1.6rem); }
+
+.other-information-content .ghostInput.multiselect select {
+  padding: 0.75rem 0.25rem 0.125rem; }
+  .other-information-content .ghostInput.multiselect select option {
+    display: block;
+    max-width: 100%; }
+
+.contact-information-content .header.name, .other-information-content .header.name {
+  height: 2.5rem; }
+.contact-information-content .formsection, .other-information-content .formsection {
+  margin: 0.25rem 0; }
+.contact-information-content .formbuttons .button, .contact-information-content .button:focus, .other-information-content .formbuttons .button, .other-information-content .button:focus {
+  opacity: 1; }
+.contact-information-content .buttonList .cancelButton, .other-information-content .buttonList .cancelButton {
+  display: inline-block;
+  margin-top: 0; }
+.contact-information-content .loadingIndicator, .other-information-content .loadingIndicator {
+  position: absolute;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+  margin: 0 0 -0.5rem 0; }
+.contact-information-content .overflowHiddenWithEllipses, .other-information-content .overflowHiddenWithEllipses {
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 0.5rem; }
+.contact-information-content .noValue, .other-information-content .noValue {
+  font-style: italic; }
+
+.contact-information-content .name.icon:after {
+  height: 2.1rem;
+  width: 2.1rem;
+  background-image: url("../images/PersonalInformation/contact_house.png"); }
+.contact-information-content .header.temporaryHeader, .contact-information-content .header.permanentHeader {
+  font-size: 0.9rem;
+  padding: 0 0 0.25rem 0.25rem; }
+.contact-information-content .space:before {
+  content: " "; }
+.contact-information-content .addTemporaryAddressLink {
+  white-space: nowrap;
+  text-decoration: underline; }
+.contact-information-content .addTemporaryAddressLinkContainer {
+  margin-top: 0.5rem; }
+.contact-information-content .formsection .addTemporaryAddressLinkContainer {
+  margin: 0 0 0.5rem 0.25rem; }
+.mobile .contact-information-content .formsection .ghostInput:not(.ghosted) label {
+  padding-top: 0; }
+.contact-information-content .header.temporaryHeader {
+  display: inline-block;
+  width: auto; }
+.contact-information-content .removeTemporaryAddressLink {
+  text-decoration: underline; }
+.contact-information-content .removeTemporaryAddressLinkContainer {
+  display: inline-block;
+  width: auto;
+  float: right;
+  margin: 0.25rem; }
+.contact-information-content .formsection .ghostInput label {
+  overflow: visible;
+  padding-top: 0;
+  white-space: normal; }
+.contact-information-content .homePhone.ghostInput, .contact-information-content .mobilePhone.ghostInput, .contact-information-content .workPhone.ghostInput {
+  width: 50%; }
+.contact-information-content .homePhone input::-ms-clear, .contact-information-content .mobilePhone input::-ms-clear, .contact-information-content .workPhone input::-ms-clear {
+  display: none; }
+.contact-information-content .homePhone input, .contact-information-content .mobilePhone input, .contact-information-content .workPhone input {
+  padding-right: 1.5rem; }
+.contact-information-content .formsection .ghostInput label.preferredDeviceSelector {
+  padding-top: 0;
+  margin: -2.5rem 0 0 0;
+  line-height: 2.5rem;
+  height: 2.5rem;
+  width: auto;
+  float: right;
+  cursor: pointer;
+  position: relative; }
+  .mobile .contact-information-content .formsection .ghostInput label.preferredDeviceSelector {
+    margin-top: -1.8rem;
+    line-height: 1.8rem;
+    height: 1.8rem; }
+.contact-information-content .preferredDeviceSelector .preferredDeviceSelected, .contact-information-content .preferredDeviceSelector .preferredDeviceUnselected {
+  display: none;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem; }
+.contact-information-content .preferredDeviceSelector.selected .preferredDeviceSelected, .contact-information-content .preferredDeviceSelector:hover .preferredDeviceUnselected, .contact-information-content input:hover + .preferredDeviceSelector .preferredDeviceUnselected, .contact-information-content input:focus + .preferredDeviceSelector .preferredDeviceUnselected, .contact-information-content .preferredDeviceSelector input:focus + .preferredDeviceSelected + .preferredDeviceUnselected, .mobile .contact-information-content .preferredDeviceSelector .preferredDeviceUnselected {
+  display: inline; }
+.contact-information-content .preferredDeviceSelector.selected input:focus + .preferredDeviceSelected, .contact-information-content .preferredDeviceSelector input:focus + .preferredDeviceSelected + .preferredDeviceUnselected {
+  outline: 1px dotted #000000; }
+.contact-information-content .preferredDeviceSelector.selected:hover .preferredDeviceUnselected, .contact-information-content input:hover + .preferredDeviceSelector.selected .preferredDeviceUnselected, .contact-information-content input:focus + .preferredDeviceSelector.selected .preferredDeviceUnselected, .contact-information-content .preferredDeviceSelector.selected input:focus + .preferredDeviceSelected + .preferredDeviceUnselected, .mobile .contact-information-content .preferredDeviceSelector.selected .preferredDeviceUnselected {
+  display: none; }
+.contact-information-content .iconLabel {
+  vertical-align: middle;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0.25rem; }
+.contact-information-content .ghostInput.email {
+  width: 50%; }
+
+.other-information-content .name.icon:after {
+  background-image: url("../images/PersonalInformation/personal_details.png"); }
+.other-information-content .otherInformationPretext {
+  font-size: 0.8rem;
+  font-style: italic;
+  padding: 0 0.25rem; }
+.other-information-content .readOnlyLine {
+  margin-bottom: 0.5rem;
+  overflow: inherit; }
+.other-information-content .popupinstructionsicon img {
+  width: 1rem;
+  height: 1rem; }
+.other-information-content .formsection .ghostInput label {
+  overflow: visible;
+  padding-top: 0;
+  white-space: normal; }
+.other-information-content .ghostInput.multiselect select {
+  height: auto;
+  min-height: 2.5rem;
+  line-height: normal; }
+.other-information-content .ghostInput.multiselect, .mobile .other-information-content .ghostInput.multiselect {
+  width: 100%; }
+.other-information-content .ghostInput.field8 {
+  width: 100%; }
+.other-information-content .ghostInput.multiselect .helptext {
+  margin-bottom: 0;
+  margin-top: 0; }
+  .mobile .other-information-content .ghostInput.multiselect .helptext {
+    display: none; }
+.mobile .other-information-content .readOnlyLine .fieldValues {
+  white-space: normal; }
+.mobile .section .content .other-information-content .ghostInput .helptext {
+  margin-top: 0.25rem; }
+.mobile .other-information-content .ghostInput.multiselect label, .mobile .section .content .other-information-content .ghostInput.multiselect label {
+  font-size: inherit;
+  height: auto;
+  line-height: inherit;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  width: auto;
+  position: relative; }
+.mobile .other-information-content .ghostInput.multiselect select {
+  padding: 0.1em 0.25em; }
+
+.quickLinks.vertical a::after {
+  background-color: rgba(118, 118, 118, 0.25); }
+
+.addressDefaults textarea, .addressDefaults input {
+  margin: 0; }
+
+.addressDefaults label.error {
+  margin-bottom: 0.75rem;
+  margin-top: 0; }
+
+.addressDefaults .addressList .togglebutton {
+  font-size: 1rem;
+  width: 100%;
+  text-align: left; }
+
+.temporaryInformation.noMatchesContainer, .permanentInformation.noMatchesContainer {
+  background-color: #7fcbdc; }
+
+.temporaryInformation.noMatchesContainer div.noMatchesMessage, .permanentInformation.noMatchesContainer div.noMatchesMessage {
+  margin: 0.5rem 0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: bold;
+  color: #000000; }
+
+.permanentInformation p.buttoncheck, .temporaryInformation p.buttoncheck {
+  margin-left: 0.25rem;
+  padding: 0.25rem 0 0 0; }
+
+.mobile .noMatchesContainer .buttoncheck label {
+  margin-top: -0.25rem; }
+
+.mobile .noMatchesContainer p.buttoncheck {
+  margin-bottom: -1.5rem; }
+
+.mobile .temporaryInformation.noMatchesContainer {
+  margin-bottom: 2rem; }

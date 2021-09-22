@@ -1,0 +1,266 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+.mediaheader {
+  display: inline-block;
+  width: auto;
+  padding-right: 1rem; }
+
+.tabletitle {
+  text-align: right; }
+  .tabletitle.sticky {
+    text-align: left;
+    position: fixed;
+    top: 70px;
+    left: 0; }
+    .tabletitle.sticky .mediaheader {
+      position: relative;
+      background-color: #ffffff; }
+
+.mediaheader span {
+  padding-bottom: 0.6rem;
+  display: inline-block;
+  width: 3.5rem;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem; }
+
+span.grouptitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.1rem;
+  display: inline-block;
+  width: auto;
+  line-height: 1.6rem; }
+
+.groupname {
+  display: inline-block;
+  background: url("../images/down_chevron.png") no-repeat scroll left center transparent;
+  width: auto;
+  padding-left: 1.6rem;
+  margin-left: 0.3rem;
+  vertical-align: middle; }
+  .group.expanded .groupname {
+    background-image: url("../images/up_chevron.png"); }
+
+.group.collapsed .expandtext {
+  display: inline; }
+.group.collapsed .collapsetext {
+  display: none; }
+
+.group.expanded .collapsetext {
+  display: inline; }
+.group.expanded .expandtext {
+  display: none; }
+
+.groupsection .grouphelptext {
+  font-size: 11pt;
+  margin-left: 0.3rem;
+  display: none; }
+
+.group.hover .grouphelptext {
+  color: #df4a2b;
+  display: inline; }
+
+p.groupdetails {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+ul.ticklerlist {
+  background-color: #ffffff; }
+  ul.ticklerlist li {
+    padding: 0.5rem 0 0.5rem 0;
+    border-bottom: 1px solid #dbdbdb;
+    margin-left: 2rem; }
+    ul.ticklerlist li:last-child {
+      border-bottom: 0; }
+
+.groupitem .media .mediabutton, .groupitem .media .disabletext {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin: 0; }
+
+#inputForm .list.collapsible .collapsed {
+  cursor: default;
+  min-height: 4rem; }
+
+.list.collapsible .groupitem .leftcolumn {
+  cursor: pointer;
+  min-height: 3rem; }
+
+.additionalinfopretext {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem; }
+
+.tickleritem .media .mediabutton, .tickleritem .media .disabletext {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem; }
+
+.media div.texticon {
+  background-image: url("../images/preference/text.png"); }
+  .media div.texticon.checked {
+    background-image: url("../images/preference/text_toggled.svg"); }
+.media .disabletext {
+  background-image: url("../images/preference/text_off.png");
+  cursor: default; }
+.media div.texticon.checked.locked {
+  background-image: url("../images/preference/text_locked.svg");
+  cursor: default; }
+.media div.emailicon {
+  background-image: url("../images/preference/email.png"); }
+  .media div.emailicon.checked {
+    background-image: url("../images/preference/email_toggled.svg"); }
+    .media div.emailicon.checked.locked {
+      background-image: url("../images/preference/email_locked.svg");
+      cursor: default; }
+.media div.phoneicon {
+  background-image: url("../images/preference/phone.png"); }
+  .media div.phoneicon.checked {
+    background-image: url("../images/preference/phone_toggled.svg"); }
+    .media div.phoneicon.checked.locked {
+      background-image: url("../images/preference/phone_locked.svg");
+      cursor: default; }
+.media div.mailicon {
+  background-image: url("../images/preference/snailmail.png"); }
+  .media div.mailicon.checked {
+    background-image: url("../images/preference/snailmail_toggled.svg"); }
+    .media div.mailicon.checked.locked {
+      background-image: url("../images/preference/snailmail_locked.svg");
+      cursor: default; }
+.media .mediabutton, .media .disabletext {
+  background-size: contain; }
+
+.section .content .options .media {
+  width: 3.5rem;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top; }
+
+.list .group .groupitem .media .mediacount {
+  display: block;
+  visibility: hidden;
+  line-height: 0.7rem;
+  font-size: 0.7rem; }
+
+.list .group.hover .groupitem .media .mediacount, .list .group .groupitem .media input:focus + .mediacount {
+  visibility: visible; }
+
+.media input:focus ~ label {
+  outline: -webkit-focus-ring-color auto 5px; }
+
+.leftcolumn {
+  text-align: left;
+  display: inline-block;
+  width: calc(100% - 3.6rem);
+  vertical-align: middle; }
+  .media_2 .leftcolumn {
+    width: calc(100% - 7.1rem); }
+  .media_3 .leftcolumn {
+    width: calc(100% - 10.7rem); }
+  .media_4 .leftcolumn {
+    width: calc(100% - 14.1rem); }
+  .media_5 .leftcolumn {
+    width: calc(100% - 17.8rem); }
+
+.rightcolumn {
+  width: auto;
+  text-align: right;
+  display: inline-block;
+  vertical-align: top; }
+
+.options {
+  display: inline-block;
+  width: auto;
+  padding-right: 0.1rem; }
+
+.collapsed .ticklers {
+  display: none; }
+
+.section .content.contactinfo {
+  margin-top: 2rem; }
+
+#smsSignupForm {
+  background-image: url("../images/preference/text_off.png"); }
+
+.reminderdropdown {
+  display: inline-block;
+  min-width: 0;
+  font-size: inherit;
+  margin-right: 0.5rem; }
+
+.leftcolumn .ticklername .infoicon {
+  margin-left: 0.1rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-top: 0.3rem; }
+
+.mobile .ticklers .popupiconcontainer .popupinstructionsicon > img {
+  height: 0.7rem;
+  width: 0.7rem;
+  margin-top: 0; }
+
+.leftcolumn .ticklername .paperlessicon {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-right: 0.1rem; }
+
+.list.collapsible .buttoncontainer {
+  padding-top: 0.75rem;
+  text-align: right; }
+
+.warningmessage:before {
+  background: transparent none no-repeat scroll left center/1rem 1rem;
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  position: relative;
+  vertical-align: middle;
+  width: 1.2rem;
+  background-image: url("../images/yield.png");
+  bottom: 0.1rem; }
+
+.warningmessage {
+  padding-bottom: 0.3rem; }
+
+#inputForm .popupiconcontainer .popupInstructions {
+  min-height: 1.7rem; }
+#inputForm .popupiconcontainer a {
+  height: 1.2rem; }
+#inputForm {
+  margin-top: 0.5rem; }
+
+.confirmcontainer {
+  text-align: right;
+  margin-right: 0.2rem; }
+
+#confirmsave {
+  width: auto;
+  display: inline-block;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.2);
+  background: #ffffff url("../images/success.svg") no-repeat scroll left center/2rem 2rem; }
+
+.applytoalldiv {
+  margin-bottom: 0.5rem; }
+
+#sidebar dl dd {
+  margin-bottom: 0.5rem; }
+
+.billingError:before {
+  background: transparent none no-repeat scroll left center/1rem 1rem;
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  position: relative;
+  vertical-align: middle;
+  width: 1.2rem;
+  background-image: url("../images/error.png");
+  bottom: 0.1rem; }
+
+.billingError {
+  padding-bottom: 0.3rem; }
+
+.inlineInfoBubble {
+  display: inline-block;
+  width: auto; }

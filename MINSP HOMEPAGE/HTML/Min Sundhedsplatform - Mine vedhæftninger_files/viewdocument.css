@@ -1,0 +1,302 @@
+﻿/* Copyright 2016-2019 Epic Systems Corporation */
+.filters {
+  display: inline-block;
+  margin-left: -1.5rem;
+  padding-left: 1.5rem;
+  margin-right: 6rem;
+  max-width: none !important;
+  width: calc(100% + 2.8rem); }
+
+.filters select, option {
+  display: inline;
+  max-width: 25%;
+  min-width: 20%; }
+
+.filters label {
+  max-width: 25%;
+  display: inline; }
+
+#documentwidgettitle {
+  font-size: 1.25rem;
+  color: #00396B; }
+
+#viewdocumentwidget {
+  margin-bottom: 10px;
+  padding-bottom: 0.5rem; }
+  #viewdocumentwidget .document:hover {
+    cursor: pointer; }
+
+div.no-content {
+  display: table;
+  border-spacing: 10px;
+  margin-left: -10px; }
+
+.DocumentTable .document {
+  width: 100%; }
+
+div.document.card.onlydoc {
+  display: block;
+  width: 49%;
+  min-height: 0; }
+  div.document.card.onlydoc.docListStyle {
+    width: 100%; }
+
+#doc_title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+iframe.tiffviewer {
+  width: 100%;
+  height: 70rem; }
+
+.documenttable .documents .document .docinfo {
+  width: 100%;
+  margin-left: 0;
+  margin-top: 0;
+  color: #767676; }
+
+.documentpopup.Popup .titlebar {
+  word-wrap: break-word; }
+  .documentpopup.Popup .titlebar span {
+    word-wrap: break-word; }
+
+div.options {
+  text-align: right; }
+
+.options img {
+  padding: 0px 5px;
+  height: 30px;
+  width: auto; }
+
+.documentpopup.Popup .jplayer-inst {
+  width: 640px;
+  margin: auto; }
+.documentpopup .options {
+  margin-top: 15px;
+  padding-bottom: 15px; }
+.documentpopup video {
+  width: 100%;
+  text-align: center; }
+.documentpopup .options .printDownload {
+  margin-left: 10px; }
+
+.esigDocContent {
+  text-align: left; }
+
+.printdoc {
+  width: 100%; }
+
+#viewdocumentwidget .titlebar {
+  margin-bottom: 7px; }
+  #viewdocumentwidget .titlebar .header {
+    display: inline;
+    overflow: ellipsis; }
+
+#filters .docFilter {
+  max-width: 100%; }
+
+.filters .docFilter #filter-DocTypeLabel {
+  margin-left: 1rem; }
+
+#document_container {
+  overflow-y: hidden; }
+
+#filters .docFilter select {
+  display: inline-block;
+  min-width: 10%;
+  max-width: 50%;
+  margin-right: 1rem; }
+#filters .docFilter label {
+  margin-right: 1rem;
+  width: 50%; }
+
+#dociframe {
+  width: 100%;
+  min-height: 100%;
+  border: none; }
+
+#viewdocumentwidget span.statusBadge {
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  margin: 0 0.25rem 0 0;
+  padding: 0.125rem 0.5rem; }
+#viewdocumentwidget p.rejectionReason {
+  line-height: 1.25rem;
+  font-size: 1rem;
+  font-style: italic;
+  word-wrap: break-word; }
+#viewdocumentwidget .doctitle {
+  word-wrap: break-word;
+  max-width: 100%; }
+
+.documenttable .documents .document .topRightElem {
+  top: 0px;
+  right: 0px;
+  height: 3rem;
+  padding: 0.5rem;
+  position: absolute;
+  text-align: right;
+  width: auto; }
+
+.pendingDocBadge {
+  background-color: #ffa020; }
+
+.deniedDocBadge {
+  background-color: #767676; }
+
+.approvedDocBadge {
+  background-color: #ff2a00; }
+
+.expiredDocBadge {
+  background-color: #767676; }
+
+ul.DocumentTable {
+  margin: 0 auto;
+  width: 100%;
+  transition: opacity 1s;
+  opacity: 1; }
+  ul.DocumentTable li.SingleDocument {
+    border-bottom: solid 1px;
+    border-color: #dbdbdb;
+    margin: 0;
+    transition: all 1s, background-color 0.5s; }
+    ul.DocumentTable li.SingleDocument.Header {
+      animation: expandNormal;
+      animation-duration: 1s; }
+    ul.DocumentTable li.SingleDocument.Expired {
+      border-bottom: solid 1px;
+      border-color: #dbdbdb;
+      background-color: #eaeaea; }
+  ul.DocumentTable span.SingleDocument {
+    text-decoration: none;
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+    transition: opacity 1s;
+    opacity: 1; }
+  ul.DocumentTable .SingleDocument span.DocIcon {
+    width: 35px;
+    margin: 0.5rem 1rem 0rem 0.25rem; }
+    @media only screen and (max-width: 768px) {
+      ul.DocumentTable .SingleDocument span.DocIcon {
+        margin: 1rem 1rem 0rem 0.25rem; } }
+  ul.DocumentTable span.SingleDocument > span {
+    padding: 5px;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle; }
+
+li.Clickable {
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem; }
+
+span.DocIcon {
+  min-width: 35px; }
+
+.grid > .row div.grid.compact.InfoRow {
+  margin: 0.75rem 0px 0.5rem 0px; }
+
+#documentTableHeader {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0rem; }
+  #documentTableHeader #docType {
+    width: calc(62.5% + 35px + 0.75rem); }
+  #documentTableHeader .Header {
+    display: inline-block;
+    padding-left: 6px;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5rem; }
+
+.ClickableHeader {
+  cursor: pointer; }
+
+span.StatusHeader {
+  width: 15%; }
+
+span.DateHeader {
+  width: 30%; }
+
+.DocumentTable span.SingleDocument > span > span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden; }
+
+.descending::after {
+  border-left: 7px solid transparent !important;
+  border-right: 7px solid transparent !important;
+  border-top: 7px solid rgba(86, 86, 86, 0.75) !important;
+  bottom: 2px;
+  content: "";
+  display: inline-block;
+  height: 0;
+  left: 7px;
+  position: relative;
+  width: 0; }
+
+.ascending::after {
+  border-left: 7px solid transparent !important;
+  border-right: 7px solid transparent !important;
+  border-bottom: 7px solid rgba(86, 86, 86, 0.75) !important;
+  bottom: 2px;
+  content: "";
+  display: inline-block;
+  height: 0;
+  left: 7px;
+  position: relative;
+  width: 0; }
+
+.New {
+  font-weight: bold; }
+
+.loadMore {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  display: block; }
+
+span#showDeclined {
+  float: right;
+  margin-right: 2.5rem;
+  line-height: 2.25rem; }
+
+#showRejected {
+  display: inline;
+  margin-right: 0.25rem; }
+
+.esigned canvas {
+  background-color: #eaeaea;
+  border: 1px #cccccc solid; }
+
+.esigned input[type='checkbox'], input[type='radio'] {
+  margin: 4px 4px 0 5px;
+  display: inline-block; }
+
+.esigned main div {
+  width: auto; }
+
+.popupInstructions {
+  word-wrap: normal;
+  white-space: normal; }
+
+.filtered {
+  display: none !important; }
+
+@keyframes expandNormal {
+  from {
+    height: 0rem; }
+
+  to {
+    height: 2.8rem; } }
+
+.quickLinks.vertical a::after {
+  background-color: rgba(118, 118, 118, 0.25); }

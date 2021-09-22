@@ -1,0 +1,935 @@
+﻿/* Copyright 2018-2019 Epic Systems Corporation */
+/* #region Generic styling */
+.estimatedCostContainer .popupiconcontainer {
+  float: right; }
+
+#MedicationForm {
+  padding-bottom: 20px; }
+  #MedicationForm p.pretext {
+    margin: 0.5rem 0; }
+  #MedicationForm #DeliveryCommentsContainer {
+    margin: 1rem 0 0.5rem 0; }
+    #MedicationForm #DeliveryCommentsContainer label {
+      font-size: 1rem; }
+
+.pretext-button-group .buttonList {
+  width: auto;
+  vertical-align: top;
+  padding-top: 0.5em; }
+  .pretext-button-group .buttonList .button {
+    margin: 0; }
+    .pretext-button-group .buttonList .button img {
+      filter: brightness(100);
+      width: 1.5rem;
+      vertical-align: text-top;
+      margin-right: 0.5rem; }
+
+.refilldisclaimer {
+  padding: 0 0.25rem; }
+
+#MedicationsPageContent .medicationcontainer .pretext-button-group {
+  margin: 0.25rem 0.5% 0 0; }
+
+#CurrentMedicationsList {
+  margin-top: 0;
+  margin-bottom: 0.5rem; }
+
+input.dummy-checkbox {
+  height: 1px;
+  opacity: 0;
+  min-height: unset;
+  margin: 0;
+  border: 0; }
+
+.loading-overlay {
+  display: none; }
+
+.step-loading .loading-overlay {
+  display: flex;
+  align-items: center;
+  height: 350px; }
+.step-loading .step-body {
+  display: none; }
+
+.jqHidden.transition {
+  display: block; }
+
+/* #region SVG styling */
+.card svg.clock-icon, .card svg.info-icon, .refill-step svg.info-icon, .card svg.warning-icon {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: top; }
+
+.medcard.card .contentlink svg.info-icon {
+  margin: 0 0.25rem 0 0; }
+
+.medcard .medmessage svg.clock-icon, .medcard .medmessage svg.info-icon, .medcard .medwarning svg.warning-icon {
+  margin: 0 1.25rem -0.1rem 0; }
+
+.popupinstructionsicon svg.info-icon {
+  fill: #000000; }
+
+.refill-step .see-more-banner svg.expand {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  padding-left: 0.25rem;
+  fill: currentColor;
+  vertical-align: text-bottom; }
+
+/* #endregion */
+/* #region Formbuttons A.K.A. Bottom Banner */
+#MedicationForm .formbuttons {
+  position: fixed;
+  bottom: -100px;
+  box-shadow: 0 0 0.6rem 0 rgba(0, 0, 0, 0.2);
+  display: none;
+  padding: 0.5rem 1.5rem;
+  z-index: 100;
+  margin-left: -1.25rem;
+  transition: bottom 0.5s ease-in-out, background-color 0.2s ease-in, box-shadow 0.2s ease-in; }
+
+#MedicationForm.refill-workflow .formbuttons {
+  bottom: 0px;
+  display: flex;
+  flex-wrap: wrap; }
+  #MedicationForm.refill-workflow .formbuttons.not-sticky, html.datatile #MedicationForm.refill-workflow .formbuttons {
+    position: relative;
+    box-shadow: none;
+    padding: 0.5rem 1.5rem 15px 1.5rem;
+    margin-top: 0; }
+
+#MedicationForm .formbuttons .button {
+  min-width: 80px; }
+#MedicationForm .formbuttons .selected-count {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  padding: 0.25rem 0 0 0.25rem;
+  display: none;
+  width: auto;
+  flex-grow: 1; }
+#MedicationForm.refill-workflow .medications-step ~ .formbuttons {
+  flex-wrap: wrap-reverse; }
+#MedicationForm.refill-workflow .medications-step ~ .formbuttons .selected-count {
+  display: inline;
+  min-width: 215px; }
+.mobile #MedicationForm.refill-workflow .formbuttons .selected-count, html.datatile #MedicationForm.refill-workflow .formbuttons .selected-count {
+  display: none; }
+
+/* #endregion */
+/* #region Stuff to hide when NOT in refill-workflow */
+.refill-instructions {
+  display: none; }
+
+.medcard .med-selection-box .selection-disabled {
+  display: none; }
+
+.medcard .med-selection-box .selection-enabled {
+  display: none; }
+
+#OtherPrescriptionsCard {
+  display: none; }
+
+#MedicationForm .no-available-pharmacies-warning {
+  display: none; }
+
+.refill-workflow .medcard .medbottom .buttonList.right {
+  display: none; }
+
+/* #endregion */
+/* #region Medcards */
+.medcard .medbottom .buttonList.right {
+  z-index: 99;
+  width: auto;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap; }
+
+#MedicationForm .medtitle {
+  font-weight: bold; }
+
+.meddetailshowmore {
+  display: none;
+  width: 100%;
+  text-align: center;
+  padding: 0.25rem 0.75rem; }
+
+/* #endregion */
+/* #region Refillable cards */
+.medcard .selection-enabled input[type="checkbox"].styled-checkbox {
+  opacity: 0;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  min-height: 0; }
+.medcard .med-selection-box .selection-enabled label {
+  text-indent: -10000px;
+  line-height: 0; }
+.medcard .selection-enabled input[type=checkbox]:checked + label .inverted-checkmark {
+  opacity: 1; }
+.medcard .selection-enabled label {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block; }
+.medcard .med-selection-box .selection-enabled svg {
+  display: block; }
+.medcard .selection-enabled label .inverted-checkmark {
+  opacity: 0; }
+
+.refill-workflow .medications-step .medcard.refill-enabled {
+  cursor: pointer; }
+
+/* #endregion */
+/* #region Non-refillable cards */
+.refill-workflow .medcard.refill-disabled, .refill-workflow .medcard.refill-disabled .medbottom {
+  transition: background-color 0.5s; }
+.refill-workflow .card.refill-disabled .medmessage {
+  transition: background-color 0.5s; }
+.refill-workflow .medcard.refill-disabled * {
+  transition: color 0.5s; }
+.refill-workflow .card.medcard.refill-disabled a {
+  pointer-events: none;
+  cursor: default; }
+.refill-workflow .card.medcard.refill-disabled .meddetail {
+  border-top: 1px solid #dbdbdb; }
+.refill-workflow .card.medcard.refill-disabled .contentlink {
+  display: none; }
+
+.medcard .med-selection-box .selection-disabled svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block; }
+
+.refill-workflow .medcard .med-selection-box {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: auto; }
+.refill-workflow .medcard.refill-disabled .selection-disabled {
+  display: inline; }
+.refill-workflow .card.medcard.refill-disabled:before {
+  background-size: 0 0; }
+
+/* #endregion */
+/* #region Rx Comment Cards */
+.rxComment {
+  width: 100%; }
+
+#MedicationForm .rxCommentInput {
+  margin-top: 0.25rem; }
+#MedicationForm .editRxComment {
+  margin-top: 2px;
+  margin-bottom: 9px; }
+
+.medcard.rx-comment-card {
+  margin-bottom: 0.25rem; }
+
+.rxCommentReadonly {
+  overflow-wrap: break-word;
+  font-style: italic; }
+  .rxCommentReadonly::before {
+    background-image: url("../images/test_results/comments_read.svg");
+    background-size: 1.25rem 1.25rem;
+    content: "";
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 0.5rem; }
+
+.rx-comments-container.cardline {
+  margin: 0.5rem 0; }
+.refill-disabled .rx-comments-container {
+  display: none; }
+
+.rx-comment-card {
+  word-wrap: break-word; }
+  .rx-comment-card .costlabel {
+    padding-right: 4px; }
+
+/* #endregion */
+/* #region rxReviewCards (parent div of rxReviewCardList and rxReviewDetailsCardList) */
+.rxReviewCards.grid {
+  margin-top: 0; }
+.rxReviewCards .column_3 > .card {
+  width: 33.3%; }
+.rxReviewCards .column_2 > .card {
+  width: 50%; }
+.rxReviewCards .column_1 > .card {
+  width: 100%;
+  margin: 0px; }
+.rxReviewCards .popupiconcontainer {
+  margin-top: -1rem; }
+.rxReviewCards .paymentinfo .CardBrand {
+  vertical-align: middle;
+  width: auto;
+  display: inline-block; }
+  .rxReviewCards .paymentinfo .CardBrand img {
+    width: 3rem; }
+.rxReviewCards .paymentinfo .CardInfo {
+  vertical-align: middle;
+  width: auto;
+  display: inline-block;
+  margin-left: 0.5rem; }
+  .rxReviewCards .paymentinfo .CardInfo .CardExpiration {
+    margin-left: 0.5rem; }
+
+.rxReviewCardList.cardlist {
+  margin: 0px; }
+.rxReviewCardList .reviewStepCardListHeader {
+  border-bottom: 1px solid #eaeaea; }
+.rxReviewCardList .medcard {
+  border: 1px solid #eaeaea;
+  padding-bottom: 0.5rem;
+  min-height: 0;
+  margin-top: 0.25rem; }
+
+/* #endregion */
+/* #region Step-specific styling */
+/* #region  Medications Step */
+.refill-workflow .medications-step .card.medcard:before {
+  background-size: 0 0; }
+.refill-workflow .medications-step .medcard.refill-enabled .selection-enabled {
+  display: inline; }
+.refill-workflow .medications-step .medcard.selected {
+  border: 1px solid #0098BA; }
+.refill-workflow .medications-step .card.refill-enabled {
+  transition: box-shadow 300ms; }
+.refill-workflow .medications-step .card.refill-enabled:hover {
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.1); }
+
+.medicationcontainer .medcard.workflowMode {
+  margin: 0.6rem 0.5%; }
+  .medicationcontainer .medcard.workflowMode .refillremaining {
+    display: none; }
+  .medicationcontainer .medcard.workflowMode .medbottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    .medicationcontainer .medcard.workflowMode .medbottom .meddetail {
+      display: none; }
+
+/* #endregion */
+/* #region  Refill Step */
+.refill-workflow .refill-step .card.medcard.refill-disabled a {
+  display: none; }
+.refill-workflow .card.medcard .medwarning {
+  display: none; }
+.refill-workflow .refill-step .card.medcard.refill-disabled .medwarning {
+  display: inline-block; }
+.refill-workflow .card.medcard .cardline.medwarning.medmessage span {
+  width: 300px;
+  float: right; }
+.refill-workflow .addRxCommentSpan:before {
+  content: "+";
+  display: inline-block;
+  font-size: 0.9rem;
+  margin: 0 0.25rem 0 0;
+  vertical-align: top;
+  color: #FF5531;
+  text-decoration: none; }
+
+.refill-step .costContainer {
+  display: none; }
+.refill-step .card.medcard:not(.withButton):first-child {
+  margin-top: 0.25rem; }
+.refill-step #PickupOptions {
+  margin-top: 0.75rem; }
+  .refill-step #PickupOptions input {
+    width: 12rem;
+    min-width: 12rem; }
+  .refill-step #PickupOptions fieldset {
+    display: inline-block;
+    vertical-align: top;
+    width: 15rem; }
+  .refill-step #PickupOptions fieldset.date .messagedisplay {
+    margin-top: 0.5rem; }
+.refill-step .pharmacyHoursValue {
+  margin-left: 0.25rem; }
+.refill-step .PharmacyDropdown, .refill-step .flatradiogrouper, .refill-step #FreeTextPharmacy {
+  width: 100%;
+  max-width: 50%;
+  min-width: 425px; }
+.refill-step .PharmacyDropdown:disabled {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  padding-left: 0; }
+.refill-step .flatradio.container {
+  margin: 0.5rem 0; }
+  .refill-step .flatradio.container input.flatradio + label {
+    width: 100%; }
+.refill-step .prescription-list.collapsed {
+  max-height: 500px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem; }
+.refill-step .prescription-list .see-more-banner {
+  display: none; }
+.refill-step .prescription-list.collapsed .see-more-banner {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 99%;
+  margin: 0 0.25rem; }
+.refill-step .prescription-list .see-more-banner .fade-layer {
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 60%, #ffffff 100%); }
+.refill-step .prescription-list .see-more-banner .text-layer {
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  font-size: 1.25rem;
+  vertical-align: middle; }
+.refill-step label[for="PharmacyDropdownField"] {
+  display: none; }
+.refill-step .flatradio div.address_option_container {
+  display: inline; }
+.refill-step .flatradio span.address {
+  display: block; }
+.refill-step .flatradio span.address_label {
+  display: inline-block; }
+
+/* #endregion */
+/* #region  Review/Confirmation Step (shared) */
+.rxReviewDetailsCardList.cardlist {
+  margin: 0px; }
+  .rxReviewDetailsCardList.cardlist .card {
+    min-height: 0; }
+    .rxReviewDetailsCardList.cardlist .card:not(:first-child) {
+      border-left: 1px solid #dbdbdb; }
+
+.card .rxReviewDetailsName {
+  font-size: 1.2rem;
+  display: inline-block;
+  line-height: 1.5rem; }
+
+.card .rxReviewDetailsLink {
+  width: 50%;
+  display: inline-block; }
+
+.rxReviewLabel {
+  padding-right: 4px; }
+
+.reviewCostContainer {
+  line-height: normal;
+  font-size: 1.25rem; }
+
+.cardline.paymentinfo {
+  margin-bottom: 10px;
+  line-height: 1.25rem; }
+
+/* #endregion */
+/* #region  Review Step only */
+.review-step .card.medcard .medwarning, .confirmationStep .card.medcard .medwarning {
+  display: none; }
+
+/* #endregion */
+/* #region  Confirmation Step only */
+.confirmationStep .editRxComment, .confirmationStep .addRxComment {
+  display: none; }
+.confirmationStep .reviewStepCardListHeader .submitDate {
+  display: inline-block;
+  width: 30%; }
+.confirmationStep #OtherPrescriptionsCard {
+  display: inline-block; }
+.confirmationStep .popupiconcontainer {
+  display: none; }
+.confirmationStep .card.medcard .medwarning.renewalinfo {
+  display: flex;
+  max-width: none; }
+
+.renewalinfo::before {
+  background-image: url("../images/clock.png");
+  background-size: 1.5rem 1.5rem;
+  content: "";
+  display: inline-block;
+  height: 1.5rem;
+  margin: 0 0 0 -0.8rem;
+  position: relative;
+  vertical-align: middle;
+  width: 1.5rem; }
+
+.renewalmessage {
+  margin-left: 1.2rem; }
+
+.confirmationStep .card.medcard .cardline.medwarning.medmessage.renewalinfo span {
+  float: right;
+  max-width: 80%; }
+
+.confirmationMessage {
+  padding: 0.5rem 1rem 0.5rem 0; }
+  .confirmationMessage > img + div {
+    display: inline-block;
+    max-width: calc(100% - 2rem - 32px); }
+  .confirmationMessage h2 {
+    font-size: 13pt;
+    padding: 0px; }
+
+img.refilldone {
+  width: 32px;
+  height: 32px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+  vertical-align: top; }
+
+/* #endregion */
+/* #region Applied across all of refill-workflow */
+#MedicationForm.refill-workflow .no-available-pharmacies-warning {
+  display: block; }
+
+.refill-workflow .refill-instructions {
+  display: inline-block; }
+.refill-workflow .no-available-pharmacies .refill-instructions {
+  display: none; }
+.refill-workflow a[data-id="requestrefill"] {
+  visibility: hidden; }
+.refill-workflow .pretext-button-group {
+  display: none; }
+.refill-workflow .nodata.no-meds-banner {
+  display: none; }
+.refill-workflow #OtherPrescriptionsCard {
+  display: inline-block;
+  margin-bottom: 12px; }
+.refill-workflow .no-available-pharmacies #OtherPrescriptionsCard {
+  display: none; }
+
+/* #endregion */
+/* #region All Steps */
+#MedicationForm .subway {
+  visibility: hidden;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+  min-height: 0px; }
+
+.medications-step .messagedisplay:empty, .refill-step .messagedisplay:empty, .review-step .messagedisplay:empty, .confirmationStep .messagedisplay:empty {
+  display: none; }
+
+.medications-step .messagedisplay[data-message-display-for="notes"] {
+  display: block; }
+
+/* #endregion */
+/* #endregion */
+/* #region My Conditions styling */
+div.workrequest {
+  margin: 0 5px 15px 0; }
+
+#medslist {
+  clear: both; }
+
+.section .rxholder .rx {
+  margin: 10px auto;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
+  display: table; }
+  .section .rxholder .rx .rxleft {
+    width: 70%;
+    padding: 10px 10px 30px;
+    display: table-cell; }
+  .section .rxholder .rx .rxright {
+    width: 30%;
+    height: 170px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: inset 10px 0 5px -5px rgba(0, 0, 0, 0.1);
+    display: table-cell;
+    vertical-align: top;
+    background-image: url("../images/rx.png");
+    background-position: 50% 1em;
+    background-repeat: no-repeat; }
+  .section .rxholder .rx a.contentlink {
+    position: absolute;
+    margin-left: 0;
+    bottom: 10px; }
+
+.rxbuttonholder {
+  clear: none;
+  float: right;
+  height: 3.5rem;
+  margin: 0 0 1rem 0.5rem;
+  width: auto; }
+
+.rxbutton {
+  display: inline-block;
+  height: 100%;
+  line-height: 1.1rem;
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.7rem; }
+  .rxbutton:first-child {
+    margin: 0 0.25rem 0 0; }
+  .rxbutton:last-child {
+    margin: 0 0 0 0.25rem; }
+
+.rxbuttonholder + p {
+  clear: none; }
+
+.rxbutton img {
+  display: inline-block;
+  margin: 0 0.25rem 0 0;
+  vertical-align: middle; }
+.rxbutton span {
+  display: inline-block;
+  max-width: 8rem;
+  vertical-align: middle; }
+
+.section .rxholder .rx h2, .section .rxholder .rx h3 {
+  border: none;
+  clear: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0; }
+.section .rxholder .rx .rxsig {
+  font-weight: normal;
+  display: block;
+  float: none;
+  clear: both;
+  margin-top: 10px; }
+.section .rxholder .rx .rxright p {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  font-size: 13.5px; }
+.section .rxholder .rx .rxsig.temporary {
+  display: inline-block;
+  padding: 3px 8px; }
+.section .rxholder .rx img.popupinstructionsicon {
+  width: 24px !important;
+  height: 24px !important;
+  float: none;
+  display: inline; }
+.section .rxholder .rx .popupInstructions span.header {
+  float: left;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%; }
+.section .rxholder .rx .rxsig.temporary img {
+  padding: 0 5px 3px 0; }
+.section .rxholder .rx .rxright div.epa {
+  text-align: left; }
+.section .rxholder .rx p {
+  margin: 0 0 2px;
+  padding: 0; }
+.section .rxholder .rx .button {
+  margin: 20px auto 0;
+  display: inline-block;
+  line-height: inherit; }
+
+.section .rxholder .commonname {
+  margin: 0 0 0px; }
+.section .content .commonname {
+  font-size: 0.9rem; }
+.section .content ul li .commonname {
+  margin: 2px 0 6px 0; }
+.section .content table tbody tr td .commonname {
+  margin: 2px 0 3px 0; }
+
+ul.medrefill li {
+  margin: 0 0 10px 0; }
+
+/* #endregion */
+/* Responsive / MO Meds */
+.add-medication-box {
+  padding-left: 2px;
+  padding-right: 2px; }
+  .add-medication-box .cardlist {
+    margin: 0 0 0.5rem 0; }
+
+a.button .med_actions_label_container img {
+  height: 1.5rem; }
+
+.med_actions_label_container img {
+  width: 20px;
+  vertical-align: top;
+  transition: transform 0.5s; }
+.med_actions_label_container .med_actions_label {
+  padding-left: 0.4rem;
+  vertical-align: top; }
+
+.medcard .medbottom .buttonList, .pendingUpdatesSection .clinicalcard .buttonList {
+  min-height: 0;
+  padding: 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+  position: relative; }
+  .medcard .medbottom .buttonList .button, .pendingUpdatesSection .clinicalcard .buttonList .button {
+    margin-right: 0;
+    opacity: 1;
+    border-radius: 0; }
+    .medcard .medbottom .buttonList .button.inlinesave, .pendingUpdatesSection .clinicalcard .buttonList .button.inlinesave {
+      border-right-width: 1px;
+      border-right-style: solid;
+      border-bottom-style: none; }
+    .medcard .medbottom .buttonList .button.inlinesave, .medcard .medbottom .buttonList .button.inlinedelete, .pendingUpdatesSection .clinicalcard .buttonList .button.inlinesave, .pendingUpdatesSection .clinicalcard .buttonList .button.inlinedelete {
+      flex: 1;
+      text-transform: none;
+      margin: 0;
+      padding: 0.3rem 0.5rem;
+      opacity: 1; }
+
+html:not(.mobile) .pendingUpdatesSection .cardlist.column_3 > .card.clinicalcard {
+  width: calc(33.33333% - 12px);
+  display: inline-flex; }
+
+.pendingUpdatesSection .cardlist > .card.clinicalcard {
+  display: flex;
+  flex-direction: column;
+  padding: 0; }
+  .pendingUpdatesSection .cardlist > .card.clinicalcard .clinicalinfo {
+    padding: 0.5rem 2rem 1rem 0.5rem;
+    flex-grow: 1; }
+
+.card .pharmacy_info_container {
+  display: flex;
+  justify-content: space-between; }
+  .card .pharmacy_info_container .pharmacy_details_container {
+    padding: 0; }
+  .card .pharmacy_info_container .pharmacy_actions_container {
+    width: 50px;
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap; }
+    .card .pharmacy_info_container .pharmacy_actions_container .pharmacy_action {
+      display: block;
+      line-height: 0.3;
+      font-size: 0.8rem;
+      text-align: center;
+      align-self: flex-end; }
+      .card .pharmacy_info_container .pharmacy_actions_container .pharmacy_action img {
+        width: 1.7rem; }
+      .card .pharmacy_info_container .pharmacy_actions_container .pharmacy_action:not(:first-child) {
+        margin-top: 0.5rem; }
+    .card .pharmacy_info_container .pharmacy_actions_container .pharmacy_action_label {
+      line-height: 1; }
+
+@media screen and (max-width: 320px) {
+  .medcard .medbottom .buttonList.right {
+    flex-direction: column;
+    align-items: stretch; }
+    .medcard .medbottom .buttonList.right .button.inlinesave, .medcard .medbottom .buttonList.right .button.inlinedelete {
+      flex: none; }
+    .medcard .medbottom .buttonList.right .button.inlinesave {
+      border-right-style: none;
+      border-bottom-width: 1px;
+      border-bottom-style: solid; } }
+
+@media screen and (max-width: 425px) {
+  #MedicationForm.refill-workflow .formbuttons {
+    margin-left: -0.75rem; }
+    #MedicationForm.refill-workflow .formbuttons.not-sticky {
+      margin: 0.5rem 0 0 0;
+      padding: 0; }
+    #MedicationForm.refill-workflow .formbuttons .selected-count {
+      padding: 0 0 0.25rem 0; }
+  #MedicationForm.refill-workflow .subwayStep.medications-step + .formbuttons .button {
+    flex-grow: 1; }
+    #MedicationForm.refill-workflow .subwayStep.medications-step + .formbuttons .button.cancelworkflow {
+      margin-right: 0; }
+  #MedicationForm.refill-workflow .subwayStep:not(.medications-step) + .formbuttons .button.nextstep, #MedicationForm.refill-workflow .subwayStep:not(.medications-step) + .formbuttons .button.completeworkflow {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    order: -1; }
+  #MedicationForm.refill-workflow .subwayStep:not(.medications-step) + .formbuttons .button.previousstep, #MedicationForm.refill-workflow .subwayStep:not(.medications-step) + .formbuttons .button.cancelworkflow {
+    flex-grow: 1; }
+  #MedicationForm.refill-workflow .subwayStep:not(.medications-step) + .formbuttons .button.nextstep, #MedicationForm.refill-workflow .subwayStep:not(.medications-step) + .formbuttons .button.completeworkflow, #MedicationForm.refill-workflow .subwayStep:not(.medications-step) + .formbuttons .button.cancelworkflow {
+    margin-right: 0; }
+  #MedicationForm.refill-workflow .refill-step .flatradiogrouper, #MedicationForm.refill-workflow .refill-step .PharmacyDropdown, #MedicationForm.refill-workflow .refill-step #FreeTextPharmacy {
+    max-width: 100%;
+    min-width: 0; } }
+
+@media screen and (max-width: 768px) {
+  .medcard .medbottom {
+    padding: 0; }
+    .medcard .medbottom .meddetail {
+      padding: 0.25rem; }
+      .medcard .medbottom .meddetail .meddetailcolumns {
+        display: none;
+        padding: 0 0.5rem 0 0;
+        overflow: hidden;
+        max-height: 0em;
+        transition: all 0.25s ease-in-out; }
+        .medcard .medbottom .meddetail .meddetailcolumns .medinfocolumn {
+          padding-left: 1rem; }
+    .medcard .medbottom .meddetailshowmore {
+      display: inline-block; }
+  .meddetailcolumns .sigbottom {
+    padding-left: 1rem; }
+  .pretext-button-group .buttonList {
+    width: 100%;
+    text-align: left; }
+  #MedicationForm .formbuttons:not(.non-sticky) {
+    margin-left: -0.75rem; }
+  .rxReviewDetailsCardList.cardlist .card:not(:first-child) {
+    border-left: none;
+    border-top: 1px solid #dbdbdb;
+    padding-left: 0.5rem; }
+  .personalnotes .card {
+    width: 100%; }
+  .personalnotes textarea {
+    min-width: 100%; }
+  #MedicationForm .confirmationStep div.success {
+    display: flex;
+    padding: 4rem 0 1rem 0;
+    flex-direction: column;
+    align-items: center;
+    background-position: top;
+    background-size: 4.2rem; }
+    #MedicationForm .confirmationStep div.success span {
+      margin: 0;
+      text-align: center;
+      padding: 0.25rem; } }
+
+/* Responsive Tabbed Navigation */
+.respNavParent {
+  width: 100%;
+  overflow: hidden;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  line-height: 1.25rem; }
+
+.respNavParent.fullwidth .respNavChild {
+  width: 100%; }
+  .respNavParent.fullwidth .respNavChild > .respNavTab {
+    flex: 1 1 auto; }
+
+.respNavParent.overflow {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch !important;
+  -ms-overflow-style: none; }
+  .respNavParent.overflow::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    /* remove scrollbar */
+    background: transparent;
+    /* scrollbar invisible */ }
+
+.respNavChild {
+  display: inline-flex;
+  width: auto;
+  max-width: none; }
+
+.respNavTab {
+  flex: 0 0 112px;
+  height: 5.25rem;
+  width: 112px;
+  padding: 4px 8px 4px 8px;
+  margin: 4px 2px 0 2px;
+  border-style: solid;
+  border-width: thin;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer; }
+  .respNavTab > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-decoration: none; }
+    .respNavTab > a > img.tabimg {
+      height: 2rem;
+      width: 2rem;
+      flex-shrink: 0;
+      overflow: hidden;
+      border-style: solid;
+      border-width: thin;
+      border-radius: 50%; }
+    .respNavTab > a > span.tabname {
+      margin: auto;
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -moz-box-orient: vertical;
+      -webkit-box-orient: vertical;
+      -webkit-box-align: center;
+      -moz-box-align: start;
+      -webkit-box-pack: center;
+      -moz-box-pack: start;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: bold; }
+
+@media only screen and (min-width: 321px) {
+  .respNavTab {
+    flex: 0 0 124px;
+    width: 124px; } }
+
+@media only screen and (min-width: 412px) {
+  .respNavTab {
+    flex: 0 0 140px;
+    width: 140px; } }
+
+@media only screen and (min-width: 769px) {
+  .respNavChild > .respNavTab {
+    flex: 0 0 150px;
+    width: 150px;
+    padding: 4px 8px 4px 8px;
+    height: 3.25rem; }
+  .respNavChild > .respNavTab > a {
+    display: inline-flex;
+    flex-direction: row; }
+    .respNavChild > .respNavTab > a > img.tabimg {
+      margin-right: 8px; }
+    .respNavChild > .respNavTab > a > span.tabname {
+      align-self: baseline;
+      flex: 1 1 auto; } }
+
+.respNavParent {
+  border-bottom-color: #cccccc; }
+
+.respNavTab {
+  background-color: rgba(0, 57, 107, 0.1);
+  border-color: transparent; }
+  .respNavTab > a {
+    color: #000000; }
+    .respNavTab > a > .tabimg {
+      border-color: #cccccc;
+      background-color: #ffffff; }
+  .respNavTab.selected {
+    border-color: #dbdbdb;
+    border-bottom-color: #00396B;
+    background-color: rgba(255, 255, 255, 0.25); }
+    .respNavTab.selected > a {
+      color: #00396B; }
+
+.refill-workflow .respNavChild {
+  width: 100%; }
+.refill-workflow .respNavTab {
+  flex: 1 1 auto;
+  height: 3.25rem;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent; }
+  .refill-workflow .respNavTab > a {
+    display: inline-flex;
+    flex-direction: row;
+    cursor: default; }
+    .refill-workflow .respNavTab > a > img.tabimg {
+      margin-right: 8px; }
+    .refill-workflow .respNavTab > a > span.tabname {
+      flex: 1 1 auto;
+      text-align: left;
+      font-size: 1.1rem;
+      -webkit-box-align: start; }
+.refill-workflow .respNavTab:not(.selected) {
+  display: none; }
+
+/* #endregion */

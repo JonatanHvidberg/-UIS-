@@ -1,0 +1,134 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.bg-steel {
+  background-color: #22a33c;
+}
+.qoutes {
+    font-family:"Zapfino", Times, serif;
+    font-size: 35px;
+}
+
+.names {
+    font-size:25px;
+}
+
+.mr-4 {
+    font-family:"Times New Roman", Times, serif;
+}
+
+.nav-item {
+    font-family:"Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #000000;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  /*color: #1b52d1;
+  color: #12731e;*/
+  color: #248242;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+  color: #22a33c;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+/*For submit boxes*/
+.btn-outline-info{
+    color: #000000;
+}
+.btn-outline-info:hover{
+    color: #11b52d1;
+    color:#fff;
+    background-color:#2668ed;
+    border-color:#17a2b8;
+    }
+
+.article-metadata {%}
+    color: #150cfa;
+}
+
+
+
+
+/*hudlæge osv*/
+.article-content1 {
+    color: #1109e8;
+}
+
+.article-content0 {
+    color: #095ee8;
+}
+
+.article-content {
+    color: #0996e8;
+}
+
+.article-content2 {
+    color: #09bfe8;
+}
+
+.article-title {
+  color: #0b8de3;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}%}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}

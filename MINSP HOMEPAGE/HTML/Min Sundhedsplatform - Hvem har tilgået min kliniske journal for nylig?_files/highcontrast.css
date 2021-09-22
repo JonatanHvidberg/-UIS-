@@ -1,0 +1,620 @@
+﻿/* Copyright 2018-2019 Epic Systems Corporation */
+#wrap .cssSwitcher[data-csstitle="High Contrast"] {
+  display: none; }
+
+#wrap .cssSwitcher[data-csstitle="Default"] {
+  display: inline;
+  margin-right: 0; }
+
+html, #sidebar, #sidebar .subtle, #sidebar .subtlecolor, #header .menugroup a:not(.button), .subtle, .subtlecolor, body.isInside #footer, body.isInside #footer a, .datatile #wrap > .copyright a, .list.hoverable:not(.collapsible) a:not(.button), .list.hoverable:not(.collapsible) a:not(.button):focus, .list.hoverable:not(.collapsible) a:not(.button):hover, .list.hoverable.collapsible a.collapsed:focus, .list.hoverable.collapsible a.collapsed:hover, .list.hoverable.collapsible li.collapsed:focus a, .list.hoverable.collapsible li.collapsed:hover a, .list.hoverable.collapsible li.collapsed a:focus, .list.hoverable.collapsible li.collapsed a:hover, .md_caredecision_index .documenttable .documents .document .docinfo, .md_caredecision_index #divHCAs .divHCATitle p, .md_premiumbilling_index span.premium-bill-balance-label, .md_premiumbilling_index span.premium-bill-summary-details, .md_premiumbilling_index span.premium-bill-payment-date, .md_premiumbilling_payments tr.uncommitted-payment, .md_socialcareapplications_index .statusAuthorized, .md_socialcareapplications_index .statusOpen, .md_socialcareapplications_index .statusPendingReview, .md_socialcareapplications_index .statusNewRequest, .md_socialcareapplications_index .statusIncomplete, .md_socialcareapplications_index .statusCanceled, .md_socialcareapplications_index .statusDenied, .md_socialcareapplications_index .statusClosed, .md_socialcareapplications_index .statusDefault, body.md_visitdetails_index div.waitlist span.waitlistpretext, body.md_visitdetails_index div.visitinstructionsheader, body.md_visitdetails_index div.departmentaddress, body.md_visitdetails_index div.departmentphone, body .component.Popup.notificationreview .footer, label, .label, .section.questionsContainer .helptext, .section.questionsContainer .question.HORIZSLIDER .answers .slidersection > .minmax .min, .section.questionsContainer .question.HORIZSLIDER .answers .slidersection > .minmax .max, .section.questionsContainer .question.VERTSLIDER .answers .slidersection > .minmax .min, .section.questionsContainer .question.VERTSLIDER .answers .slidersection > .minmax .max, .qnr-summary-question-answer.slider-answer .slidersection.HORIZSLIDER > .minmax, .qnr-summary-question-answer.slider-answer .slidersection.VERTSLIDER > .minmax, .inlinelabel, .formsection fieldset legend, .button.buttoncheck label, .openingsContainer .filterControls .filterFrame, .statusBadge.CareEverywhere, .statusBadge.CareEverywhere .header, #orgSearch::placeholder {
+  color: #000000; }
+
+a, .linkcolor, .subtle.linkcolor, #sidebar .recovery a, #sidebar .component.medicationslist .pickupbanner, #sidebar .component.medicationslist .pendingupdates, .visitinformation a:not(.button), .apptDeptInstructions .section.flat a:not(.button), .medbottom .medinfocolumn a, .softwarning a:not(.button), #editdocumentform .fa-edit-file, .doc-upload-container .doc-upload-container-content .addItem.card form span, #twofactorresend input[type="submit"], #twofactorresend input[type="button"], .goalssmall .goalslist .compliant, .multiMonthCalendar .calendarBtns a, .multiMonthCalendar .calendarBtns a:hover, .multiMonthCalendar .calendarBtns a:focus, .multiMonthCalendar li.calendarBackEventBtn:before, .multiMonthCalendar li.calendarNextEventBtn:after, .loginalert .body .apptDateDetails, .BeforeList .top a, .messagefooter .loadall, .calendar table td#calcancel a, .ToDolist li.healthadvisory a.requestappointment:not(.button), .visittypecontainer a.visitlink.request, .summaryInfo .subtle.editText, .list.hoverable:not(.collapsible) a.notificationSelect:not(.button) {
+  color: #c50000; }
+
+@media only screen and (min-width: 1px) and (max-width: 1300px) {
+  #touchmenu-account .menuname {
+    color: #c50000; } }
+
+.cardline .popupiconcontainer .popupinstructionsicon > svg {
+  fill: #c50000; }
+
+a:focus, a:hover, .linkcolor:focus, .linkcolor:hover, #calendar table td.ctrl a:hover, .clicktoexpand, .clicktocollapse, .group.hover .grouphelptext {
+  color: #ad0000; }
+
+ul.MessageList.list.hoverable.collapsible .SingleMessage .ReplyButton a.button:-moz-focusring {
+  outline-color: #ad0000; }
+
+.md_visitdetails_index div.providerphotocontainer a:hover .providerphoto {
+  border-color: #ad0000; }
+
+.linkcolorOverride, .linkcolorOverride:visited {
+  color: #c50000 !important; }
+.linkcolorOverride:focus, .linkcolorOverride:hover {
+  color: #ad0000 !important; }
+
+.list.hoverable:not(.collapsable) a.addItem, .list.hoverable:not(.collapsable) a.addItem:hover {
+  color: #c50000; }
+
+#sidebar .header {
+  color: #003666; }
+  #sidebar .header.titlebar {
+    color: #ffffff; }
+
+.Visits .card .date div, .previewCCD .listelement .date div {
+  color: #0060b4; }
+
+h1, h2, h3, h4, .header, .heading, .hover a.header:focus, .hover a.header:hover, .hover a.heading:focus, .hover a.heading:hover, .titlebar, .sectionheader, .formsection > legend, table thead tr, div.OutstandingBalanceHeader, .receipt .receiptsection .receiptline.name, .section .content .PEF .headerrow, .section .content .PEF .grouper.prompt, .refillpickupoptions#pickupoptions > label, #divAcpQuestionnaire .qnr-container .questiongroup .group-prompt, .popupiconcontainer > .popupInstructions > span.header, .md_questionnairelist .header, .md_mychartquestionnaire_questionnaires .header, #calendar table td.ctrln, .urgent, .PickOrganization .content > p, .essSearchResultsMsg, .summaryInfo.summaryActive .subtle.edit, .summaryInfo.summaryComplete .subtle, .summaryInfo.summaryIncomplete .subtle, #standardworkflowselector > .separator > p, a.card-button, .md_confirmation_confirm input:focus + label.togglebutton[for], .md_confirmation_confirm input + label.togglebutton[for]:hover, #ShareCodeSection #Code, .TRPComponentHeader, .upload--file-name, #documentwidgettitle {
+  color: #00396B; }
+
+.pageNum:not(.active) {
+  color: #00396B; }
+
+.ba_card_actions_link, .insurance_card_actions_link {
+  color: #00396B; }
+  .ba_card_actions_link:hover, .ba_card_actions_link:focus, .ba_card_actions_link:active, .insurance_card_actions_link:hover, .insurance_card_actions_link:focus, .insurance_card_actions_link:active {
+    background-color: #eaeff3;
+    color: #00396B; }
+
+.cardlist.selectable .card.selected:before, .fullscreen ul.careteam li.selected:before, .goalslarge li.goalslistelement.selected:before {
+  background-color: #00396B; }
+
+select.selected, div.ChargeGroupContainer, .shareeverywhere a.selinks:hover, .selinks:hover, .shareeverywhere .selinks.selected, .TRPCareteamParent .TRPComponentAbbrev.selected {
+  border-left-color: #00396B; }
+
+.calendar table td.today a, #SavedPaymentMethods.selectable.cardlist .card.Selected, #ShareCodeSection #Code {
+  border-color: #00396B; }
+
+.ReviewMessages .BeforeList .tabs input:checked + label, .hra-chosen {
+  border-bottom-color: #00396B; }
+
+.membertab.selected {
+  border-top-color: #00396B; }
+
+a.summaryInfo:hover, a.summaryInfo.summaryActive {
+  background-color: rgba(0, 57, 107, 0.1); }
+
+.summaryInfo:before {
+  background-color: #00396B; }
+
+.summary {
+  border-top-color: rgba(0, 57, 107, 0.2); }
+
+@media only screen and (min-width: 1px) and (max-width: 1300px) {
+  #touchmenu-toggle:after {
+    border-top-color: #00396B; } }
+
+.previewCCD .previewPopupMulti .listelement.selected, #SavedPaymentMethods.selectable.cardlist .card.Selected {
+  background-color: #cbd7e1; }
+
+div#goallist > div.hover, #SavedPaymentMethods.selectable.cardlist .cardlist.selectable .card.clickable.hover, #SavedPaymentMethods.selectable.cardlist .cardlist.selectable .card.clickable:focus {
+  background-color: #eaeff3; }
+
+#two-factor-intro span.blue, .instructionImages span.blue, .receipt .titlebar, .calendar table tbody td.hi a, .calendar .selectableevent, .summary .titlebar, .sidebarlinks .titlebar, .visitlist li.listheaderelement {
+  background-color: #00396B; }
+
+table tr.hover, table tr td.selected, table.hoverable tr:hover, .section .content .hover:not(.button):not(.card), .list.hoverable:not(.collapsible) a:not(.button):focus, .list.hoverable:not(.collapsible) a:not(.button):hover, .list.hoverable:not(.collapsible) li:focus, .list.hoverable:not(.collapsible) li:hover, .list.hoverable.collapsible a.collapsed:focus, .list.hoverable.collapsible a.collapsed:hover, .list.hoverable.collapsible li.collapsed:focus, .list.hoverable.collapsible li.collapsed:focus a, .list.hoverable.collapsible li.collapsed:hover, .list.hoverable.collapsible li.collapsed:hover a, .list.hoverable.collapsible li.collapsed a:focus, .list.hoverable.collapsible li.collapsed a:hover, .MessageList .SingleMessage.collapsed .inlinedelete:focus, .SingleIndicator.collapsed.hover, .listHolder > .listRow.hover, .listHolder > .listRow.selected, .clickable:hover, .clickable:focus, .clickable a:focus, .lookup ul.suggestions li.suggestion.selected, .flipButton:hover .flipIcon, .hospitalinfo .hospitalthumbnail:hover, #paymentCollectionGroup .hover {
+  background: #eaeff3; }
+
+.section .content .PEF .headerrow, .section .content .PEF .grouper.prompt, .section > *:not(.report) thead tr, .section table.benefitdetailstable tbody tr.header {
+  background-color: rgba(0, 57, 107, 0.05); }
+
+.section table tbody tr.header th:last-child::after, .section table tbody tr.header td:last-child::after, .section table tfoot tr.amount.header td:last-child::after {
+  background-color: rgba(0, 57, 107, 0.05); }
+
+.ReviewMessages .messageheader .filters, .organizationStep .filterContainer > .filters, .Visits .filters, .requestheader, #scheduling-workflow .banner::before, .section.questionsContainer .questiongroup .grouptable .grouptablerow[data-zebrastripeon="true"] {
+  background-color: rgba(0, 57, 107, 0.05); }
+
+.MyChartPromptBox, .card .cardheader, .section .chart .tableOveraly table tr th.fixed, .loginalert .body .offertitle, .apptDeptInstructions .section.flat, #scheduling-workflow .extrasContainer, ul.MessageList > li.SingleMessage .head.grid > .row.message_header:focus, .apptDeptInstructions .section.flat {
+  background-color: #eaeff3; }
+
+.visitdetails .visitinstructionscontent .readmore {
+  background-color: rgba(234, 239, 243, 0.8); }
+
+@media only screen and (min-width: 1px) and (max-width: 1300px) {
+  #touchmenu-account, #touchmenu-localeswitch {
+    background: #eaeff3; } }
+
+.md_visitdetails_index div.triangle {
+  border-bottom-color: #eaeff3; }
+
+.section.questionsContainer .questiongroup .grouptable .grouptablerow .grouptablecolumn:not(.responseheader) .groupresponsecolumn:hover, tr.clickable.selectedVisitRecord, #ld-workflow #calendar table tr td.currentselected:not(.othermonth):not(.hi) a {
+  background-color: #cbd7e1; }
+
+.medicationspopup .medcard.selected {
+  box-shadow: 0 8px 9px 1px #c50000; }
+
+.ba_card_header_paperless {
+  border-top-color: #c50000; }
+
+.datatile .payplanautonormal .paymentplanautocontainer, .famhxtopic .highlighteditborder .famrel select, .famhxtopic .highlighteditborder .famname input, .shareeverywhere .payplanautonormal .paymentplanautocontainer {
+  border-color: #c50000; }
+
+.temporaryInformation.noMatchesContainer, .permanentInformation.noMatchesContainer {
+  background-color: #7db5b4; }
+
+.progbarsquares {
+  background: #00396B; }
+
+div.essInfoCard {
+  border-left-color: #006d6b; }
+
+div.notificationsignupdiv:focus, .refill-workflow .medications-step .medcard.selected {
+  border-color: #006d6b; }
+
+.drawingcontainer .patternscontainer .pattern.selected {
+  background: #006d6b; }
+
+.shareeverywhere a.selinks:hover, .selinks:hover, .shareeverywhere .selinks.selected {
+  color: #006d6b; }
+
+body .moneyColor, body .essMoneyColor, body .HARSAutopay, body .payplannormal .paymentplanautocontainer .payplanamount.nopayment {
+  color: #246d34; }
+
+#documenttable .document .docinfo.signed {
+  color: #246d34; }
+
+.rxReviewCards .reviewCostContainer.moneyColor {
+  color: #246d34; }
+
+.rxReviewCards {
+  border: 1px solid #dbdbdb; }
+
+#main, .BeforeList input.SearchList, body .card.addItem {
+  background-color: white; }
+
+#sidebar {
+  background-color: rgba(255, 255, 255, 0.92); }
+
+body .signupContainer .card.loginContainer {
+  background: #ffffff; }
+
+body .application {
+  background: #ffffff; }
+
+body .section .chart .tableOverlay table tr th.fixed {
+  background: #f2f5f7; }
+
+.todoweekcalendarcontent .event.showtime, .todoweekcalendarcontent .event.notime .eventinner:before, .todoweekcalendarcontent .event.notime .eventinner {
+  background: #1e7fb3; }
+
+div.section div.sidetab ul.sectiontabs li:not(.selected) {
+  background: #f2f2f2;
+  color: #c50000; }
+
+input, select, textarea, .terms, label.togglebutton[for], input.buttoncheck + label.buttoncheck, .TestResultsHeader .BeforeTestResultsList input.SearchList, .testresultheader .BeforeTestResultsList input.SearchList, .TestResultsHeader .BeforeTestResultsList select, .Visits .filters select[class], .messageheader .BeforeList input.SearchList, .messageheader .BeforeList select, .lookup .searchinputs input[type="text"] {
+  border: 1px solid #cccccc; }
+
+.messageheader .BeforeList select {
+  box-shadow: none; }
+
+.card:not(.SingleResult), .accountBadge, #calendar table, .section table[id], .TestResultsList .SingleResult, ul.MessageList, .HPcell.component > .content, .component.pocdefault > a.viewmore, .stepContainer .filterControl .filterValue, ul li.HARForPayment:first-of-type {
+  border: 1px solid #dbdbdb; }
+
+.component.Popup > .titlebar {
+  background-color: rgba(255, 255, 255, 0.925);
+  border-bottom: 1px solid #dbdbdb; }
+
+@media screen and (-ms-high-contrast: active) {
+  :not(.ghostInput) > .required:before, :not(.ghostInput) > .required.clearlabel:before {
+    background: url("../images/required_asterisk.png") scroll no-repeat transparent 0 0/0.5rem 0.5rem; }
+  .ghostInput label.required + input, .ghostInput label.required + select, .ghostInput label.required + textarea {
+    background: url("../images/required_asterisk.png") scroll no-repeat 0.1rem 0.1rem/0.5rem 0.5rem; }
+  .component.Popup, a.button, div.button, input.button, body .lookup .searchinputs::after, body .lookup .expanded #searchimg {
+    border: 1px solid; }
+  .tbContainer > input.togglebutton.clearradio {
+    opacity: 1;
+    top: 0.58rem;
+    left: 0.7rem;
+    position: absolute;
+    z-index: 1;
+    width: 1.125rem;
+    height: 1.125rem; }
+  label[for].togglebutton {
+    padding: 0.25rem 0.7rem 0.25rem 2rem !important; }
+  input.prettycheck:checked + label:before, input.buttoncheck:checked + label.buttoncheck:before {
+    background-color: black;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AIYEjQPAcoESgAAAKVJREFUSMft1rENgzAQQFGKbAAsEUoaZxyycYCKDWhQFoCfIk4Tgm2k8yEF//70Gp91WZZKCQRcjkBL4AHctdGOd7MK/oWigm+gnyag0EafwC2hx6J7l10KbYAWKLXR2Q71PjwGig+XQnO71L9a4aKvFzB2yIlbtBddmQD8Ko4G4osDNRKfgQuPg+7EZdFAPA7qweOiG/gI1Jq3kwEGoDrHifpXvQANql+AlGeZnQAAAABJRU5ErkJggg=="); }
+  input.prettyradio + label:before {
+    opacity: 0;
+    width: 0; }
+  .prettyradio.container > input.prettyradio {
+    opacity: 1;
+    top: 5px;
+    width: 0.9rem;
+    height: 0.9rem;
+    position: relative; }
+  body .stepContainer .openingsData .slotslist .slotdetailaction.selected, body .lookup .searchinputs::after, body .lookup .expanded #searchimg {
+    background-color: black;
+    height: 96%; }
+  #wrap [data-csstitle='Default'].cssSwitcher, #wrap [data-csstitle='High Contrast'].cssSwitcher {
+    display: none; }
+  .sliderresponsecontainer > .sliderresponseoptions .option .tbContainer > input.togglebutton.clearradio {
+    opacity: 0;
+    width: 0px;
+    z-index: -1; }
+  .slider-answer .slidersection.HORIZSLIDER .sliderball, .slider-answer .slidersection.VERTSLIDER .sliderball {
+    border-bottom-color: transparent; } }
+
+.flyoutprompt, .flyoutitem:focus, .flyoutitem:hover {
+  background-color: #006d6b; }
+
+.flyoutitem, .flyoutitem.chosen:focus, .flyoutitem.chosen:hover {
+  color: #006d6b; }
+
+img[src*="info_grey.png"] {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABKklEQVR42p3SsU7CUBTG8UMBBwNJJ8OgmCBuhBDiAzg5ER2cHHgBEl6A0SdggoWBBEcXpw7EyYUnMCZORFcfgMjgv81XaG5oUnuSXwK3vefcc3vM9lFCHQMs8Y0v+cQcN/BRMCeOcY8XLNBDTc88NDFEgAlaWt9VDjc/4QGVROI73Cb+X+IRz+jEJ6mrcrj5yDnZK2bOWhVjnSb8HfW8cCrH0cbFgfUTfKBvurCe/T/Cwm+m266lvPSD95RnDWxMnyktfjM8j17wciQoYmsakmaOBF21GE3YMEeCqfZG4xloSLImuMYaV6bZnmjCqhkSnGGFEcqmcWxpPMcakjjOcepUXqmYn8zqabYDTdhA3zm+7a56Xquyf+hSCmqhrwnbqIWtbnuunsvJTX8JMkA3dxB0rwAAAABJRU5ErkJggg==");
+  background-size: auto;
+  background-repeat: no-repeat;
+  padding: 8px;
+  width: 16px; }
+
+img[src*="edit.svg"] {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABTklEQVR42u2bzRGCMBBGKYESKCElWAIlpAPoxBJSQkrwzsUSKCElIEN0ZDRC/g7u7vfN7N33SLIxgaZBEARBENoZplYidL/Wfa1lV3YtJQH++gG+L8dbwjDpA/h9aY7wl0h41hJMogTFZdjrTAmW05zPk8BswUuXwHC1T5PAtNXFSpi59vlYCZoSvHru5JZKEgx3+CMJYuBDErQ0eKJb37rwy/b3WDQ8mYMRwAMe8NLgO8nwbeD0FvCAB3xSOenwCvCABzzgAf+HAm6S4Y1c+LoCyD35tqIEcvDd148uk9BTG/Zj8MnlSSB2hO1B55/DN00CSXh1OofjJBCEP4ZzCVfVROE9mCu8qiYNrwuvqgnDexhbcFVNHr6T0eLOe3/K7s5yEjBHQht6O7u83v9++8q/tc36zWwTOJsft3VBRF7z2bdBgV9lIAiCIAjrPACtPjntoLD4qwAAAABJRU5ErkJggg==");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 10px;
+  width: 20px; }
+
+.summary .apptProvider img {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALElEQVR42mNgwA7+k4BpawA+MIgMINl/NDOAYi/QxACi0gFNDBjEiWbw5TwAcSR7hT7Ve94AAAAASUVORK5CYII=");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0.35rem; }
+
+img[src*="paperless_tiny.png"], .section .content table.billing img[src*="paperless_tiny.png"] {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACRklEQVR42sWTX0jTURTHv0aG1TIHiQaRSGYRGRVJYcw5mxvOOaf9+Q1pQg8VJaOVq6b7136/uZn+ZoXLUAwlC8OMzGkSRfTgW5BPRWRRQQ/1FAgVFfudjr6NZUUvHbjcl/v5nHvPORf4h2iZQtaJcWys70bJHw83XIa6KoQKs4RMq4TVdW3QWVsxVNqCD844+n4LV/qw0hRAFwOvrGEMMDy+N4w3tSK+mPxITH2DLgWSnyHT6IHWGkS+5RwkzjzLmYklVM27JQSFJSREMKHQiqUpAttFNLL9rV1Wvzgoqz8LHSqqYdDYDDoUzSObvJz4NrN1ErQpsPgYheXNmGGYfEPF5OhdT4HhnWT2pVPT1S3kvr6VhPaMOeHzfSGsShEIHXDrOdOx7jySbmvo8KV8ao/rSbylIWf/BqptTSNriJ8h4rUQRmESrFDWEosXk1Ve0NHYWpJGSulUX9G8wN6RS0I4e74GNSJ+GLx4cvwaNicJ7iaQY3DhndkHarxSQPKEkdrH9BQc3k3yuIHODm4jS5CLKeEhd0d48B0ZSYLRj9ikdeKruQXkHtxB5xn23CimI11rGEwjs8hdCGC6woN1v+z5vQS2lznwyeJVUeSOjvw3d9GBVhWZWDj3LJ4H4qtLCw5NNBotqI5hJjJartRHchSdC4quCaQ5yS08A8XeiacX3kOzoKC6F8IeD6YrucINfXjkmsTI6fsYiL5E2xgt3s8JsheEDTEUVYQQM3XCb+tBiUK5yxhI57Xor35XmQtxYw8c+B/xE1ai+GRz6uTcAAAAAElFTkSuQmCC");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 8px;
+  width: 16px !important; }
+
+img[src*="payplanauto_normal_tiny.svg"], .section .content table.billing img[src*="payplanauto_normal_tiny.svg"] {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA40lEQVR42mNgIADEO039gFiYgRwA1OgLxA/J0cgIxMVA/AeIXwHxfCBeAsStQGxASLMkEO8E4v848G8gzsJnQDQQLwbix0iaZgGxFxB7Qtkgl6mja2TFYpgWEDcB8X5keaghDeiKlfC4igOIBZD4ikC8DF1RJIkBPRFdYBKJBkSiCywDOQ2JLwByOh4DlNAFGkCBgxyo0MADBaIWFgNY0QXUodEzA4hdgNgbGtqwqHwExAuBOAafv7KhhuBKRLtACY1Q4BgAcRs06S4A4tdQQ0FJm5GcfPEAiH3IzY1CoOyMTw0ApSCA3RNfYakAAAAASUVORK5CYII=");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 8px;
+  width: 16px !important; }
+
+.ba_card_header_paperless {
+  border-top-color: #c50000; }
+
+body .component .medicationlistelement .rightsection .refillBtn img, body .section .content input.transparent {
+  opacity: 1; }
+
+a.button, div.button, input.button, button.button {
+  font-weight: bold; }
+
+.button:not(.buttoncheck), .button:not(.buttoncheck):focus, .button:not(.buttoncheck):hover, ul.MessageList.list.hoverable.collapsible .SingleMessage .ReplyButton a.button, div#furtherexplanation, .essLtrBtn:not(.nextstep) {
+  background-color: #006d6b; }
+
+.button.nextstep, .button.nextstep:focus, .button.nextstep:hover, .expanded #searchimg, .confirmationstep .buttoncontainer .button, .shareeverywhere #submit, .logout input[type="button"] {
+  background-color: #c50000; }
+
+.button.completeworkflow, .button.completeworkflow:focus, .button.completeworkflow:hover {
+  background-color: #c50000; }
+
+.button.cancelworkflow, .button.cancelworkflow:focus, .button.cancelworkflow:hover, .button.cancelqnr, .button.cancelqnr:focus, .button.cancelqnr:hover {
+  background-color: #006d6b; }
+
+.button.inlinedelete, .button.inlinedelete:focus, .button.inlinedelete:hover {
+  background-color: #006d6b; }
+
+.button.inlineedit, .button.inlineedit:focus, .button.inlineedit:hover {
+  background-color: #006d6b; }
+
+.button.inlinesave, .button.inlinesave:focus, .button.inlinesave:hover {
+  background-color: #c50000; }
+
+.button.disabled, .button.disabled:focus, .button.disabled:hover, .button[disabled], .button[disabled]:focus, .button[disabled]:hover {
+  background-color: #dbdbdb; }
+
+#main .back .button {
+  color: #006d6b; }
+
+@media screen and (max-width: 1300px) {
+  #sidebar .back .button {
+    color: #006d6b; } }
+
+body .stepContainer .openingsData .slotslist .slotdetailaction.selected, body .lookup .searchinputs:after, body .lookup .expanded #searchimg {
+  background-color: #c50000;
+  border-color: #246d34; }
+
+#organizationList .button.cancelworkflow.multi {
+  color: #d80000;
+  border-color: #d80000; }
+
+.md_admissions .tbContainer.nextstep input:checked + label.togglebutton[for], .md_admissions .tbContainer.nextstep input.buttoncheck:checked + label.buttoncheck, .md_ippatientnotes .tbContainer.nextstep input:checked + label.togglebutton[for], .md_ippatientnotes .tbContainer.nextstep input.buttoncheck:checked + label.buttoncheck, .md_ippatientedu .tbContainer.nextstep input:checked + label.togglebutton[for], .md_ippatientedu .tbContainer.nextstep input.buttoncheck:checked + label.buttoncheck {
+  background-color: #c50000; }
+
+input.flatradio:checked + label, input.flatradio:checked + label .subtle, div input.button.sign-later, div input.button.sign-later:focus, div input.button.sign-later:hover, .drawingcontainer .patternscontainer .pattern {
+  color: #006d6b; }
+
+div input.button.sign-later, div input.button.sign-later:focus, div input.button.sign-later:hover, .drawingcontainer .patternscontainer .pattern {
+  border-color: #006d6b; }
+
+input.prettycheck:checked + label:before, input.buttoncheck:checked + label.buttoncheck:before {
+  background-color: #006d6b;
+  border-color: #006d6b; }
+
+input.prettyradio:checked + label:before {
+  background-color: #006d6b; }
+
+input.flatradio:checked + label:before {
+  background-color: #006d6b;
+  border-color: #006d6b; }
+
+.flatradio.container input.flatradio:disabled + label {
+  color: #767676; }
+
+.list.collapsible > * {
+  border-color: #cccccc;
+  border-style: solid solid none;
+  border-width: 1px 1px 0; }
+
+.list.collapsible > :last-child {
+  border-bottom: 1px solid #cccccc; }
+
+.listHolder {
+  border: 1px solid #dbdbdb; }
+
+.button[data-type=workflow]:hover, .button[data-type=workflow]:focus {
+  background-color: #005c5a; }
+
+#scheduling-workflow .banner::before {
+  background-color: transparent; }
+
+body #scheduling-workflow a.slot:not(:hover):not(:focus), body #selftriage-triage-workflow a.slot:not(:hover):not(:focus) {
+  color: #ffffff;
+  background-color: #c50000; }
+
+.slot.selected, .slotgroup.preview .slot, html:not(.mobile) .slot:hover, html:not(.mobile) .slot:focus {
+  background-color: #940000; }
+
+.solutionpreview {
+  border-top-color: #940000;
+  border-bottom-color: #940000; }
+
+#scheduling-workflow .summaryInfo .summarySpan > .subtle.editText {
+  color: #c50000; }
+
+a.expandrequestoptions, a.loadanotherbatchbutton {
+  color: #006d6b; }
+
+.requestheader {
+  background-color: #ffffff; }
+
+#scheduling-workflow .favoriteContainer {
+  background-color: transparent; }
+
+body #onMyWayPopup .slot:not(:hover):not(:focus) {
+  color: #ffffff;
+  background-color: #c50000; }
+
+body #onMyWayPopup .slot:focus {
+  background-color: #940000; }
+
+body #onMyWayPopup .slotDropdown {
+  border-color: #000000; }
+
+body #onMyWayPopup .walkInButton:hover:not([disabled]), body #onMyWayPopup .walkInButton:focus:not([disabled]) {
+  background-color: #005c5a; }
+
+.positiveValue {
+  color: #246d34; }
+
+.mapHolder, #filterControls {
+  border: 1px solid #dbdbdb; }
+
+body .case .trackerStatus.Pending .trackerBadge, body .case .trackerStatus.OpenCase .trackerBadge, #viewdocumentwidget .docinfo span.pendingDocBadge, .org-signup:not(.button) > span {
+  background: none;
+  border: 1px solid #ffa020;
+  color: #000000; }
+
+#viewdocumentwidget .Status span.pendingDocBadge {
+  background: none;
+  border: 1px solid #ffa020;
+  color: #000000; }
+
+#viewdocumentwidget .Status {
+  line-height: 1.5rem; }
+
+body .tracker.Approved .trackerStatus .trackerBadge {
+  background-color: #246d34; }
+
+.hca-content.card .cardline.hca-activestatus.active {
+  background-color: #f6a1a1;
+  border-color: #f73c3c; }
+
+.acpContent .approvedDocBadge {
+  background-color: #f6a1a1;
+  border-color: #c50000;
+  color: #610a0a; }
+
+.tracker.Approved .trackerStatus .trackerBadge, .approvedDocBadge {
+  background-color: #a50000; }
+
+.card.helptip.success, .telemedicine, .visitactionbanner {
+  background-color: #facfcf; }
+
+.card.helptip.success:not(.moreToDo) .header.medium {
+  color: #610a0a; }
+
+.statusBadge.neutral {
+  background-color: #bfcdda;
+  border-color: #00396B;
+  color: #002a50; }
+
+.statusBadge.positive {
+  background-color: #f6a1a1;
+  border-color: #c50000;
+  color: #610a0a; }
+
+#documenttable .document .docinfo.unsigned {
+  background-color: #767676; }
+
+body.md_mychartquestionnaire_questionnaires .assigned_qnr_description, body.md_mychartquestionnaire_questionnaires .optional_qnr_description {
+  color: #000000; }
+
+.section.questionsContainer .tbContainer > input:focus + label[for] {
+  text-decoration: underline;
+  border: 1px solid #000000; }
+
+.section.questionsContainer .question.HORIZSLIDER .answers .slider, .section.questionsContainer .question.VERTSLIDER .answers .slidertools .slider, .section.questionsContainer .question.HORIZSLIDER .answers .noresponse, .section.questionsContainer .question.VERTSLIDER .answers .noresponse, .qnr-summary-question-answer.slider-answer .slidersection.HORIZSLIDER > .slider, .qnr-summary-question-answer.slider-answer .slidersection.VERTSLIDER > .slider {
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: none; }
+
+.section.questionsContainer .question.questionSlider .slidersection .sliderball {
+  border-color: #000000; }
+
+.section.questionsContainer .question.HORIZSLIDER .answers .slider, .section.questionsContainer .question.VERTSLIDER .answers .slidertools .slider, .qnr-summary-question-answer.slider-answer .slidersection.HORIZSLIDER > .slider, .qnr-summary-question-answer.slider-answer .slidersection.VERTSLIDER > .slider {
+  background: rgba(0, 57, 107, 0.85); }
+
+.section.questionsContainer .question.HORIZSLIDER .answers .slider.higherbetter, .slider-answer:not(.vert) .slidersection.HORIZSLIDER .slider.higherbetter {
+  background-image: linear-gradient(to right, #d60017, #dede0e, #09b737); }
+.section.questionsContainer .question.HORIZSLIDER .answers .slider.lowerbetter, .slider-answer:not(.vert) .slidersection.HORIZSLIDER .slider.lowerbetter {
+  background-image: linear-gradient(to left, #d60017, #dede0e, #09b737); }
+
+.section.questionsContainer .question.VERTSLIDER .answers .slider.higherbetter, .slider-answer.vert .slidersection.VERTSLIDER .slider.higherbetter {
+  background-image: linear-gradient(to top, #d60017, #dede0e, #09b737); }
+.section.questionsContainer .question.VERTSLIDER .answers .slider.lowerbetter, .slider-answer.vert .slidersection.VERTSLIDER .slider.lowerbetter {
+  background-image: linear-gradient(to bottom, #d60017, #dede0e, #09b737); }
+
+.qnr-summary-question-answer.slider-answer .slidersection.HORIZSLIDER .sliderball, .qnr-summary-question-answer.slider-answer .slidersection.VERTSLIDER .sliderball {
+  border-color: transparent #000000 transparent; }
+
+.section.questionsContainer input.prettyradio:checked + label:before, .section.questionsContainer input.prettycheck:checked + label:before {
+  border-color: #006d6b; }
+
+.qnr-scoring-header {
+  background-color: rgba(0, 57, 107, 0.05); }
+
+/* #region Accordion UI */
+.section.questionsContainer .questionGroupWithFollowUps .accordion {
+  border: 1px #cccccc solid;
+  margin-bottom: -1px; }
+  .section.questionsContainer .questionGroupWithFollowUps .accordion .accordion-body {
+    background-color: #f8f8f8; }
+  .section.questionsContainer .questionGroupWithFollowUps .accordion .accordion-heading {
+    border-top: none; }
+  .section.questionsContainer .questionGroupWithFollowUps .accordion:not(.checkboxAccordion) .accordion-heading .tbContainer input + label.togglebutton[for] {
+    border: 1px #cccccc solid; }
+  .section.questionsContainer .questionGroupWithFollowUps .accordion:not(.checkboxAccordion) .accordion-heading .tbContainer input:checked + label.togglebutton[for] {
+    background-color: #006d6b;
+    border: 1px solid #006d6b; }
+  .section.questionsContainer .questionGroupWithFollowUps .accordion:not(.checkboxAccordion) .accordion-heading .tbContainer input:checked:focus + label.togglebutton[for] {
+    border-color: #003c3b; }
+  .section.questionsContainer .questionGroupWithFollowUps .accordion.checkboxAccordion .accordion-heading .answers input.buttoncheck + label.buttoncheck {
+    border: none; }
+  .section.questionsContainer .questionGroupWithFollowUps .accordion.checkboxAccordion:not(.accordion-show):not(.accordion-transitioning):hover {
+    background-color: #eaeff3; }
+
+/* #endregion */
+.componentDataTable .refRangeGraph .ptMid {
+  stroke: #178935; }
+
+.componentDataTable .refRangeGraph .ptLeft, .componentDataTable .refRangeGraph .ptRight {
+  stroke: #857700; }
+
+.TRPTimelineList .timeLineDetails .testResultAndComponents li.TRPComponentHeader, .dashboardComponentCard {
+  border: 1px #dbdbdb solid;
+  border-collapse: collapse; }
+
+.TRPComponentHeader .nameColumn {
+  color: #000000; }
+
+div.hmt-item-card > div.hmt-previously-done > div {
+  color: #000000 !important; }
+
+.ellipsisControl > a.ellipsisControl-caret:after {
+  border-top-color: #000000 !important; }
+
+.ellipsisControl.ellipsisControl-no-ellipsis > a.ellipsisControl-caret:after {
+  border-top-color: transparent !important;
+  border-bottom-color: #000000 !important; }
+
+.pastvisit.card .visit-summary-text {
+  color: #00396B; }
+.pastvisit.card .avs.visit-summary-link:hover, .pastvisit.card .notes.visit-summary-link:hover {
+  background-color: #eaeff3; }
+
+div.filters.extendedBar {
+  background-color: rgba(0, 57, 107, 0.05) !important; }
+
+.noShowCanceledShiftedCard > .date > div {
+  color: #000000 !important; }
+
+label.filterButton {
+  color: #c50000 !important; }
+  label.filterButton:hover {
+    color: #ad0000 !important; }
+
+label.clearButton {
+  color: #c50000 !important; }
+
+.dropdown-content tr:hover td.optionCell > label, .optionCell > input:focus + label {
+  background-color: #006d6b; }
+
+.md_visitdetails_index .telemedicine, .md_visitdetails_index .visitactionbanner {
+  background-color: rgba(118, 118, 118, 0.02); }
+
+.selfTriage .landingPage .inProgressStatus .status {
+  background: none;
+  border: 1px solid #ffa020;
+  color: #000000; }
+.selfTriage .helperSection.narrowSymptoms:after, .selfTriage .helperSection.nextSteps:after {
+  border-color: rgba(0, 57, 107, 0.5); }
+
+/* #region Medications */
+.medcard .selection-enabled input[type=checkbox] + label svg, .medcard .med-selection-box .selection-disabled svg {
+  fill: #565656; }
+
+.medcard .selection-enabled input[type=checkbox] + label svg:hover, .medcard .selection-enabled input[type=checkbox]:checked + label svg {
+  fill: #006d6b; }
+
+.refill-workflow .card.refill-disabled .medmessage, .medcard .selection-disabled .cardline.medmessage {
+  background-color: #565656; }
+
+.refill-workflow .medcard.refill-disabled * {
+  color: #565656; }
+
+.refill-workflow .card.refill-disabled .medmessage {
+  color: #eaeaea; }
+
+#MedicationForm .formbuttons {
+  background-color: #ffffff; }
+
+/* #endregion */
+/* #region Subway UI */
+.subway.scrollable .nav div {
+  background-color: #767676 !important; }
+
+.subway, .subway a, .subway a:focus, .subway a:hover {
+  color: #00396B; }
+
+.line .trainrail {
+  background-color: #00396B; }
+  .line .trainrail.future:not(.visited) {
+    background-color: rgba(0, 57, 107, 0.5); }
+
+.stops .trainstation {
+  background: #7f9cb5;
+  border-color: #00396B; }
+.stops .now .trainstation {
+  background-color: #00396B; }
+.stops .future:not(.visited) .trainstation {
+  border-color: rgba(0, 57, 107, 0.5); }
+
+/* #endregion */
+/* #region Add Item Card help text */
+.card.addItem .vcentertablecell .addMessage {
+  color: #000000 !important; }
+
+/* #endregion */
+/* #region Community*/
+#ceSpotlight:not(:empty), #fhirSpotlight:not(:empty) {
+  border: 1px solid #cccccc; }
+
+/* #endregion*/

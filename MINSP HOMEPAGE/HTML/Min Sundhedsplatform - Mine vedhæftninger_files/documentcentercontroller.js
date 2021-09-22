@@ -1,0 +1,2 @@
+/*! Copyright (c) Epic Systems Corporation 2017 */
+(function ClassDefinition(){$$WP.Utilities.guaranteeExistence($$WP,"Documents.ViewDocument.Controllers");var b=$$WP.Documents.ViewDocument.Controllers,c=$$WP.Documents.ViewDocument.Models,a=function DocumentCenterController(){};a.prototype={DocumentWidgetController:null};$$WP.Documents.ViewDocument.Controllers.DocumentCenterController=a;a.extend($$WP.Controllers.Controller,"WP$Documents$ViewDocuments$Controllers$DocumentCenterController")})()

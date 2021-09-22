@@ -1,0 +1,645 @@
+﻿/* Copyright 2018-2019 Epic Systems Corporation */
+.component > .content {
+  overflow: visible; }
+
+.messageheader select {
+  min-width: 50px;
+  width: auto; }
+
+ul.MessageList.list.hoverable.collapsible .SingleMessage .ReplyButton a.button {
+  border-style: solid;
+  border-width: 1px; }
+  ul.MessageList.list.hoverable.collapsible .SingleMessage .ReplyButton a.button:-moz-focusring {
+    outline: 1px dotted #df4a2b; }
+
+ul.MessageList .SingleMessage .actionButtons a {
+  padding-left: 10px; }
+
+ul.MessageList {
+  margin: 0 auto;
+  width: 100%;
+  line-height: 1.25rem;
+  position: relative;
+  vertical-align: top;
+  padding: 0.5rem; }
+  ul.MessageList > li.SingleMessage {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    vertical-align: top;
+    transition-property: background, height, min-height, max-height, border-width, opacity, margin, padding, visibility;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    overflow: hidden; }
+    ul.MessageList > li.SingleMessage:first-child {
+      padding-top: 0; }
+    ul.MessageList > li.SingleMessage .head.grid {
+      vertical-align: top; }
+      ul.MessageList > li.SingleMessage .head.grid > .row.message_header {
+        height: 100%;
+        padding: 0.3rem 0.5rem 0 0.5rem; }
+        ul.MessageList > li.SingleMessage .head.grid > .row.message_header:focus {
+          background: #eaeff3; }
+
+li.SingleMessage.collapsed .indeterminateLinkWarning {
+  display: none; }
+li.SingleMessage .indeterminateLinkWarning {
+  padding: 1%;
+  margin-left: calc(42px + 1%);
+  margin-bottom: 5px;
+  width: auto;
+  border-radius: 4px; }
+
+ul.MessageList > li.collapsed:hover {
+  cursor: pointer; }
+ul.MessageList li.SingleMessage.hidden {
+  display: block !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0;
+  margin: 0;
+  border: solid 0 transparent;
+  opacity: 0;
+  visibility: hidden; }
+  ul.MessageList li.SingleMessage.hidden a {
+    display: none; }
+
+.MessageList .SingleMessage.collapsed .head {
+  z-index: 101;
+  transition: opacity ease 1s; }
+.MessageList .SingleMessage.Read.collapsed:hover .popupiconcontainer, .MessageList .SingleMessage.Read.collapsed:focus .popupiconcontainer, .MessageList .SingleMessage.JustRead.collapsed:hover .popupiconcontainer, .MessageList .SingleMessage.JustRead.collapsed:focus .popupiconcontainer {
+  opacity: 0.25; }
+.MessageList .SingleMessage.collapsed .popupiconcontainer:hover {
+  opacity: 1 !important; }
+.MessageList .SingleMessage.collapsed:focus .inlinedelete, .MessageList .SingleMessage.collapsed:hover .inlinedelete, .MessageList .SingleMessage.collapsed .inlinedelete:focus {
+  display: inline-block;
+  opacity: 1; }
+.MessageList .SingleMessage.collapsed, .MessageList .SingleMessage .head {
+  height: 3.1rem !important;
+  min-height: 3.1rem !important;
+  margin: 0px; }
+.MessageList .SingleMessage.collapsed .print.otherbutton, .MessageList .SingleMessage.collapsed .ExpandedSummary {
+  display: none; }
+.MessageList .SingleMessage.expanded {
+  border-bottom: 10px solid #f8f8f8; }
+  .MessageList .SingleMessage.expanded.deleted {
+    border-bottom: none; }
+  .MessageList .SingleMessage.expanded .head {
+    background: #f8f8f8;
+    box-shadow: 0 -10px 0 10px #f8f8f8; }
+
+ul.MessageList > li.SingleMessage.deleted:first-child, .MessageList .SingleMessage.deleted {
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0;
+  border: none; }
+
+.allowOverflow ul.MessageList > li.SingleMessage.expanded {
+  overflow: visible; }
+
+.MessageList .SingleMessage.collapsed .MessageSummary {
+  z-index: 1; }
+.MessageList .SingleMessage.collapsed .inlinedelete {
+  opacity: 0; }
+
+ul.MessageList > li:last-child::after {
+  height: 0; }
+
+.MessageList > li .head {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  word-break: break-word; }
+
+.BeforeList label.unfiltered {
+  margin-left: 8px; }
+
+.MessageList > li.collapsed:hover .head::after {
+  height: 0; }
+
+.MessageList .SenderDetails {
+  display: inline-block;
+  width: calc(100% - 62px);
+  padding-left: 12px;
+  box-sizing: border-box; }
+
+.SingleMessage .popupinstructionsicon {
+  transition: all 0.5s; }
+
+.MessageList .SenderDetails .SenderName, .MessageList .SenderDetails .Date {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block; }
+
+.MessageList .head span {
+  vertical-align: middle;
+  word-break: break-word; }
+
+li.incomplete {
+  min-height: 26px; }
+
+ul.MessageList > li .head img.photo, ul.MessageList > li .head span.photo, ul.MessageList > li .ReplyButton .photo {
+  border-radius: 21px;
+  border-style: solid;
+  border-width: 1px; }
+ul.MessageList > li .ReplyButton .photo {
+  height: 43px;
+  position: relative;
+  z-index: 99;
+  vertical-align: middle; }
+ul.MessageList > li .head span.photo {
+  width: 42px;
+  padding: 10px; }
+
+ul.MessageList li .SenderDetails .Organization {
+  display: none; }
+ul.MessageList li .SenderDetails .Date {
+  font-size: 0.85em; }
+
+.MessageList .Viewers ul {
+  margin: -12px 0 0 0; }
+  .MessageList .Viewers ul li {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    font-size: 0.9em; }
+    .MessageList .Viewers ul li:not(:last-child):after {
+      content: ","; }
+
+ul.MessageList li .Viewers .label {
+  font-size: 0.7em;
+  top: -8px;
+  position: relative; }
+ul.MessageList li .actionButtons {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.4rem;
+  text-align: right; }
+ul.MessageList li .head .actionButtons a {
+  display: inline-block;
+  padding: 5px; }
+  ul.MessageList li .head .actionButtons a img {
+    width: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.1rem; }
+ul.MessageList li .actionButtons a:last-child {
+  margin-right: 1px; }
+ul.MessageList li.Unread .SenderDetails, ul.MessageList li.Unread .Subject {
+  font-weight: bold;
+  word-break: break-word; }
+ul.MessageList li.Unread.JustRead .SenderDetails, ul.MessageList li.Unread.JustRead .Subject {
+  font-weight: normal; }
+
+ul.MessageList .MessageDetails .Subject {
+  line-height: normal; }
+
+ul.MessageList li.collapsed:focus {
+  outline: none; }
+ul.MessageList li.collapsed .MessageDetails, ul.MessageList li.collapsed .ReplySection {
+  display: none; }
+ul.MessageList li .MessageDetails, ul.MessageList li .PastReplies, ul.MessageList li .ReplySection {
+  margin-left: calc(42px + 12px);
+  width: auto;
+  margin-bottom: 0.75rem; }
+
+.MessageList .ReplySection {
+  display: flex;
+  align-items: center; }
+
+ul.MessageList li .ReplyButton {
+  margin: 0;
+  white-space: nowrap; }
+
+.MessageList .ReplyButton.disabled, .MessageList .ReplyButton.disabled + .CannotReplyLabel {
+  opacity: 0.5; }
+.MessageList .ReplyButton .button {
+  display: inline-block;
+  margin-left: -10px;
+  line-height: 1rem;
+  position: relative;
+  padding: 7px 11px 7px 14px;
+  vertical-align: middle; }
+
+.MessageList .collapsed .MessageDetails a, .MessageList .collapsed .ReplyButton {
+  visibility: hidden;
+  transition: visibility ease 0.1s;
+  transition-delay: 1s; }
+
+.MessageList .ReplyButton .button.disabled {
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 1px;
+  cursor: default;
+  margin-right: 10px; }
+
+div.orgicon {
+  width: 20px; }
+
+ul.MessageList li .MessageDetails::before {
+  width: 1px;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+ul.MessageList .MessageDetails h3 {
+  padding-top: 0.15rem; }
+
+.MessageList .SingleMessage.collapsed.waiting .head {
+  opacity: 0.1; }
+.MessageList .SingleMessage.collapsed.waiting::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0.5rem;
+  opacity: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-image: url("../images/spinner64.gif");
+  background-repeat: no-repeat;
+  background-size: 2.5rem; }
+
+.MessageList .MessageDetails > span {
+  display: block; }
+.MessageList .MessageDetails .Tasks ul li, .MessageList .MessageDetails .Attachments ul li {
+  display: block;
+  margin: 0.2rem 0.5em 0.2rem 0; }
+.MessageList .MessageDetails .Attachments {
+  margin-bottom: 1.5rem; }
+.MessageList .MessageDetails .Attachments .cardlist {
+  margin-top: 0; }
+.MessageList .MessageDetails .Attachments .card {
+  min-height: 0rem;
+  border: 1px solid #dbdbdb;
+  margin: 0;
+  height: 100%; }
+.MessageList .MessageDetails .Attachments .card img {
+  max-height: 24px;
+  vertical-align: middle; }
+.MessageList .MessageDetails .Attachments .card span.label {
+  height: 24px;
+  padding-left: 0.5rem; }
+
+.BeforeList {
+  position: relative;
+  display: inline-block; }
+
+.SearchList::-ms-clear {
+  display: none; }
+
+.BeforeList input.SearchList {
+  border: 0 none;
+  border-radius: 0;
+  box-shadow: 0 0 0;
+  min-width: 20%;
+  padding: 5px 40px 5px 10px;
+  font-size: 0.9em;
+  line-height: 1rem;
+  margin-top: 6px; }
+.BeforeList label {
+  margin: 0 0.5em 0 0; }
+.BeforeList select {
+  border: 0;
+  background: transparent;
+  margin: 0 1em 0 0; }
+
+.messagefooter {
+  text-align: center; }
+  .messagefooter > .inlineloading + .content {
+    display: none; }
+  .messagefooter > .inlineloading.hidden + .content {
+    display: inline-block; }
+
+.afterList a.loadmore {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  margin-top: 20px; }
+.afterList .newline {
+  display: block; }
+
+.externalorglabel {
+  width: calc(100% - 2rem);
+  display: inline-block;
+  vertical-align: top; }
+
+.message.component .content {
+  padding: 5px; }
+
+.MessageList .SingleMessage.expanded .MessageSummary, .MessageList .SingleMessage.collapsed .ExpandedSummary {
+  display: none; }
+
+ul.MessageList .SingleMessage.collapsed .MessageSummary, ul.MessageList .SingleMessage .ExpandedSummary {
+  overflow: hidden;
+  word-break: break-word;
+  word-wrap: normal;
+  align-self: center; }
+
+ul.MessageList .MessageSummary span {
+  margin: 0 1em 0 0.5em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden; }
+  ul.MessageList .MessageSummary span.Subject {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 0 0 0.5em; }
+    ul.MessageList .MessageSummary span.Subject > img {
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 0.5rem; }
+  ul.MessageList .MessageSummary span.UnreadMessage {
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+    color: #565656;
+    font-size: 0.9rem;
+    padding-right: 0.25em; }
+
+span.UnreadMessage:before {
+  background: url("../images/UnreadMessage.png") no-repeat;
+  display: inline-block;
+  height: 1rem;
+  width: 1.5rem;
+  content: "";
+  background-size: 1.5em; }
+
+.MessageDetails .UnreadMessage {
+  color: #565656;
+  font-size: 0.9rem; }
+
+ul.MessageList span.hilite {
+  padding: 0;
+  margin: 0; }
+
+.afterList a {
+  font-weight: bold; }
+
+img.External {
+  height: 25px;
+  width: 25px; }
+
+.orgiconimg {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px; }
+
+.SingleMessage .InTransit {
+  display: inline-block;
+  position: absolute;
+  right: 60px;
+  bottom: 10px;
+  width: 1.2rem; }
+
+.orgicon {
+  display: inline-block;
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  width: 5%; }
+
+div.orglabel {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+  margin-left: 15px; }
+
+.MessageList .SingleMessage .tooltipcontainer {
+  right: 20px;
+  bottom: 10px;
+  text-align: right;
+  position: absolute;
+  width: auto; }
+
+.messageheader .labelinput, .messageheader .labelinput label, .messageheader .labelinput input {
+  display: inline-block;
+  width: auto; }
+
+ul.MessageList .SenderDetails {
+  vertical-align: middle; }
+ul.MessageList li.Unread .SenderDetails .Date {
+  font-weight: normal; }
+ul.MessageList .RecipientName {
+  max-height: 2.3rem;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.ReviewMessages .container {
+  max-height: none; }
+.ReviewMessages .messages {
+  overflow: visible;
+  max-height: none;
+  transition: opacity 1s;
+  height: auto; }
+
+.BeforeList .actionlinks span {
+  float: left; }
+.BeforeList .actionlinks input {
+  margin-left: 10px;
+  padding-left: 10px; }
+  .BeforeList .actionlinks input.undelete {
+    animation: expandFromRight 0.5s;
+    transform-origin: right; }
+
+@keyframes expandFromRight {
+  from {
+    transform: rotateY(90deg); }
+
+  to {
+    transform: rotateY(0); } }
+
+.ReviewMessages .messageheader {
+  overflow: visible;
+  transition: opacity 1s;
+  margin-bottom: 10px; }
+  .ReviewMessages .messageheader.hidden {
+    height: 0;
+    display: inline-block !important;
+    opacity: 0; }
+
+.newmessages span, .newmessages a {
+  text-align: center; }
+
+.md_review_index #sidebar .externalorgkey {
+  padding-bottom: 18px; }
+
+.ReviewMessages .messageheader .tabs a {
+  margin-right: 1rem; }
+  .ReviewMessages .messageheader .tabs a[data-checked="checked"] {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    cursor: default; }
+  .ReviewMessages .messageheader .tabs a:focus {
+    text-decoration: none;
+    outline: 1px dotted #000000; }
+
+.messageheader .actionlinks {
+  text-align: right;
+  padding: 6px 2px 0 10px; }
+
+.ReviewMessages .messageheader .filters {
+  padding: 4px 10px 8px 22px;
+  margin-top: 2px;
+  margin-left: -1.25rem;
+  width: calc( 100% + (1.25rem * 2));
+  border-top-style: solid;
+  border-top-width: 1px; }
+  .ReviewMessages .messageheader .filters label {
+    margin-left: 10px; }
+  .ReviewMessages .messageheader .filters div, .ReviewMessages .messageheader .filters select {
+    margin-right: 8px; }
+
+.BeforeList input, .BeforeList select {
+  display: inline-block;
+  margin: 0;
+  font-size: 1em; }
+.BeforeList input.noprint.imgbutn {
+  position: absolute;
+  right: 0;
+  top: 7px;
+  border: 0;
+  display: inline-block;
+  background: none; }
+.BeforeList .search {
+  width: auto;
+  height: 1.9rem;
+  display: inline-block;
+  position: relative; }
+
+.messageheader .filters select {
+  max-width: 250px; }
+
+.BeforeList > div {
+  display: block; }
+
+.BeforeList .tabs input:focus + label {
+  outline: 1px auto-webkit-focus-ring-color; }
+
+ul.MessageList li.SingleMessage.collapsed .InTransit {
+  opacity: 0; }
+
+ul.MessageList li.SingleMessage .InTransit, ul.MessageList li.SingleMessage .tooltipcontainer {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  z-index: 100; }
+
+.MessageList .SingleMessage .Tasks li img {
+  width: 21px; }
+.MessageList .SingleMessage .Tasks li > a, .MessageList .SingleMessage .Tasks li > span {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 21px);
+  transition: all 1s; }
+.MessageList .SingleMessage .Tasks li > span > a {
+  transition: all 1s; }
+
+.SingleMessage .popupiconcontainer {
+  position: absolute;
+  bottom: 5px;
+  right: 25px;
+  transition: opacity 0.5s; }
+
+#sidebar div a img.assistiveicon {
+  max-width: 45px;
+  margin-bottom: 18px; }
+#sidebar div a:focus {
+  outline: none; }
+  #sidebar div a:focus img.assistiveicon {
+    outline: 1px solid; }
+
+.messages.component .component.inlineloading {
+  margin: 0; }
+
+.section .content .confMessage {
+  background: #f2f2f2;
+  border-color: #dbdbdb;
+  border-style: solid solid none;
+  border-width: 1px 1px 0;
+  color: #565656;
+  padding: 0.125rem;
+  text-align: center; }
+
+.section.letter {
+  padding: 1.25rem 1.75rem; }
+
+/* #region Message Viewers */
+.message-viewers {
+  padding-top: 1.5rem; }
+
+.other-viewers {
+  display: inline; }
+
+.message-viewers .plain-text-viewer, .message-viewers .plain-text-viewer p {
+  display: inline;
+  width: auto; }
+
+.other-viewers .other-viewer {
+  display: none; }
+  .other-viewers .other-viewer:first-child {
+    display: inline-block; }
+
+/* #endregion */
+@media only screen and (max-width: 768px) {
+  ul.MessageList .SingleMessage .ExpandedSummary {
+    margin-left: calc( 42px + 12px);
+    max-width: calc( 100% - 42px - 12px); }
+  ul.MessageList li .MessageDetails, ul.MessageList li .PastReplies, ul.MessageList li .ReplySection {
+    margin-left: 0; }
+  ul.MessageList li .actionButtons {
+    text-align: left !important;
+    padding-left: calc( 42px + 12px); }
+    ul.MessageList li .actionButtons a:first-child {
+      padding-left: 0; }
+  .SingleMessage .popupiconcontainer {
+    left: 15px;
+    top: 55px;
+    bottom: auto;
+    right: auto; }
+  ul.MessageList .MessageSummary span.UnreadMessage {
+    margin: 0 0.5em 0 0.5em; } }
+
+@media only screen and (max-width: 1300px) {
+  #main .title h1.header {
+    white-space: nowrap;
+    max-width: calc(100% - 2rem); }
+  .md_msgoptions .alert.card {
+    display: block; }
+  #header + #content #main {
+    padding-bottom: 2rem; }
+  #wrap #header:not(:empty) + #content #sidebar {
+    padding-top: 2rem; }
+  .uploaderbutton .button {
+    margin-bottom: 0.25rem; } }
+
+#medadviceform #to {
+  width: 100%; }
+#medadviceform #subject {
+  width: 100%; }
+
+#CustServForm #subject {
+  width: 100%; }
+#CustServForm #regarding {
+  width: 100%; }
+
+.imagescontainer .filecontainer div.uploadedimage {
+  height: auto;
+  width: auto;
+  text-align: center; }
+
+.urgentWarning {
+  color: #d80000;
+  font-weight: bold; }
+
+.bcList .bcItem {
+  margin: 0 0.25rem 0.25rem 0; }
+
+fieldset.forlist ul li label.show {
+  margin: 0 0 0.25rem 0.25rem; }

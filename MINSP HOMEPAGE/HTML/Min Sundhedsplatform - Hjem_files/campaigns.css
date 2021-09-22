@@ -1,0 +1,75 @@
+﻿/* Copyright 2018 Epic Systems Corporation */
+.buttonList.campaignButtonList {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem; }
+
+.imageCard .buttonList.campaignButtonList {
+  flex-flow: row wrap-reverse;
+  position: relative; }
+
+.buttonList > .button.campaignButton {
+  opacity: 1;
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 0 1 auto; }
+
+.lastClickedReminder {
+  margin-right: 0.2rem;
+  align-self: center;
+  min-width: 2rem;
+  flex: 0 1 auto; }
+
+.campaignCard > .annotatedText {
+  white-space: pre-wrap; }
+
+.campaignLink {
+  cursor: pointer;
+  border: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: normal;
+  text-align: left; }
+  .campaignLink.popupLink:hover, .campaignLink.popupLink:focus {
+    text-decoration: underline; }
+
+.buttonReplacement {
+  margin-top: 0.5rem; }
+
+.buttonReplacementText {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  margin-right: 0.25rem;
+  margin-left: 0.35rem; }
+
+.mobile .card .buttonList.campaignButtonList {
+  height: auto; }
+
+.campaignButtonList img {
+  height: 1.1rem;
+  margin-bottom: -0.1rem; }
+
+.dismissalButton {
+  position: absolute;
+  padding: 0.75rem;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background: url("../images/remove.png");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.campaignCard:not(:hover) .dismissalButton:not(:focus) {
+  opacity: 0; }
+
+.campaignTitle {
+  padding-right: 1.25rem; }
